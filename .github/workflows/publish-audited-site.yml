@@ -1,0 +1,177 @@
+name: Publish audited Mr Adventure Dad site
+
+on:
+  push:
+    paths:
+      - '.site-release/READY'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-audited-mr-adventure-dad
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPOSITORY: ${{ github.repository }}
+      RELEASE_SHA256: 4deb1b729b9e783ecc192886060784c60cf29fa45afa8337cf6e1991eb32ff11
+    steps:
+      - name: Check out staging commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct checksum-verified release
+        shell: bash
+        run: |
+          set -euo pipefail
+          : > /tmp/site.b64
+          for sha in \
+            0ea0c4d412d74e3ff5c613cf991ba2da6c35aaa6 \
+            2a5ff61f73bfc07ae1bfb2de2cffe2bfb00362aa \
+            12fe669ab5522d30483f257bf869e490a4b378c3 \
+            2afbc82bdfbd8e72da48e5d5276022fdcb0bfe60 \
+            addb9b0571b1245f607b406dc72a39118383f8b1 \
+            ab48c3eb2f2f02fe2968bc92536f41f20cdc1eab \
+            78c22d7c52084f6867f9931fc43abbd62674b30a \
+            aae97df65ec72ced342c997819dd21d7e60be378 \
+            5e78d72acfaac412a9c9ae8873ff054dadc6c3bf \
+            49c532f3e01b058b792fd326ad1c8db95ae5b36d \
+            afbe22340bfe66ce7d664ec8f18d3af0ebfb3fcf \
+            2742a99526623d7c1966ab93ee2c2a0bcce80415 \
+            3088638fa754b3f00350b5acc525d6e8ea24317f \
+            b310f8446f578946a946e2fcfb2fcaef864fce5a \
+            e888653a9965568856772b9d347b2cacf7b9f0c7 \
+            6c35811cc77fdbb8c2dd0f5e6fc47477a109fb98 \
+            d1ccc6b6f8f501bb786b7e2fb1c92ab2bf8b108c \
+            4b0d152cde48516237254238d463541b820195b8 \
+            fb47797fd6696db3ec66c1d46e9607782ca57179 \
+            f179b7dac2be0a344c6eb7205d9113631a98ad76 \
+            48912f64c1258dbd33dd92b4d2f5bb2498acf73e \
+            240e7c7fa9f42527a03e39a7fb6dda34e08bc20a \
+            4034a78006b97034e98cac67321dec5a55ba681e \
+            6452cfa912bfb5948210a9746faf6fe294598cef \
+            886026d3c4ea67252b5e1c30d91e230048259b0a \
+            02f949102f387cd462aa0e85e1571bd713ebde04 \
+            55849eba0c46c1d3309a34ab624676783f2ae130 \
+            62cc226969d92d5d49ff33fbd60b6991cea50be6 \
+            923fa4c0af83a378b249b1d42d94f533558f7d9a \
+            5c300b4609afdfc827a074b3ce57981c14ad28b5 \
+            5e91544ab4331b5f1921e15b98c970fc98330e0c
+          do
+            curl --fail --silent --show-error --location \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${REPOSITORY}/git/blobs/${sha}" \
+              | jq -r '.content' | tr -d '\n' | base64 --decode >> /tmp/site.b64
+          done
+          base64 --decode /tmp/site.b64 > /tmp/site.tar.gz
+          echo "${RELEASE_SHA256}  /tmp/site.tar.gz" | sha256sum --check --strict
+          rm -rf /tmp/site
+          mkdir -p /tmp/site
+          tar -xzf /tmp/site.tar.gz -C /tmp/site
+          test "$(find /tmp/site -type f | wc -l | tr -d ' ')" = "45"
+          test -f /tmp/site/index.html
+          test -f /tmp/site/field-guides.html
+          test -f /tmp/site/weekend-generator.html
+          test -f /tmp/site/guides/family-adventure-safety-brief.html
+          test -f /tmp/site/assets/css/site.css
+          test -f /tmp/site/assets/js/site.js
+          grep -q 'Raise kids with stories to tell' /tmp/site/index.html
+          grep -q 'Make it fit your family' /tmp/site/guides/family-adventure-safety-brief.html
+
+      - name: Install finished site
+        shell: bash
+        run: |
+          set -euo pipefail
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a /tmp/site/. .
+
+      - name: Run release validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find . -type f ! -path './.git/*' | wc -l | tr -d ' ')" = "45"
+          test "$(find . -name '*.html' ! -path './.git/*' | wc -l | tr -d ' ')" = "33"
+          test "$(find guides -name '*.html' | wc -l | tr -d ' ')" = "22"
+          node --check assets/js/site.js
+          node --check assets/js/guides-data.js
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          import xml.etree.ElementTree as ET
+
+          root = Path('.')
+          html_files = sorted(root.rglob('*.html'))
+          assert len(html_files) == 33
+          assert len(list((root / 'guides').glob('*.html'))) == 22
+
+          class Checker(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = set()
+                  self.duplicates = set()
+                  self.links = []
+                  self.images = []
+                  self.h1 = 0
+                  self.title = False
+                  self.canonical = False
+              def handle_starttag(self, tag, attrs):
+                  data = dict(attrs)
+                  if 'id' in data:
+                      if data['id'] in self.ids:
+                          self.duplicates.add(data['id'])
+                      self.ids.add(data['id'])
+                  if tag == 'a' and data.get('href'):
+                      self.links.append(data['href'])
+                  if tag == 'img':
+                      self.images.append(data)
+                  if tag == 'h1':
+                      self.h1 += 1
+                  if tag == 'title':
+                      self.title = True
+                  if tag == 'link' and data.get('rel') == 'canonical':
+                      self.canonical = True
+
+          for path in html_files:
+              text = path.read_text(encoding='utf-8')
+              parser = Checker()
+              parser.feed(text)
+              assert parser.title, f'missing title: {path}'
+              assert parser.canonical, f'missing canonical: {path}'
+              assert parser.h1 == 1, f'h1 count: {path} ({parser.h1})'
+              assert not parser.duplicates, f'duplicate IDs: {path} {parser.duplicates}'
+              for image in parser.images:
+                  assert image.get('alt') is not None, f'missing alt: {path}'
+              for href in parser.links:
+                  split = urlsplit(href)
+                  if split.scheme or href.startswith(('mailto:', 'tel:', '#', 'javascript:')):
+                      continue
+                  target = (path.parent / split.path).resolve()
+                  if split.path.endswith('/'):
+                      target = target / 'index.html'
+                  assert target.exists(), f'broken link: {path} -> {href}'
+
+          tree = ET.parse(root / 'sitemap.xml')
+          ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [node.text for node in tree.findall('.//s:loc', ns)]
+          assert len(urls) == 32
+          assert len(urls) == len(set(urls))
+          print('release validation passed: 33 HTML routes, 22 guides, 45 files')
+          PY
+
+      - name: Commit finished site to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish audited Mr Adventure Dad site"
+          git push origin HEAD:main
