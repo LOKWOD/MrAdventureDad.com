@@ -1,0 +1,84 @@
+name: Apply staged Mr Adventure Dad rebuild
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-site-bundle.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-site-bundle
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Decode and install staged site
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -d .site-bundle
+          test -f .site-bundle/part-00
+
+          cat .site-bundle/part-* | tr -d '\n\r' | base64 --decode > /tmp/mad-site.gz
+          gzip -t /tmp/mad-site.gz
+          gzip -dc /tmp/mad-site.gz > /tmp/mad-site.payload
+
+          rm -rf /tmp/mad-site-unpacked
+          mkdir -p /tmp/mad-site-unpacked
+
+          if tar -tf /tmp/mad-site.payload >/dev/null 2>&1; then
+            tar -xf /tmp/mad-site.payload -C /tmp/mad-site-unpacked
+          elif unzip -t /tmp/mad-site.payload >/dev/null 2>&1; then
+            unzip -q /tmp/mad-site.payload -d /tmp/mad-site-unpacked
+          else
+            echo 'Staged payload is not a tar or zip archive.' >&2
+            file /tmp/mad-site.payload || true
+            exit 1
+          fi
+
+          INDEX_PATH="$(find /tmp/mad-site-unpacked -type f -name index.html -not -path '*/_qa/*' | head -n 1)"
+          test -n "$INDEX_PATH"
+          SITE_ROOT="$(dirname "$INDEX_PATH")"
+          echo "Installing site from $SITE_ROOT"
+
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name '.git' \
+            ! -name '.github' \
+            ! -name '.site-bundle' \
+            ! -name 'CNAME' \
+            ! -name 'README.md' \
+            -exec rm -rf {} +
+
+          rsync -a \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '_qa/' \
+            "$SITE_ROOT"/ ./
+
+          printf 'mradventuredad.com\n' > CNAME
+          rm -rf .site-bundle
+          rm -f .github/workflows/pages.yml
+          rm -f .github/workflows/apply-site-bundle.yml
+
+      - name: Commit rebuilt site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish complete Mr Adventure Dad rebuild'
+          git push origin HEAD:main
