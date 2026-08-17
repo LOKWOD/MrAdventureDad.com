@@ -32,10 +32,13 @@ jobs:
           node scripts/generate-expansion-two.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload site
+      - name: Upload generated site
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
-      - name: Deploy
+      - name: Let GitHub's branch publisher finish first
+        if: github.event_name == 'push'
+        run: sleep 75
+      - name: Deploy generated site
         id: deployment
         uses: actions/deploy-pages@v4
