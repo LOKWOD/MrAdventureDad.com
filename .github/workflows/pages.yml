@@ -27,7 +27,9 @@ jobs:
         with:
           node-version: 20
       - name: Generate expanded family-adventure library
-        run: node scripts/generate-expansion.mjs
+        run: |
+          node scripts/generate-expansion.mjs
+          node scripts/generate-expansion-two.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload site
