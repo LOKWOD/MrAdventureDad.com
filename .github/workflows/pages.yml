@@ -30,6 +30,8 @@ jobs:
         run: |
           node scripts/generate-expansion.mjs
           node scripts/generate-expansion-two.mjs
+      - name: Inject website visitor light beacon
+        run: node scripts/inject-visitor-beacon.mjs . mr-adventure-dad
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload generated site
