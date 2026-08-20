@@ -30,6 +30,8 @@ jobs:
         run: |
           node scripts/generate-expansion.mjs
           node scripts/generate-expansion-two.mjs
+      - name: Add contextual Amazon commerce
+        run: node scripts/inject-affiliate-commerce.mjs .
       - name: Inject website visitor light beacon
         run: node scripts/inject-visitor-beacon.mjs . mr-adventure-dad
       - name: Setup Pages
