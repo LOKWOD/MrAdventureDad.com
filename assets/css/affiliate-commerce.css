@@ -1,0 +1,13 @@
+.commerce-module{width:min(1160px,calc(100% - 40px));margin:0 auto 110px;padding:42px;background:#fff;border:1px solid #d8d2c5}
+.commerce-kicker{margin:0 0 10px;color:#ff6a2a;font-size:12px;font-weight:800;letter-spacing:.17em}
+.commerce-module>h2{margin:0;font:600 clamp(34px,5vw,54px)/1 Oswald,sans-serif}
+.commerce-intro{max-width:760px;color:#59615c;font-size:16px}
+.affiliate-disclosure{padding:12px 14px;background:#f4eee4;border-left:4px solid #ff6a2a;font-size:13px;color:#4d554f}
+.commerce-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.commerce-card{display:block;padding:22px;border:1px solid #d8d2c5;background:#f5f1e8;color:#111815;text-decoration:none;transition:transform .2s,border-color .2s}
+.commerce-card:hover{border-color:#ff6a2a;transform:translateY(-2px)}
+.commerce-card span{color:#ff6a2a;font-size:10px;font-weight:800;letter-spacing:.13em}
+.commerce-card h3{margin:8px 0;font:600 25px/1.05 Oswald,sans-serif}
+.commerce-card p{margin:0 0 16px;color:#59615c;font-size:14px}
+.commerce-card b{font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:800px){.commerce-grid{grid-template-columns:1fr}.commerce-module{width:min(100% - 28px,1160px);padding:28px}}
