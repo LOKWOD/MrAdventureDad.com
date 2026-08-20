@@ -64,7 +64,8 @@ function amazonUrl(query) {
 }
 
 function chooseCatalog(path, text) {
-  const haystack = `${path} ${text}`.toLowerCase();
+  const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
+  const haystack = `${path} ${title}`.toLowerCase();
   if (/bike|bicycle|cycling/.test(haystack)) return catalog.bike;
   if (/fish|angling|tackle/.test(haystack)) return catalog.fishing;
   if (/winter|snow|ski|cold/.test(haystack)) return catalog.winter;
