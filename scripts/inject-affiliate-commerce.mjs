@@ -48,6 +48,12 @@ const catalog = {
     ["youth life jacket coast guard approved", "Youth life jacket", "Select by weight, fit, activity and current labeling—not age alone."],
     ["small fishing tackle box organizer", "Small tackle organizer", "A limited, orderly kit is easier to supervise around children."],
   ],
+  cooler: [
+    ["insulated soft cooler family day trip", "Soft day-trip coolers", "Best for one family meal, a short carry and easy storage after lunch."],
+    ["hard cooler family road trip", "Hard coolers for car-base days", "Compare loaded weight, exterior dimensions, cleaning access and real cargo-space fit."],
+    ["backpack cooler insulated leak resistant", "Backpack coolers", "Prioritize carry comfort, cleanability and the maker's exact leak-resistance claim."],
+    ["refrigerator cooler thermometer", "Cooler thermometers", "An actual temperature is more useful than guessing from how the lid feels."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -66,6 +72,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/cooler/.test(haystack)) return catalog.cooler;
   if (/bike|bicycle|cycling/.test(haystack)) return catalog.bike;
   if (/fish|angling|tackle/.test(haystack)) return catalog.fishing;
   if (/winter|snow|ski|cold/.test(haystack)) return catalog.winter;
@@ -79,6 +86,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
+  if (normalized === "guides/chimney-bluffs-with-kids.html") return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
