@@ -78,7 +78,7 @@ function chooseCatalog(path, text) {
   if (/winter|snow|ski|cold/.test(haystack)) return catalog.winter;
   if (/beach|lake|water|kayak|paddl|swim|island/.test(haystack)) return catalog.water;
   if (/camp|tent|sleeping bag/.test(haystack)) return catalog.camping;
-  if (/hike|trail|waterfall|adirondack/.test(haystack)) return catalog.trail;
+  if (/hik(e|ing)|trail|waterfall|adirondack/.test(haystack)) return catalog.trail;
   if (/road.trip|packing|car kit|amusement/.test(haystack)) return catalog.road;
   return catalog.daytrip;
 }
@@ -86,7 +86,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (normalized === "guides/chimney-bluffs-with-kids.html") return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
