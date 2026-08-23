@@ -83,6 +83,14 @@ for (const surface of ["index.html", "adventures.html", "destinations.html", "ou
   const html = readFileSync(resolve(root, surface), "utf8");
   if (!html.includes("DAILY 2026-08-23")) fail(`${surface}: discovery module missing`);
 }
+for (const surface of ["index.html", "destinations.html", "outdoors.html"]) {
+  const html = readFileSync(resolve(root, surface), "utf8");
+  if (!/green-lakes-family-day-plan\.svg[^>]*object-fit:contain/.test(html)) fail(`${surface}: Green Lakes card can crop the planning diagram`);
+}
+for (const surface of ["index.html", "outdoors.html", "gear.html"]) {
+  const html = readFileSync(resolve(root, surface), "utf8");
+  if (!/family-hiking-daypack-loadouts\.svg[^>]*object-fit:contain/.test(html)) fail(`${surface}: daypack card can crop the loadout diagram`);
+}
 for (const rel of ["guides/family-day-trip-system.html", "guides/chimney-bluffs-with-kids.html"]) {
   if (!readFileSync(resolve(root, rel), "utf8").includes("DAILY 2026-08-23")) fail(`${rel}: related-guide module missing`);
 }
