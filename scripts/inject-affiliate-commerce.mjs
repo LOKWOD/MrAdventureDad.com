@@ -54,6 +54,11 @@ const catalog = {
     ["backpack cooler insulated leak resistant", "Backpack coolers", "Prioritize carry comfort, cleanability and the maker's exact leak-resistance claim."],
     ["refrigerator cooler thermometer", "Cooler thermometers", "An actual temperature is more useful than guessing from how the lid feels."],
   ],
+  rain: [
+    ["kids waterproof rain jacket hood", "Kids' waterproof rain jackets", "Compare hood visibility, layer room, cuff fit, seam construction and the maker's exact waterproof claim."],
+    ["adult packable waterproof rain shell", "Packable adult rain shells", "Prioritize loaded fit, ventilation and verified construction over the smallest packed bundle."],
+    ["reusable rain poncho family", "Reusable family rain ponchos", "Useful for quick event coverage when loose fabric will not create a snag or trip hazard."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -72,6 +77,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/rain|poncho|waterproof shell/.test(haystack)) return catalog.rain;
   if (/cooler/.test(haystack)) return catalog.cooler;
   if (/bike|bicycle|cycling/.test(haystack)) return catalog.bike;
   if (/fish|angling|tackle/.test(haystack)) return catalog.fishing;
@@ -86,7 +92,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
