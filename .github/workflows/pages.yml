@@ -34,6 +34,7 @@ jobs:
           node scripts/publish-daily-2026-08-23.mjs .
           node scripts/publish-daily-2026-08-24.mjs .
           node scripts/publish-daily-2026-08-25.mjs .
+          node scripts/publish-daily-2026-08-26.mjs .
       - name: Add contextual Amazon commerce
         run: node scripts/inject-affiliate-commerce.mjs .
       - name: Inject website visitor light beacon
@@ -46,6 +47,8 @@ jobs:
         run: node scripts/audit-daily-2026-08-24.mjs .
       - name: Audit August 25 publication batch
         run: node scripts/audit-daily-2026-08-25.mjs .
+      - name: Audit August 26 publication batch
+        run: node scripts/audit-daily-2026-08-26.mjs .
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload generated site
