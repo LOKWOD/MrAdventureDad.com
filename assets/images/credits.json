@@ -1,34 +1,198 @@
 {
-  "assets/images/watkins-glen-family-plan.svg": {
-    "title": "Watkins Glen gorge-first family plan",
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fall%20in%20the%20Adirondack%20Mountains.jpg?width=1800": {
+    "title": "Adirondack Mountains in fall",
+    "creator": "Amy Sabattis",
+    "source": "https://commons.wikimedia.org/wiki/File:Fall_in_the_Adirondack_Mountains.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lake%20George%20aerial%20view%202025.jpg?width=1800": {
+    "title": "Lake George aerial view",
+    "creator": "Hayden Soloviev",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_George_aerial_view_2025.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Thousand%20Islands%2004.JPG?width=1800": {
+    "title": "Thousand Islands waterway",
+    "creator": "Nandaro",
+    "source": "https://commons.wikimedia.org/wiki/File:Thousand_Islands_04.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lake%20Placid%20-%20Mirror%20Lake.jpg?width=1800": {
+    "title": "Mirror Lake at Lake Placid",
+    "creator": "Mwanner",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Placid_-_Mirror_Lake.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Onondaga%20Lake%20Park%20-%2020220506%20-%2003%20-%20Syracuse%20skyline%20from%20Willow%20Bay.jpg?width=1800": {
+    "title": "Onondaga Lake and Syracuse skyline",
+    "creator": "Andre Carrotflower",
+    "source": "https://commons.wikimedia.org/wiki/File:Onondaga_Lake_Park_-_20220506_-_03_-_Syracuse_skyline_from_Willow_Bay.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cooperstown%20%2853059438366%29.jpg?width=1800": {
+    "title": "Main Street, Cooperstown",
+    "creator": "Andrew Parlette",
+    "source": "https://commons.wikimedia.org/wiki/File:Cooperstown_(53059438366).jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Canadice%20Lake%20in%20the%20Finger%20Lakes.jpg?width=1200": {
+    "title": "Canadice Lake in the Finger Lakes",
+    "creator": "VisitFingerLakes",
+    "source": "https://commons.wikimedia.org/wiki/File:Canadice_Lake_in_the_Finger_Lakes.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20Straight%20Shot%20Down%20Route%2014A%2C%20Town%20of%20Seneca%2C%20New%20York%20-%2020220311.jpg?width=1800": {
+    "title": "New York Route 14A",
+    "creator": "Andre Carrotflower",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Straight_Shot_Down_Route_14A,_Town_of_Seneca,_New_York_-_20220311.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Family%20in%20canoe%20on%20lake.jpg?width=1800": {
+    "title": "Family paddling a canoe",
+    "creator": "U.S. Fish and Wildlife Service",
+    "source": "https://commons.wikimedia.org/wiki/File:Family_in_canoe_on_lake.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Family%20bike%20ride%2C%20St%20Nicholas%20Park%20-%20geograph.org.uk%20-%203283561.jpg?width=800": {
+    "title": "Family bike ride",
+    "creator": "Robin Stott",
+    "source": "https://commons.wikimedia.org/wiki/File:Family_bike_ride,_St_Nicholas_Park_-_geograph.org.uk_-_3283561.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Family%20Kingdom%20Amusement%20Park%203.jpg?width=1200": {
+    "title": "Family amusement park",
+    "creator": "Fk714",
+    "source": "https://commons.wikimedia.org/wiki/File:Family_Kingdom_Amusement_Park_3.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kids%20Fishing%20Day%20%285164952980%29.jpg?width=1600": {
+    "title": "Kids Fishing Day",
+    "creator": "Virginia State Parks",
+    "source": "https://commons.wikimedia.org/wiki/File:Kids_Fishing_Day_(5164952980).jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Father%20and%20son%20fishing%20little%20boy%20helps%20his%20father%20to%20fish.jpg?width=1600": {
+    "title": "Father and son fishing",
+    "creator": "U.S. Fish and Wildlife Service",
+    "source": "https://commons.wikimedia.org/wiki/File:Father_and_son_fishing_little_boy_helps_his_father_to_fish.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-08-27"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Alta%20ski%20lessons%20-%20Feb%2021%2C%202011.jpg?width=1800": {
+    "title": "Children's ski lesson",
+    "creator": "Scott Catron",
+    "source": "https://commons.wikimedia.org/wiki/File:Alta_ski_lessons_-_Feb_21,_2011.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verified": "2026-08-27"
+  },
+  "assets/images/chimney-bluffs-family-plan.svg": {
+    "title": "chimney bluffs family plan",
     "creator": "Mr Adventure Dad Editorial Desk",
     "source": "Original editorial planning illustration",
     "license": "Copyright Mr Adventure Dad",
-    "created": "2026-08-26",
-    "notes": "Conceptual itinerary diagram; not a destination photograph or trail map."
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/family-cooler-decision.svg": {
+    "title": "family cooler decision",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/green-lakes-family-day-plan.svg": {
+    "title": "green lakes family day plan",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/family-hiking-daypack-loadouts.svg": {
+    "title": "family hiking daypack loadouts",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/taughannock-family-day-plan.svg": {
+    "title": "taughannock family day plan",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/family-rain-gear-decision.svg": {
+    "title": "family rain gear decision",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/beaver-lake-family-plan.svg": {
+    "title": "beaver lake family plan",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/family-radio-decision.svg": {
+    "title": "family radio decision",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
+  },
+  "assets/images/watkins-glen-family-plan.svg": {
+    "title": "watkins glen family plan",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
   },
   "assets/images/family-sun-protection-stack.svg": {
-    "title": "Family sun-protection stack",
+    "title": "family sun protection stack",
     "creator": "Mr Adventure Dad Editorial Desk",
     "source": "Original editorial planning illustration",
     "license": "Copyright Mr Adventure Dad",
-    "created": "2026-08-26",
-    "notes": "Conceptual decision framework; no product, medical or testing imagery."
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
   },
   "assets/images/letchworth-overlook-family-plan.svg": {
-    "title": "Letchworth overlook-first family day",
+    "title": "letchworth overlook family plan",
     "creator": "Mr Adventure Dad Editorial Desk",
     "source": "Original editorial planning illustration",
     "license": "Copyright Mr Adventure Dad",
-    "created": "2026-08-27",
-    "notes": "Conceptual car-linked itinerary; not a destination photograph, road map or trail map."
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
   },
   "assets/images/family-lighting-system.svg": {
-    "title": "Family outdoor lighting system",
+    "title": "family lighting system",
     "creator": "Mr Adventure Dad Editorial Desk",
     "source": "Original editorial planning illustration",
     "license": "Copyright Mr Adventure Dad",
-    "created": "2026-08-27",
-    "notes": "Conceptual role framework; no product, testing or technical configuration imagery."
+    "notes": "Conceptual planning graphic; not a destination photograph or trail map."
   }
 }
