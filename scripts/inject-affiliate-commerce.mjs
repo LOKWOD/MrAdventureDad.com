@@ -69,6 +69,11 @@ const catalog = {
     ["kids UPF 50 long sleeve sun shirt", "Kids' UPF sun shirts", "Compare coverage, wet comfort, care instructions and the maker's stated UPF rating."],
     ["portable sun shade canopy family beach", "Portable family shade", "Check the packed size, anchoring method, wind limits and whether the destination allows it."],
   ],
+  lighting: [
+    ["rechargeable headlamp lock mode hiking", "Rechargeable headlamps", "Compare fit, a real lock mode, low-output control, charge-port design and the maker's runtime table."],
+    ["AAA headlamp hiking family", "Replaceable-battery headlamps", "A common-cell model can be easier to revive away from outlets; store matched spares separately and dry."],
+    ["rechargeable camping lantern dimmable", "Dimmable camp lanterns", "Use area light at the table or tent, not as a substitute for the hands-free light each moving person needs."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -87,6 +92,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/headlamp|flashlight|lantern|family lighting/.test(haystack)) return catalog.lighting;
   if (/sun protection|sunscreen|\bupf\b|sun shade/.test(haystack)) return catalog.sun;
   if (/rain|poncho|waterproof shell/.test(haystack)) return catalog.rain;
   if (/walkie|two.way radio|\bfrs\b|\bgmrs\b/.test(haystack)) return catalog.radio;
@@ -104,7 +110,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
