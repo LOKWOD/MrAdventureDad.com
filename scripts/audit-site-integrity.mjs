@@ -35,6 +35,14 @@ const retiredImageIds=[
   "1464822759023-fed622ff2c3b","1520975958225-9e4be0f3066d",
   "1445307806294-bff7f67ff225"
 ];
+const destinationGuideMedia={
+  "guides/chimney-bluffs-with-kids.html":["chimney-bluffs.webp","chimney-bluffs-family-plan.svg"],
+  "guides/green-lakes-state-park-with-kids.html":["green-lakes.webp","green-lakes-family-day-plan.svg"],
+  "guides/taughannock-falls-with-kids.html":["taughannock-falls.webp","taughannock-family-day-plan.svg"],
+  "guides/beaver-lake-nature-center-with-kids.html":["beaver-lake-nature-center.webp","beaver-lake-family-plan.svg"],
+  "guides/watkins-glen-with-kids.html":["watkins-glen.webp","watkins-glen-family-plan.svg"],
+  "guides/letchworth-state-park-with-kids.html":["letchworth-upper-falls.webp","letchworth-overlook-family-plan.svg"]
+};
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
   const html=readFileSync(file,"utf8");
@@ -85,6 +93,23 @@ for(const src of imageSources.keys()){
 }
 for(const src of usedLocalImages){
   if(src.endsWith(".svg")&&!credits[src])fail("missing illustration credit: "+src);
+  if(src.startsWith("assets/images/photos/")&&!credits[src])fail("missing local photo credit: "+src);
+}
+for(const [rel,[photo,plan]] of Object.entries(destinationGuideMedia)){
+  const html=readFileSync(resolve(root,rel),"utf8");
+  const hero='class="article-hero" src="../assets/images/photos/'+photo+'"';
+  const diagram='class="article-plan"';
+  const planSrc='src="../assets/images/'+plan+'"';
+  if(!html.includes(hero))fail(rel+": destination photograph is not the article hero");
+  if(count(html,new RegExp(plan.replaceAll(".","\\."),"g"))!==1)fail(rel+": planning diagram must appear exactly once");
+  if(!html.includes(diagram)||!html.includes(planSrc))fail(rel+": planning diagram is not embedded in the article");
+  if(html.indexOf(hero)>html.indexOf(planSrc))fail(rel+": planning diagram appears before destination photograph");
+  for(const file of htmlFiles){
+    const other=relative(root,file).replaceAll("\\","/");
+    if(other===rel)continue;
+    const otherHtml=readFileSync(file,"utf8");
+    if(otherHtml.includes('src="assets/images/'+plan+'"'))fail(other+": destination planning diagram is still used as a card image");
+  }
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);

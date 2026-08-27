@@ -206,5 +206,59 @@
     "license": "Copyright Mr Adventure Dad",
     "notes": "Conceptual planning graphic; not a destination photograph or trail map.",
     "created": "2026-08-27"
+  },
+  "assets/images/photos/chimney-bluffs.webp": {
+    "title": "Chimney Bluffs above Lake Ontario",
+    "creator": "Dougtone",
+    "source": "https://commons.wikimedia.org/wiki/File:Chimney_Bluffs_-_Wolcott,_New_York_07.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verified": "2026-08-27",
+    "notes": "Resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/green-lakes.webp": {
+    "title": "Green Lake at Deadman’s Point",
+    "creator": "Tiina Toomet",
+    "source": "https://commons.wikimedia.org/wiki/File:GreenLakesStatePark.JPG",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-08-27",
+    "notes": "Resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/taughannock-falls.webp": {
+    "title": "Taughannock Falls in autumn",
+    "creator": "Yuko Kudos",
+    "source": "https://commons.wikimedia.org/wiki/File:Taughannock_Falls_In_Heart_(125223867).jpeg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "verified": "2026-08-27",
+    "notes": "Resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/beaver-lake-nature-center.webp": {
+    "title": "Beaver Lake Nature Center in winter",
+    "creator": "DanielPenfield",
+    "source": "https://commons.wikimedia.org/wiki/File:BeaverLakeNatureCenterSignInWinter.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-27",
+    "notes": "Resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/watkins-glen.webp": {
+    "title": "Watkins Glen Gorge Trail and waterfall",
+    "creator": "Andre Carrotflower",
+    "source": "https://commons.wikimedia.org/wiki/File:Watkins_Glen_State_Park_-_20200625_-_62.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-27",
+    "notes": "Resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/letchworth-upper-falls.webp": {
+    "title": "Upper Falls and Genesee Arch Bridge at Letchworth",
+    "creator": "Andre Carrotflower",
+    "source": "https://commons.wikimedia.org/wiki/File:Letchworth_State_Park_-_20191006_-_04_-_Upper_Falls_and_Genesee_Arch_Bridge.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-27",
+    "notes": "Resized and converted to WebP for site presentation."
   }
 }
