@@ -62,3 +62,5 @@ body{background:#f7f4ed}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .destination-hero{margin:40px 0}.destination-hero .article-hero{margin:0}.destination-hero figcaption,.article-plan figcaption{margin-top:11px;color:#667069;font-size:13px;line-height:1.55}.destination-hero figcaption a{color:#24563a;text-decoration:underline;text-underline-offset:3px}.article-plan{margin:24px 0 34px}.article-plan img{border-radius:var(--radius);box-shadow:var(--shadow);background:#eef3e7}
+
+.gear-hero{margin:40px 0}.gear-hero .article-hero{margin:0}.gear-hero figcaption{margin-top:11px;color:#667069;font-size:13px;line-height:1.55}.gear-hero figcaption a{color:#24563a;text-decoration:underline;text-underline-offset:3px}

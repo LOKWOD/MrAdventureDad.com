@@ -260,5 +260,59 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
     "verified": "2026-08-27",
     "notes": "Resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-cooler.webp": {
+    "title": "Insulated cooler at an outdoor picnic area",
+    "creator": "Brecht Corbeel",
+    "source": "https://unsplash.com/photos/an-orange-and-white-cooler-sits-on-green-ground-outdoors-aubg9AXB7zI",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-hiking-daypack.webp": {
+    "title": "Hiker packing a daypack",
+    "creator": "Emily Hassell / National Park Service",
+    "source": "https://commons.wikimedia.org/wiki/File:Woman_packing_backpack_before_a_hike_(50730228403).jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-rain-gear.webp": {
+    "title": "Child in a yellow rain jacket",
+    "creator": "Jorge Antonio Palmero Guerrero",
+    "source": "https://unsplash.com/photos/a-child-in-a-yellow-raincoat-crouches-outdoors-rDZE63kDgk0",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-radios.webp": {
+    "title": "Family Radio Service handheld radio",
+    "creator": "Tim",
+    "source": "https://commons.wikimedia.org/wiki/File:Motorola_T5320_FRS_Radio.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-sun-protection.webp": {
+    "title": "Children wearing sun hats on a beach",
+    "creator": "Đào Việt Hoàng",
+    "source": "https://unsplash.com/photos/two-girls-in-hats-playing-on-a-sandy-beach-x2oZR1dz5DI",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-lighting.webp": {
+    "title": "Camper using a headlamp beside a tent",
+    "creator": "Marty Garcia",
+    "source": "https://unsplash.com/photos/man-with-headlamp-in-front-on-camping-tent-vyJhbmYbZ-4",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
   }
 }

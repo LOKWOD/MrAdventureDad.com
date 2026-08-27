@@ -43,6 +43,14 @@ const destinationGuideMedia={
   "guides/watkins-glen-with-kids.html":["watkins-glen.webp","watkins-glen-family-plan.svg"],
   "guides/letchworth-state-park-with-kids.html":["letchworth-upper-falls.webp","letchworth-overlook-family-plan.svg"]
 };
+const gearGuideMedia={
+  "guides/family-day-trip-cooler-guide.html":["family-cooler.webp","family-cooler-decision.svg"],
+  "guides/family-hiking-daypack-guide.html":["family-hiking-daypack.webp","family-hiking-daypack-loadouts.svg"],
+  "guides/family-rain-gear-guide.html":["family-rain-gear.webp","family-rain-gear-decision.svg"],
+  "guides/family-walkie-talkie-guide.html":["family-radios.webp","family-radio-decision.svg"],
+  "guides/family-sun-protection-guide.html":["family-sun-protection.webp","family-sun-protection-stack.svg"],
+  "guides/family-headlamps-flashlights-lanterns.html":["family-lighting.webp","family-lighting-system.svg"]
+};
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
   const html=readFileSync(file,"utf8");
@@ -109,6 +117,22 @@ for(const [rel,[photo,plan]] of Object.entries(destinationGuideMedia)){
     if(other===rel)continue;
     const otherHtml=readFileSync(file,"utf8");
     if(otherHtml.includes('src="assets/images/'+plan+'"'))fail(other+": destination planning diagram is still used as a card image");
+  }
+}
+for(const [rel,[photo,plan]] of Object.entries(gearGuideMedia)){
+  const html=readFileSync(resolve(root,rel),"utf8");
+  const hero='class="article-hero" src="../assets/images/photos/'+photo+'"';
+  const diagram='class="article-plan"';
+  const planSrc='src="../assets/images/'+plan+'"';
+  if(!html.includes(hero))fail(rel+": gear photograph is not the article hero");
+  if(count(html,new RegExp(plan.replaceAll(".","\\."),"g"))!==1)fail(rel+": gear planning diagram must appear exactly once");
+  if(!html.includes(diagram)||!html.includes(planSrc))fail(rel+": gear planning diagram is not embedded in the article");
+  if(html.indexOf(hero)>html.indexOf(planSrc))fail(rel+": gear planning diagram appears before gear photograph");
+  for(const file of htmlFiles){
+    const other=relative(root,file).replaceAll("\\","/");
+    if(other===rel)continue;
+    const otherHtml=readFileSync(file,"utf8");
+    if(otherHtml.includes('src="assets/images/'+plan+'"'))fail(other+": gear planning diagram is still used as a card image");
   }
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
