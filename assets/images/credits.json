@@ -314,5 +314,41 @@
     "license_url": "https://unsplash.com/license",
     "verified": "2026-08-27",
     "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-first-aid.webp": {
+    "title": "Outdoor first-aid practice",
+    "creator": "Frederick Shaw",
+    "source": "https://unsplash.com/photos/people-practicing-first-aid-on-an-injured-person-outdoors-Mp1X7eLVqkE",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-hydration.webp": {
+    "title": "Hiker holding a reusable bottle",
+    "creator": "Michael Holzinger / Bluewater Sweden",
+    "source": "https://unsplash.com/photos/person-holding-stainless-steel-cup-ZRSw-2dOMU8",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-bug-protection.webp": {
+    "title": "American dog tick",
+    "creator": "Jerry Kirkhart",
+    "source": "https://commons.wikimedia.org/wiki/File:American_Dog_Tick_(Dermacentor_variabilis).jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/family-sleep-system.webp": {
+    "title": "Camper arranging a sleeping pad",
+    "creator": "Chaewool Kim",
+    "source": "https://unsplash.com/photos/a-man-sitting-inside-of-a-tent-next-to-a-sleeping-bag-gPG-82fGnec",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "verified": "2026-08-27",
+    "notes": "Cropped, resized and converted to WebP for site presentation."
   }
 }

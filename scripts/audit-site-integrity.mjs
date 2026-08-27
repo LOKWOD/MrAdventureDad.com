@@ -51,6 +51,12 @@ const gearGuideMedia={
   "guides/family-sun-protection-guide.html":["family-sun-protection.webp","family-sun-protection-stack.svg"],
   "guides/family-headlamps-flashlights-lanterns.html":["family-lighting.webp","family-lighting-system.svg"]
 };
+const photoOnlyGearGuides={
+  "guides/family-first-aid-kit-guide.html":"family-first-aid.webp",
+  "guides/family-hydration-gear-guide.html":"family-hydration.webp",
+  "guides/family-bug-protection-guide.html":"family-bug-protection.webp",
+  "guides/family-camping-sleep-system-guide.html":"family-sleep-system.webp"
+};
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
   const html=readFileSync(file,"utf8");
@@ -94,7 +100,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==41)fail("expected 41 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==45)fail("expected 45 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -135,9 +141,16 @@ for(const [rel,[photo,plan]] of Object.entries(gearGuideMedia)){
     if(otherHtml.includes('src="assets/images/'+plan+'"'))fail(other+": gear planning diagram is still used as a card image");
   }
 }
+for(const [rel,photo] of Object.entries(photoOnlyGearGuides)){
+  const html=readFileSync(resolve(root,rel),"utf8");
+  const hero='class="article-hero" src="../assets/images/photos/'+photo+'"';
+  if(!html.includes(hero))fail(rel+": real gear photograph is not the article hero");
+  if(count(html,/class="article-hero"/g)!==1)fail(rel+": must contain exactly one article hero");
+  if(count(html,/class="article-plan"/g)!==0)fail(rel+": planning diagram must not replace or duplicate the hero photograph");
+}
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==41)fail("expected 41 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==45)fail("expected 45 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
