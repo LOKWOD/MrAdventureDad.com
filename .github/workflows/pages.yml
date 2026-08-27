@@ -21,46 +21,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout audited site
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Generate expanded family-adventure library
-        run: |
-          node scripts/generate-expansion.mjs
-          node scripts/generate-expansion-two.mjs
-          node scripts/publish-daily-2026-08-22.mjs .
-          node scripts/publish-daily-2026-08-23.mjs .
-          node scripts/publish-daily-2026-08-24.mjs .
-          node scripts/publish-daily-2026-08-25.mjs .
-          node scripts/publish-daily-2026-08-26.mjs .
-          node scripts/publish-daily-2026-08-27.mjs .
-      - name: Add contextual Amazon commerce
-        run: node scripts/inject-affiliate-commerce.mjs .
-      - name: Inject website visitor light beacon
-        run: node scripts/inject-visitor-beacon.mjs . mr-adventure-dad
-      - name: Audit August 22 publication batch
-        run: node scripts/audit-daily-2026-08-22.mjs .
-      - name: Audit August 23 publication batch
-        run: node scripts/audit-daily-2026-08-23.mjs .
-      - name: Audit August 24 publication batch
-        run: node scripts/audit-daily-2026-08-24.mjs .
-      - name: Audit August 25 publication batch
-        run: node scripts/audit-daily-2026-08-25.mjs .
-      - name: Audit August 26 publication batch
-        run: node scripts/audit-daily-2026-08-26.mjs .
-      - name: Audit August 27 publication batch
-        run: node scripts/audit-daily-2026-08-27.mjs .
+          node-version: 24
+      - name: Audit committed site
+        run: node scripts/audit-site-integrity.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload generated site
+      - name: Upload audited site
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
       - name: Let GitHub's branch publisher finish first
         if: github.event_name == 'push'
         run: sleep 75
-      - name: Deploy generated site
+      - name: Deploy audited site
         id: deployment
         uses: actions/deploy-pages@v4
