@@ -510,5 +510,56 @@
     "license_url": "https://unsplash.com/license",
     "verified": "2026-08-27",
     "notes": "Cropped, resized and converted to WebP for site presentation."
+  },
+  "assets/images/photos/fort-ontario.webp": {
+    "title": "Aerial view of Fort Ontario beside Lake Ontario",
+    "creator": "Jacknayr",
+    "source": "https://commons.wikimedia.org/wiki/File:Fort_Ontario_and_Oswego.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-30",
+    "notes": "Visually verified as Fort Ontario, then resized and converted to WebP for site presentation."
+  },
+  "assets/images/fort-ontario-family-plan.svg": {
+    "title": "Fort Ontario family visit sequence",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual itinerary graphic; not a site map.",
+    "created": "2026-08-30"
+  },
+  "assets/images/photos/family-power-bank.webp": {
+    "title": "Portable phone power bank and charging cable",
+    "creator": "Santeri Viinamäki",
+    "source": "https://commons.wikimedia.org/wiki/File:Portable_power_bank.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-30",
+    "notes": "Representative category photo of an older USB power bank; resized and converted to WebP."
+  },
+  "assets/images/family-power-plan.svg": {
+    "title": "Family phone-power decision system",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Conceptual decision graphic; not a wiring or electrical diagram.",
+    "created": "2026-08-30"
+  },
+  "assets/images/photos/family-hotel-room.webp": {
+    "title": "Standard hotel room with two beds",
+    "creator": "Kurt Kaiser",
+    "source": "https://commons.wikimedia.org/wiki/File:Bed_in_hotel_room_3.jpg",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified": "2026-08-30",
+    "notes": "Representative hotel-room photo; cropped, resized and converted to WebP."
+  },
+  "assets/images/family-hotel-room-system.svg": {
+    "title": "Five-zone family hotel-room system",
+    "creator": "Mr Adventure Dad Editorial Desk",
+    "source": "Original editorial planning illustration",
+    "license": "Copyright Mr Adventure Dad",
+    "notes": "Behavioral setup graphic; not a floor plan or safety map.",
+    "created": "2026-08-30"
   }
 }

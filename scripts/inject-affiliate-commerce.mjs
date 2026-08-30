@@ -2,6 +2,7 @@ import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { relative, resolve } from "node:path";
 
 const root = resolve(process.argv[2] || ".");
+const onlyPath = process.argv[3]?.replaceAll("\\", "/");
 const tag = "mradventuredad-20";
 const markerStart = "<!-- MAD AFFILIATE COMMERCE -->";
 const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
@@ -74,6 +75,11 @@ const catalog = {
     ["AAA headlamp hiking family", "Replaceable-battery headlamps", "A common-cell model can be easier to revive away from outlets; store matched spares separately and dry."],
     ["rechargeable camping lantern dimmable", "Dimmable camp lanterns", "Use area light at the table or tent, not as a substitute for the hands-free light each moving person needs."],
   ],
+  power: [
+    ["10000mAh USB C PD power bank", "10,000 mAh USB-C power banks", "Compare watt-hours, port output, device compatibility, size and the maker's current safety information."],
+    ["dual port USB C PD car charger", "Dual-port USB-C car chargers", "A good fit when the vehicle is the base: verify socket clearance, output per port and cable compatibility."],
+    ["short USB C charging cable durable", "Short USB-C charging cables", "Short, known-good cables reduce front-seat clutter; confirm the connector and power requirement for every device."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -92,6 +98,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/power bank|car charger|phone power/.test(haystack)) return catalog.power;
   if (/headlamp|flashlight|lantern|family lighting/.test(haystack)) return catalog.lighting;
   if (/sun protection|sunscreen|\bupf\b|sun shade/.test(haystack)) return catalog.sun;
   if (/rain|poncho|waterproof shell/.test(haystack)) return catalog.rain;
@@ -110,7 +117,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
@@ -151,6 +158,7 @@ let changed = 0;
 let links = 0;
 for (const file of htmlFiles(root)) {
   const path = relative(root, file).replaceAll("\\", "/");
+  if (onlyPath && path !== onlyPath) continue;
   const original = readFileSync(file, "utf8");
   const cleaned = original.replace(new RegExp(`${markerStart}[\\s\\S]*?${markerEnd}\\s*`, "g"), "");
   const products = productsFor(path, cleaned);

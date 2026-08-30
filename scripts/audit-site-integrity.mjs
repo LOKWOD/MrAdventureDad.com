@@ -41,7 +41,8 @@ const destinationGuideMedia={
   "guides/taughannock-falls-with-kids.html":["taughannock-falls.webp","taughannock-family-day-plan.svg"],
   "guides/beaver-lake-nature-center-with-kids.html":["beaver-lake-nature-center.webp","beaver-lake-family-plan.svg"],
   "guides/watkins-glen-with-kids.html":["watkins-glen.webp","watkins-glen-family-plan.svg"],
-  "guides/letchworth-state-park-with-kids.html":["letchworth-upper-falls.webp","letchworth-overlook-family-plan.svg"]
+  "guides/letchworth-state-park-with-kids.html":["letchworth-upper-falls.webp","letchworth-overlook-family-plan.svg"],
+  "guides/fort-ontario-with-kids.html":["fort-ontario.webp","fort-ontario-family-plan.svg"]
 };
 const gearGuideMedia={
   "guides/family-day-trip-cooler-guide.html":["family-cooler.webp","family-cooler-decision.svg"],
@@ -49,7 +50,9 @@ const gearGuideMedia={
   "guides/family-rain-gear-guide.html":["family-rain-gear.webp","family-rain-gear-decision.svg"],
   "guides/family-walkie-talkie-guide.html":["family-radios.webp","family-radio-decision.svg"],
   "guides/family-sun-protection-guide.html":["family-sun-protection.webp","family-sun-protection-stack.svg"],
-  "guides/family-headlamps-flashlights-lanterns.html":["family-lighting.webp","family-lighting-system.svg"]
+  "guides/family-headlamps-flashlights-lanterns.html":["family-lighting.webp","family-lighting-system.svg"],
+  "guides/family-power-banks-car-chargers.html":["family-power-bank.webp","family-power-plan.svg"],
+  "guides/family-hotel-room-system.html":["family-hotel-room.webp","family-hotel-room-system.svg"]
 };
 const photoOnlyGearGuides={
   "guides/family-first-aid-kit-guide.html":"family-first-aid.webp",
@@ -100,7 +103,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==46)fail("expected 46 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==49)fail("expected 49 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -150,7 +153,7 @@ for(const [rel,photo] of Object.entries(photoOnlyGearGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==46)fail("expected 46 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==49)fail("expected 49 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
