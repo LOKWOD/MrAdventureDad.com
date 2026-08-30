@@ -342,6 +342,46 @@
     "verified": "2026-08-27",
     "notes": "Cropped, resized and converted to WebP for site presentation."
   },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/American%20Falls%2C%20Niagara%20Falls%2C%20Ontario%20%2829985345985%29.jpg?width=1800": {
+    "title": "American and Bridal Veil Falls at Niagara Falls",
+    "creator": "Ken Lund",
+    "source": "https://commons.wikimedia.org/wiki/File:American_Falls,_Niagara_Falls,_Ontario_(29985345985).jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verified": "2026-08-30"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/First%20Lake%20and%20Second%20Lake%20from%20Bald%20Mountain%20Fire%20Tower.jpg?width=1800": {
+    "title": "First and Second lakes from Bald Mountain",
+    "creator": "Andy Arthur",
+    "source": "https://commons.wikimedia.org/wiki/File:First_Lake_and_Second_Lake_from_Bald_Mountain_Fire_Tower.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "verified": "2026-08-30"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/External%20view%20of%20Museum%20of%20Play.jpg?width=1800": {
+    "title": "Exterior of The Strong Museum of Play",
+    "creator": "Misc",
+    "source": "https://commons.wikimedia.org/wiki/File:External_view_of_Museum_of_Play.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-30"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Corning%20Museum%20of%20Glass%20Exterior.JPG?width=1800": {
+    "title": "Corning Museum of Glass exterior",
+    "creator": "Stilfehler",
+    "source": "https://commons.wikimedia.org/wiki/File:Corning_Museum_of_Glass_Exterior.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "verified": "2026-08-30"
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Canalside%2C%20Buffalo%2C%20New%20York%2C%20June%202015%20-%2004.jpg?width=1800": {
+    "title": "Canalside in Buffalo",
+    "creator": "Andre Carrotflower",
+    "source": "https://commons.wikimedia.org/wiki/File:Canalside,_Buffalo,_New_York,_June_2015_-_04.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-08-30"
+  },
   "assets/images/photos/family-sleep-system.webp": {
     "title": "Camper arranging a sleeping pad",
     "creator": "Chaewool Kim",
