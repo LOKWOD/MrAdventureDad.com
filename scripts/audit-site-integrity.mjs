@@ -23,6 +23,8 @@ const titles=new Map();
 const canonicals=new Map();
 const imageSources=new Map();
 const usedLocalImages=new Set();
+const stylesheet=readFileSync(resolve(root,"assets/css/style.css"),"utf8");
+if(!/\.article-plan img\{[^}]*aspect-ratio:16\/9[^}]*object-fit:contain/.test(stylesheet))fail("planning diagrams must reserve a 16:9 box before lazy loading");
 const allowedUnsplash=[
   "1507525428034-b723cf961d3e","1475483768296-6163e08872a1",
   "1523987355523-c7b5b0dd90a7","1441974231531-c6227db76b6e",
