@@ -80,6 +80,11 @@ const catalog = {
     ["dual port USB C PD car charger", "Dual-port USB-C car chargers", "A good fit when the vehicle is the base: verify socket clearance, output per port and cable compatibility."],
     ["short USB C charging cable durable", "Short USB-C charging cables", "Short, known-good cables reduce front-seat clutter; confirm the connector and power requirement for every device."],
   ],
+  binoculars: [
+    ["8x32 binoculars wide field waterproof", "Family-friendly 8x32 binoculars", "Compare minimum eye spacing, field of view, eye relief, weight and the maker's exact waterproofing claim."],
+    ["8x42 binoculars bird watching wide field", "Adult-shared 8x42 binoculars", "A brighter full-size option when an adult carries it; verify the child's grip and merged view before keeping it."],
+    ["8x25 compact binoculars kids nature", "Compact 8x25 binoculars", "Choose low weight only after checking focus-wheel access, eye spacing, field of view and return terms."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -99,6 +104,7 @@ function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
   if (/power bank|car charger|phone power/.test(haystack)) return catalog.power;
+  if (/binocular|bird watching optics/.test(haystack)) return catalog.binoculars;
   if (/headlamp|flashlight|lantern|family lighting/.test(haystack)) return catalog.lighting;
   if (/sun protection|sunscreen|\bupf\b|sun shade/.test(haystack)) return catalog.sun;
   if (/rain|poncho|waterproof shell/.test(haystack)) return catalog.rain;
@@ -117,7 +123,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];

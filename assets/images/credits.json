@@ -561,5 +561,30 @@
     "license": "Copyright Mr Adventure Dad",
     "notes": "Behavioral setup graphic; not a floor plan or safety map.",
     "created": "2026-08-30"
+  },
+  "assets/images/photos/howe-caverns.webp": {
+    "title": "Passage inside Howe Caverns",
+    "creator": "jpitha",
+    "source": "https://commons.wikimedia.org/wiki/File:Howe_Caverns_Passage_1.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verified": "2026-09-01",
+    "notes": "Wikimedia Commons identifies this as Howe Caverns; visually verified, resized and converted to WebP."
+  },
+  "assets/images/photos/family-binoculars.webp": {
+    "title": "Family using binoculars at a wetland overlook",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-01",
+    "notes": "Representative family nature scene; not a destination or product endorsement."
+  },
+  "assets/images/photos/family-lost-kid-plan.webp": {
+    "title": "Family identifying a staffed help point",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-01",
+    "notes": "Representative public-attraction scene; no actual emergency or named venue is depicted."
   }
 }

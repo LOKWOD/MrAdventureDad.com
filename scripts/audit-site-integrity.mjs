@@ -62,6 +62,11 @@ const photoOnlyGearGuides={
   "guides/family-bug-protection-guide.html":"family-bug-protection.webp",
   "guides/family-camping-sleep-system-guide.html":"family-sleep-system.webp"
 };
+const photoOnlyEditorialGuides={
+  "guides/howe-caverns-with-kids.html":"howe-caverns.webp",
+  "guides/family-binoculars-8x-vs-10x.html":"family-binoculars.webp",
+  "guides/family-lost-kid-plan.html":"family-lost-kid-plan.webp"
+};
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
   const html=readFileSync(file,"utf8");
@@ -105,7 +110,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==49)fail("expected 49 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==52)fail("expected 52 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -153,9 +158,16 @@ for(const [rel,photo] of Object.entries(photoOnlyGearGuides)){
   if(count(html,/class="article-hero"/g)!==1)fail(rel+": must contain exactly one article hero");
   if(count(html,/class="article-plan"/g)!==0)fail(rel+": planning diagram must not replace or duplicate the hero photograph");
 }
+for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
+  const html=readFileSync(resolve(root,rel),"utf8");
+  const hero='class="article-hero" src="../assets/images/photos/'+photo+'"';
+  if(!html.includes(hero))fail(rel+": verified editorial photograph is not the article hero");
+  if(count(html,/class="article-hero"/g)!==1)fail(rel+": must contain exactly one article hero");
+  if(count(html,/class="article-plan"/g)!==0)fail(rel+": chart or planning diagram must not replace or duplicate the hero photograph");
+}
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==49)fail("expected 49 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==52)fail("expected 52 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
