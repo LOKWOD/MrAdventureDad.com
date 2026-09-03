@@ -30,7 +30,7 @@ jobs:
       - name: Audit committed site
         run: node scripts/audit-site-integrity.mjs
       - name: Audit current daily publication
-        run: node scripts/audit-daily-2026-09-01.mjs
+        run: node scripts/audit-daily-2026-09-03.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload audited site

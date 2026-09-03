@@ -586,5 +586,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-01",
     "notes": "Representative public-attraction scene; no actual emergency or named venue is depicted."
+  },
+  "assets/images/photos/montezuma-refuge.webp": {
+    "title": "Scenic view of Montezuma National Wildlife Refuge",
+    "creator": "Harless Todd / U.S. Fish and Wildlife Service",
+    "source": "https://commons.wikimedia.org/wiki/File:A_scenic_view_of_the_Montezuma_national_wildlife_refuge.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-09-03",
+    "notes": "Wikimedia Commons identifies this exact wetland and observation-platform photograph as Montezuma National Wildlife Refuge and marks the U.S. Fish and Wildlife Service image public domain; visually verified, resized and converted to WebP."
+  },
+  "assets/images/photos/family-travel-games.webp": {
+    "title": "Compact family travel games in a parked car",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-03",
+    "notes": "Representative unbranded travel-game scene in a parked vehicle; not a product or location endorsement."
+  },
+  "assets/images/photos/family-motion-sickness-plan.webp": {
+    "title": "Prepared family car-sickness cleanup kit",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-03",
+    "notes": "Representative preparation scene in a parked vehicle; no medication, illness event or product endorsement is depicted."
   }
 }
