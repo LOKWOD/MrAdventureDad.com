@@ -611,5 +611,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-03",
     "notes": "Representative preparation scene in a parked vehicle; no medication, illness event or product endorsement is depicted."
+  },
+  "assets/images/photos/chittenango-falls.webp": {
+    "title": "Chittenango Falls",
+    "creator": "ZeWrestler",
+    "source": "https://commons.wikimedia.org/wiki/File:NY_Chittenango_Falls.JPG",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-09-04",
+    "notes": "Wikimedia Commons identifies this exact photograph as Chittenango Falls and records the creator's public-domain release; visually verified against the destination, cropped and converted to WebP."
+  },
+  "assets/images/photos/family-travel-bags.webp": {
+    "title": "Family travel bag options",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-04",
+    "notes": "Representative unbranded rolling suitcase, duffel and backpack; not a product endorsement."
+  },
+  "assets/images/photos/family-museum-day.webp": {
+    "title": "Family museum visit",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-04",
+    "notes": "Representative family at a generic hands-on museum exhibit; does not claim a named location or personal visit."
   }
 }

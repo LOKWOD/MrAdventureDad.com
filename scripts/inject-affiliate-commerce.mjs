@@ -90,6 +90,11 @@ const catalog = {
     ["magnetic travel board games kids", "Magnetic travel board games", "Compare the closure, piece storage, magnet strength and the maker's current age guidance."],
     ["reusable activity book travel kids", "Reusable travel activity books", "Check the age fit, included marker, cleanability and whether the format works in your actual travel space."],
   ],
+  travelbags: [
+    ["rolling carry on luggage family travel", "Rolling carry-on luggage", "Compare the external dimensions, loaded weight, wheel clearance and every carrier's current limits."],
+    ["weekender duffel bag travel", "Weekend travel duffels", "Look for a comfortable loaded carry, a stable opening and dimensions that fit the actual trunk or luggage rack."],
+    ["travel backpack carry on panel opening", "Carry-on travel backpacks", "Prioritize torso fit, strap comfort, panel access and the strictest carrier or venue rule on the trip."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -108,6 +113,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/travel bag|rolling carry|duffel|luggage/.test(haystack)) return catalog.travelbags;
   if (/travel game|card game|magnetic game|activity book/.test(haystack)) return catalog.travelgames;
   if (/power bank|car charger|phone power/.test(haystack)) return catalog.power;
   if (/binocular|bird watching optics/.test(haystack)) return catalog.binoculars;
@@ -129,7 +135,7 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
