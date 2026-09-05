@@ -31,6 +31,12 @@ const related = {
 };
 for (const [path, block] of Object.entries(related)) upsertBefore(path, "</main>", block);
 
+// The hub pages use the shared full-bleed section rule. Version the stylesheet
+// reference so a corrected layout is not hidden behind GitHub Pages' edge cache.
+for (const path of ["about.html", "adventures.html", "destinations.html", "gear.html", "outdoors.html"]) {
+  write(path, read(path).replace(/href="assets\/css\/style\.css(?:\?v=\d+)?"/, 'href="assets/css/style.css?v=20260905"'));
+}
+
 let sitemap = read("sitemap.xml").replace(/  <url><loc>https:\/\/mradventuredad\.com\/guides\/(rosamond-gifford-zoo-with-kids|family-hearing-protection-earmuffs-earplugs|family-outdoor-weather-cutoff-plan)\.html<\/loc><lastmod>[^<]+<\/lastmod><\/url>\n/g, "");
 const rows = pages.map(page => `  <url><loc>https://mradventuredad.com/guides/${page.slug}.html</loc><lastmod>${date}</lastmod></url>`).join("\n");
 sitemap = sitemap.replace("</urlset>", `${rows}\n</urlset>`).replace(/(<loc>https:\/\/mradventuredad\.com\/(?:<\/loc>|index\.html<\/loc>)<lastmod>)[^<]+/, `$1${date}`).replace(/(<loc>https:\/\/mradventuredad\.com\/(?:adventures|destinations|gear|outdoors|photo-credits)\.html<\/loc><lastmod>)[^<]+/g, `$1${date}`);
