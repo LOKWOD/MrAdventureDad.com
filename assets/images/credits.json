@@ -636,5 +636,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-04",
     "notes": "Representative family at a generic hands-on museum exhibit; does not claim a named location or personal visit."
+  },
+  "assets/images/photos/rosamond-gifford-zoo.webp": {
+    "title": "Rosamond Gifford Zoo entrance pavilion",
+    "creator": "Andre Carrotflower",
+    "source": "https://commons.wikimedia.org/wiki/File:Rosamond_Gifford_Zoo,_Syracuse,_New_York_-_20210508_-_01_(Entrance_pavilion).jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-09-05",
+    "notes": "Wikimedia Commons identifies the exact Syracuse zoo entrance and records coordinates and license. Visually verified, cropped, resized and converted to WebP; this adapted asset is distributed under CC BY-SA 4.0."
+  },
+  "assets/images/photos/family-hearing-protection.webp": {
+    "title": "Family hearing-protection fit check",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-05",
+    "notes": "Representative unbranded passive earmuffs and foam earplugs; not a product test or endorsement."
+  },
+  "assets/images/photos/family-weather-decision.webp": {
+    "title": "Family outdoor weather checkpoint",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-05",
+    "notes": "Representative family checking conditions at a generic trailhead; no named destination or specific forecast is claimed."
   }
 }
