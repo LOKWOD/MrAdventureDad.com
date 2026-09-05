@@ -20,7 +20,7 @@ body{background:#f7f4ed}
 .story-card img[src$=".svg"],.card img[src$=".svg"]{object-fit:contain}
 .card-grid{align-items:stretch}
 .card{height:100%}
-.content-section.alt{position:relative;left:50%;width:100vw;margin-left:-50vw;padding-left:max(20px,calc((100vw - 1160px)/2));padding-right:max(20px,calc((100vw - 1160px)/2))}
+.content-section.alt{position:relative;left:auto;width:100%;margin-left:0}
 .stories+.stories{padding-top:0}
 .stories .wrap>.story-grid{align-items:stretch}
 .page-hero{min-height:440px}
