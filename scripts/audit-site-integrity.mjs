@@ -72,7 +72,7 @@ const photoOnlyEditorialGuides={
   "guides/rosamond-gifford-zoo-with-kids.html":"rosamond-gifford-zoo.webp",
   "guides/family-hearing-protection-earmuffs-earplugs.html":"family-hearing-protection.webp",
   "guides/family-outdoor-weather-cutoff-plan.html":"family-weather-decision.webp",
-  "guides/clark-reservation-state-park-with-kids.html":"clark-reservation.webp",
+  "guides/clark-reservation-state-park-with-kids.html":"clark-reservation-v2.webp",
   "guides/family-picnic-seating-blanket-chair-stadium-seat.html":"family-picnic-seating.webp",
   "guides/family-bathroom-stop-plan.html":"family-bathroom-stop-plan.webp"
 };

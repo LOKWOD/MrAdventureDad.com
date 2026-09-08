@@ -4,7 +4,7 @@ export const pages = [
     title: "Clark Reservation State Park With Kids: A Rim-First Day That Respects the Drop",
     metaTitle: "Clark Reservation State Park With Kids",
     description: "A practical Clark Reservation family plan with current hours, parking fee, cliff safety, pet rules, accessibility questions, picnic timing and bad-weather backups.",
-    image: "clark-reservation.webp",
+    image: "clark-reservation-v2.webp",
     type: "Guide",
     eyebrow: "SYRACUSE · RUGGED PARK DAY",
     dek: "See the lake from above while everyone is fresh, keep the cliff a boundary instead of a dare, and make the rougher trail an adult decision—not the price of admission.",
