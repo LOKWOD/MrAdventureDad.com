@@ -100,6 +100,11 @@ const catalog = {
     ["reusable musician earplugs NRR", "Labeled reusable earplugs", "Check the size range, insertion method, cleaning instructions and real NRR rather than a vague noise-reducing claim."],
     ["foam earplugs NRR travel case", "Labeled foam earplugs", "Choose clean, individually stored plugs only for users who can insert and wear them correctly."],
   ],
+  seating: [
+    ["water resistant picnic blanket foldable", "Foldable picnic blankets", "Compare open size, packed shape, underside material, care instructions and the maker's exact moisture-resistance claim."],
+    ["folding camp chair lightweight adult", "Folding camp chairs", "Check stated capacity, seat height, packed length, total weight, locking points and foot shape before buying a set."],
+    ["padded stadium seat bleacher back support", "Padded stadium seats", "Verify width, attachments and the exact venue policy before choosing a bleacher seat with a back."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -118,6 +123,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/picnic seating|camp chair|stadium seat|blanket vs chair/.test(haystack)) return catalog.seating;
   if (/hearing protection|earmuff|earplug/.test(haystack)) return catalog.hearingprotection;
   if (/travel bag|rolling carry|duffel|luggage/.test(haystack)) return catalog.travelbags;
   if (/travel game|card game|magnetic game|activity book/.test(haystack)) return catalog.travelgames;
@@ -141,11 +147,12 @@ function chooseCatalog(path, text) {
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html"].includes(normalized)) return null;
+  if (normalized.startsWith("weekend-")) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
-  if (normalized === "weekend-august-22-23-2026.html" || normalized.startsWith("guides/")) return chooseCatalog(normalized, text);
+  if (normalized.startsWith("guides/")) return chooseCatalog(normalized, text);
   return null;
 }
 
@@ -185,8 +192,13 @@ for (const file of htmlFiles(root)) {
   if (onlyPath && path !== onlyPath) continue;
   const original = readFileSync(file, "utf8");
   const cleaned = original.replace(new RegExp(`${markerStart}[\\s\\S]*?${markerEnd}\\s*`, "g"), "");
-  const products = productsFor(path, cleaned);
-  if (!products) continue;
+  // Several early guides and the gear hub have hand-curated commerce modules.
+  // Preserve those exact modules instead of stacking a generated block below them.
+  const products = /class=["']commerce-module["']/.test(cleaned) ? null : productsFor(path, cleaned);
+  if (!products) {
+    if (cleaned !== original) writeFileSync(file, cleaned);
+    continue;
+  }
   if (!/<\/main>/i.test(cleaned)) throw new Error(`Missing </main> in ${path}`);
   const depth = path.split("/").length - 1;
   const stylesheet = `<link rel="stylesheet" href="${"../".repeat(depth)}assets/css/affiliate-commerce.css">`;

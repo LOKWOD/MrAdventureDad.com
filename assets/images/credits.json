@@ -661,5 +661,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-05",
     "notes": "Representative family checking conditions at a generic trailhead; no named destination or specific forecast is claimed."
+  },
+  "assets/images/photos/clark-reservation.webp": {
+    "title": "Glacier Lake and cliff at Clark Reservation State Park",
+    "creator": "Ott Toomet",
+    "source": "https://commons.wikimedia.org/wiki/File:Clark_Reservation_cliff.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "verified": "2026-09-08",
+    "notes": "Wikimedia Commons identifies Glacier Lake, the former-waterfall cliff and picnic shelter at the exact named park. The creator released the image into the public domain worldwide. Visually verified, center-cropped, resized and converted to WebP."
+  },
+  "assets/images/photos/family-picnic-seating.webp": {
+    "title": "Family picnic seating comparison",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-08",
+    "notes": "Representative unbranded blanket, folding camp chair and stadium seat; no product model, hands-on test or endorsement is claimed."
+  },
+  "assets/images/photos/family-bathroom-stop-plan.webp": {
+    "title": "Family bathroom-stop kit",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-08",
+    "notes": "Representative unbranded travel kit at a generic public restroom; no named venue, product model or medical claim is represented."
   }
 }
