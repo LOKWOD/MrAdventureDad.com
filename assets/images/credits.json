@@ -686,5 +686,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-08",
     "notes": "Representative unbranded travel kit at a generic public restroom; no named venue, product model or medical claim is represented."
+  },
+  "assets/images/photos/most-syracuse-exterior.webp": {
+    "title": "Milton J. Rubenstein Museum of Science & Technology entrance",
+    "creator": "Marketingdirector",
+    "source": "https://commons.wikimedia.org/wiki/File:Milton_J._Rubenstein_Museum_of_Science_%26_Technology.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified": "2026-09-09",
+    "notes": "Wikimedia Commons identifies the exact Franklin Street entrance and provides camera coordinates. Photographed in 2013; visible IMAX-era signage predates the ExploraDome. Visually verified, cropped, resized and distributed under CC BY-SA 4.0."
+  },
+  "assets/images/photos/family-folding-wagon.webp": {
+    "title": "Family folding cargo wagon use case",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-09",
+    "notes": "Representative unbranded cargo wagon with day-trip gear. The empty wagon and caption do not imply passenger approval, a specific model, testing or endorsement."
+  },
+  "assets/images/photos/family-parking-lot-plan.webp": {
+    "title": "Family parking-lot regroup",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-09",
+    "notes": "Illustrative unbranded scene of an adult regrouping with two school-age children beside a fully parked vehicle before a marked crossing; no named facility or vehicle claim."
   }
 }
