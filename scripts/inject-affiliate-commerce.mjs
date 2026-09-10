@@ -110,6 +110,16 @@ const catalog = {
     ["folding wagon stroller child restraint", "Child-approved folding wagons", "Require explicit passenger approval, current age and fit guidance, required restraints, brake instructions and a clean recall check."],
     ["folding utility cart large wheels", "Folding utility carts with larger wheels", "Match wheels to the real surface and measure the folded cart against the loaded vehicle before buying."],
   ],
+  tireinflators: [
+    ["12V portable tire inflator auto shutoff", "12-volt portable tire inflators", "Verify outlet current, fuse, cord reach, hose reach, duty cycle and the vehicle maker's operating instructions."],
+    ["cordless tire inflator removable battery", "Cordless tire inflators", "Compare battery compatibility, storage limits, charge-state visibility, duty cycle and a separate pressure-gauge check."],
+    ["digital tire pressure gauge vehicle", "Tire-pressure gauges", "Use the vehicle placard for the target and a separate gauge to verify pressure instead of trusting auto-stop alone."],
+  ],
+  trackers: [
+    ["bluetooth item tracker luggage backpack", "Bluetooth item trackers", "Choose for a backpack or other item, then verify phone ecosystem, attachment, battery and unwanted-tracker protections."],
+    ["kids GPS watch cellular location", "Cellular GPS watches", "Compare service, coverage, charging, age and fit guidance, school rules, privacy and the limits of emergency features."],
+    ["reusable kids ID wristband contact", "Reusable child ID wristbands", "Use minimal contact information, check fit and durability, and keep the practiced family separation plan primary."],
+  ],
   core: [
     ["family adventure backpack", "Grab-and-go adventure pack", "Keep the repeat-use basics together so leaving takes less work."],
     ["insulated soft cooler family day trip", "Day-trip soft cooler", "A practical cooler protects lunch without taking over the whole cargo area."],
@@ -128,6 +138,8 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/tire inflator|portable inflator|foot pump|pressure gauge/.test(haystack)) return catalog.tireinflators;
+  if (/location tracker|bluetooth tag|gps watch|item tracker/.test(haystack)) return catalog.trackers;
   if (/folding wagon|utility wagon|wagon guide|utility cart/.test(haystack)) return catalog.wagons;
   if (/picnic seating|camp chair|stadium seat|blanket vs chair/.test(haystack)) return catalog.seating;
   if (/hearing protection|earmuff|earplug/.test(haystack)) return catalog.hearingprotection;
@@ -154,7 +166,7 @@ function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
   if (normalized.startsWith("weekend-")) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html", "guides/most-syracuse-with-kids.html", "guides/family-parking-lot-plan.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html", "guides/most-syracuse-with-kids.html", "guides/family-parking-lot-plan.html", "guides/highland-forest-with-kids.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];
