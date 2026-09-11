@@ -736,5 +736,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-10",
     "notes": "Representative unbranded Bluetooth item tag, blank-screen watch, abstract phone map and blank contact band beside family day-trip gear. No actual location, product identity, test or accuracy claim."
+  },
+  "assets/images/photos/pratts-falls.webp": {
+    "title": "Pratt’s Falls in Onondaga County",
+    "creator": "Doug Kerr",
+    "source": "https://commons.wikimedia.org/wiki/File:Pratts_falls.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verified": "2026-09-11",
+    "notes": "Wikimedia Commons identifies the exact waterfall and categorizes the photograph under Pratt's Falls Park. Photographed November 25, 2009. The full vertical image is preserved over a blurred extension for the site’s 16:9 frame."
+  },
+  "assets/images/photos/family-roof-cargo-options.webp": {
+    "title": "Family roof-cargo categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-11",
+    "notes": "Representative unbranded hard box, soft rooftop bag and open basket beside a generic SUV with crossbars. No product model, fit, capacity, use test or endorsement claim."
+  },
+  "assets/images/photos/multigenerational-family-day-trip.webp": {
+    "title": "Multigenerational family day-trip planning",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-11",
+    "notes": "Representative family with school-age children, parents and grandparents reviewing a map between a paved path and natural trail. No specific people, health condition or destination is depicted."
   }
 }
