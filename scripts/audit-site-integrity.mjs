@@ -84,6 +84,9 @@ const photoOnlyEditorialGuides={
   ,"guides/pratts-falls-with-kids.html":"pratts-falls.webp"
   ,"guides/family-roof-cargo-box-bag-basket-guide.html":"family-roof-cargo-options.webp"
   ,"guides/multigenerational-family-day-trip-plan.html":"multigenerational-family-day-trip.webp"
+  ,"guides/fort-stanwix-with-kids.html":"fort-stanwix-national-monument.webp"
+  ,"guides/kids-hiking-footwear-trail-runner-shoe-boot.html":"kids-hiking-footwear-categories.webp"
+  ,"guides/family-no-cell-service-day-trip-plan.html":"family-no-cell-service-plan.webp"
 };
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
@@ -128,7 +131,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==75)fail("expected 75 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==78)fail("expected 78 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -185,7 +188,7 @@ for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==75)fail("expected 75 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==78)fail("expected 78 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");

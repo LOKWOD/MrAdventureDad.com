@@ -761,5 +761,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-11",
     "notes": "Representative family with school-age children, parents and grandparents reviewing a map between a paved path and natural trail. No specific people, health condition or destination is depicted."
+  },
+  "assets/images/photos/fort-stanwix-national-monument.webp": {
+    "title": "Cannon demonstration at Fort Stanwix National Monument",
+    "creator": "National Park Service / Ranger Dan",
+    "source": "https://www.nps.gov/fost/index.htm",
+    "license": "U.S. National Park Service image; public-domain government work unless otherwise noted",
+    "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "verified": "2026-09-12",
+    "notes": "The NPS Fort Stanwix homepage identifies the exact reconstructed fort and credits the image NPS Photo / Ranger Dan. The site crop preserves the cannon crew and fort walls."
+  },
+  "assets/images/photos/kids-hiking-footwear-categories.webp": {
+    "title": "Kids’ hiking-footwear categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-12",
+    "notes": "Representative unbranded low trail runner, mid hiking shoe and taller hiking boot. No product model, fit, performance test or endorsement is depicted."
+  },
+  "assets/images/photos/family-no-cell-service-plan.webp": {
+    "title": "Family no-service day-trip planning",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-12",
+    "notes": "Representative family reviewing paper and offline maps at a generic trailhead. No specific people, app, route or destination is depicted."
   }
 }
