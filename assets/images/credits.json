@@ -786,5 +786,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-12",
     "notes": "Representative family reviewing paper and offline maps at a generic trailhead. No specific people, app, route or destination is depicted."
+  },
+  "assets/images/photos/kids-trekking-poles.webp": {
+    "title": "Kids’ trekking-pole categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-13",
+    "notes": "Representative unbranded adjustable and folding trekking poles. No product model, fit, strength test or endorsement is depicted."
+  },
+  "assets/images/photos/family-roadside-breakdown.webp": {
+    "title": "Family roadside-breakdown safe-positioning concept",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-13",
+    "notes": "Representative family SUV fully on a broad shoulder with occupants inside. Not a universal stay-in-vehicle instruction."
+  },
+  "assets/images/photos/erie-canal-museum-syracuse.webp": {
+    "title": "Erie Canal Museum in the Syracuse Weighlock Building",
+    "creator": "Tiina Toomet",
+    "source": "https://commons.wikimedia.org/wiki/File:ErieCanalMuseumSyracuse.JPG",
+    "license": "Public domain dedication",
+    "license_url": "https://commons.wikimedia.org/wiki/File:ErieCanalMuseumSyracuse.JPG#Licensing",
+    "verified": "2026-09-13",
+    "notes": "Exact-place exterior photograph from 2006. Used as a destination-identification image; current access details come from the museum."
   }
 }
