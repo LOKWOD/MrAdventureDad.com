@@ -8,21 +8,21 @@ const read = path => readFileSync(resolve(root, path), "utf8");
 const count = (text, pattern) => (text.match(pattern) || []).length;
 const strip = html => html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 const pages = [
-  {path:"guides/erie-canal-museum-with-kids.html",title:"Erie Canal Museum With Kids: The 90-Minute Syracuse History Day",photo:"erie-canal-museum-syracuse.webp",paid:0,sources:["eriecanalmuseum.org/visit","eriecanalmuseum.org/parking","eriecanalmuseum.org/accessibility","eriecanalmuseum.org/exhibits","forecast.weather.gov/MapClick"]},
-  {path:"guides/kids-trekking-poles-adjustable-fixed-folding-guide.html",title:"Kids’ Trekking Poles: Adjustable vs Fixed vs Folding—and When to Skip Them",photo:"kids-trekking-poles.webp",paid:3,sources:["blackdiamondequipment.com/pages/product-instructions","leki.com/us/en/Service/FAQ","nps.gov/articles/hiking-safety","cpsc.gov/Recalls"]},
-  {path:"guides/family-roadside-breakdown-plan.html",title:"The Family Roadside-Breakdown Plan: Get Clear, Stay Buckled, Call for Help",photo:"family-roadside-breakdown.webp",paid:0,sources:["thruway.ny.gov/travelers/safety/emergency","thruway.ny.gov/travelers/map","ops.fhwa.dot.gov/publications/fhwahop10014/s4","nhtsa.gov/vehicle-safety/seat-belts","511ny.org"]}
+  {path:"guides/harriet-tubman-national-historical-park-with-kids.html",title:"Harriet Tubman National Historical Park With Kids: Two Sites, One Reserved Tour",photo:"harriet-tubman-church-auburn.webp",paid:0,sources:["nps.gov/hart/planyourvisit/basicinfo","nps.gov/hart/planyourvisit/directions","harriettubmanhome.com","nps.gov/hart/planyourvisit/accessibility","nps.gov/hart/planyourvisit/pets","forecast.weather.gov/MapClick"]},
+  {path:"guides/kids-bike-helmet-fit-certification-guide.html",title:"Kids’ Bike Helmets: Fit, Certification, and the Replacement Decision",photo:"kids-bicycle-helmet-fit.webp",paid:3,sources:["nhtsa.gov/road-safety/bicycle-safety","cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Bicycle-Helmets","cpsc.gov/Recalls","nysenate.gov/legislation/laws/VAT/1238"]},
+  {path:"guides/family-tick-check-removal-plan.html",title:"The Family Tick-Check Plan: Before, During, and After the Trail",photo:"family-tick-check-plan.webp",paid:0,sources:["cdc.gov/ticks/prevention","cdc.gov/ticks/after-a-tick-bite","epa.gov/insect-repellents/find-repellent-right-you","health.ny.gov/diseases/communicable/lyme"]}
 ];
 const credits = JSON.parse(read("assets/images/credits.json"));
 const sitemap = read("sitemap.xml");
-const titles = new Map();
-for (const path of ["index.html", ...Array.from({length:0})]) void path;
+const titles = new Set();
+
 for (const page of pages) {
   const canonical = `https://mradventuredad.com/${page.path}`;
   if (!existsSync(resolve(root, page.path))) { fail(`${page.path}: missing`); continue; }
   const html = read(page.path);
   if (!html.includes(`<h1>${page.title}</h1>`)) fail(`${page.path}: title mismatch`);
   if (!html.includes(`rel="canonical" href="${canonical}"`)) fail(`${page.path}: canonical mismatch`);
-  if (!html.includes('datePublished":"2026-09-13"') || !html.includes('dateModified":"2026-09-13"')) fail(`${page.path}: structured dates missing`);
+  if (!html.includes('datePublished":"2026-09-14"') || !html.includes('dateModified":"2026-09-14"')) fail(`${page.path}: structured dates missing`);
   if (!/<meta property="og:title"/.test(html) || !/<meta name="twitter:card"/.test(html)) fail(`${page.path}: social metadata missing`);
   if (!html.includes('application/ld+json') || !html.includes('"Article"') || !html.includes('"Guide"')) fail(`${page.path}: Article/Guide schema missing`);
   if (count(html, /class="article-hero"/g) !== 1 || !html.includes(`/photos/${page.photo}`)) fail(`${page.path}: verified photo hero missing`);
@@ -33,7 +33,7 @@ for (const page of pages) {
   const internal = [...html.matchAll(/<a\b[^>]*href="([^"#]+\.html(?:#[^"]*)?)"/gi)].map(match => match[1]);
   if (new Set(internal).size < 3) fail(`${page.path}: fewer than three internal targets`);
   const words = strip(html).split(/\s+/).length;
-  if (words < 1050) fail(`${page.path}: insufficient substantial copy (${words} words)`);
+  if (words < 1100) fail(`${page.path}: insufficient substantial copy (${words} words)`);
   for (const source of page.sources) if (!html.toLowerCase().includes(source.toLowerCase())) fail(`${page.path}: missing authoritative source ${source}`);
   const paid = count(html, /data-affiliate-active="true"/g);
   if (paid !== page.paid) fail(`${page.path}: expected ${page.paid} paid links, found ${paid}`);
@@ -41,10 +41,12 @@ for (const page of pages) {
     if (count(html, /tag=mradventuredad-20/g) !== paid) fail(`${page.path}: Amazon tag mismatch`);
     if (count(html, /rel="sponsored nofollow noopener noreferrer"/g) !== paid) fail(`${page.path}: paid-link rel mismatch`);
     if (!html.includes('As an Amazon Associate I earn from qualifying purchases')) fail(`${page.path}: disclosure missing`);
+    for (const label of ["Youth bicycle helmets", "Extended-coverage youth bike helmets", "Dual-certified youth bike-and-skate helmets"]) if (!html.includes(label)) fail(`${page.path}: missing precise commercial category ${label}`);
   }
   if (count(sitemap, new RegExp(canonical.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) !== 1) fail(`${page.path}: sitemap entry must appear once`);
-  if (titles.has(page.title)) fail(`${page.path}: duplicate title in batch`); else titles.set(page.title, page.path);
+  if (titles.has(page.title)) fail(`${page.path}: duplicate batch title`); else titles.add(page.title);
 }
+
 for (const [hub, targets] of Object.entries({
   "index.html": pages.map(page => page.path),
   "adventures.html": pages.map(page => page.path),
@@ -55,11 +57,13 @@ for (const [hub, targets] of Object.entries({
   const html = read(hub);
   for (const target of targets) if (!html.includes(`href="${target}"`)) fail(`${hub}: missing ${target}`);
 }
+
 for (const [path, target] of Object.entries({
-  "guides/most-syracuse-with-kids.html":"erie-canal-museum-with-kids.html",
-  "guides/kids-hiking-footwear-trail-runner-shoe-boot.html":"kids-trekking-poles-adjustable-fixed-folding-guide.html",
-  "guides/family-portable-tire-inflator-guide.html":"family-roadside-breakdown-plan.html"
+  "guides/fort-stanwix-with-kids.html":"harriet-tubman-national-historical-park-with-kids.html",
+  "guides/family-bike-ride-plan.html":"kids-bike-helmet-fit-certification-guide.html",
+  "guides/family-bug-protection-guide.html":"family-tick-check-removal-plan.html"
 })) if (!read(path).includes(`href="${target}"`)) fail(`${path}: missing related ${target}`);
+
 const allHtml = [];
 const walk = directory => {
   for (const entry of readdirSync(directory, {withFileTypes:true})) {
@@ -71,5 +75,8 @@ const walk = directory => {
 walk(root);
 const sitewidePaid = allHtml.reduce((total, html) => total + count(html, /data-affiliate-active="true"/g), 0);
 if (sitewidePaid !== 145) fail(`expected 145 active affiliate links sitewide, found ${sitewidePaid}`);
+const placements = pages.reduce((total, page) => total + allHtml.filter(html => html.includes(page.photo)).length, 0);
+if (placements !== 13) fail(`expected 13 new editorial image placements, found ${placements}`);
+
 if (failures.length) { console.error(failures.map(message => `FAIL ${message}`).join("\n")); process.exit(1); }
-console.log("PASS daily 2026-09-13: 3 substantial pages, 3 verified photographic heroes, 0 charts, 3 new disclosed Amazon links, 145 current affiliate links sitewide, authoritative sources, discovery and related links verified.");
+console.log("PASS daily 2026-09-14: 3 substantial pages, 3 verified photographic heroes across 13 placements, 0 product images, 3 new disclosed Amazon links, 145 active affiliate links sitewide, authoritative sources, discovery and related links verified.");

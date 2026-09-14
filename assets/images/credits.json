@@ -811,5 +811,30 @@
     "license_url": "https://commons.wikimedia.org/wiki/File:ErieCanalMuseumSyracuse.JPG#Licensing",
     "verified": "2026-09-13",
     "notes": "Exact-place exterior photograph from 2006. Used as a destination-identification image; current access details come from the museum."
+  },
+  "assets/images/photos/harriet-tubman-church-auburn.webp": {
+    "title": "Thompson Memorial A.M.E. Zion Church facade",
+    "creator": "National Park Service",
+    "source": "https://www.nps.gov/hart/planyourvisit/basicinfo.htm",
+    "license": "Public domain — U.S. National Park Service photograph",
+    "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "verified": "2026-09-14",
+    "notes": "Exact-place photograph of the restored NPS-owned church in Auburn; visually compared with the NPS page and final copy."
+  },
+  "assets/images/photos/kids-bicycle-helmet-fit.webp": {
+    "title": "Youth bicycle-helmet fit systems",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-14",
+    "notes": "Representative unbranded bicycle helmets and rear adjustment systems. No model, certification or crash-performance claim is depicted."
+  },
+  "assets/images/photos/family-tick-check-plan.webp": {
+    "title": "Family post-trail clothing and gear check",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-14",
+    "notes": "Representative calm clothing check after a trail day; lint roller is not presented as a substitute for CDC full-body checks or correct removal."
   }
 }
