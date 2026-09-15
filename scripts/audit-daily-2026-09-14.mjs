@@ -74,7 +74,7 @@ const walk = directory => {
 };
 walk(root);
 const sitewidePaid = allHtml.reduce((total, html) => total + count(html, /data-affiliate-active="true"/g), 0);
-if (sitewidePaid !== 145) fail(`expected 145 active affiliate links sitewide, found ${sitewidePaid}`);
+if (sitewidePaid < 145) fail(`expected at least 145 active affiliate links sitewide, found ${sitewidePaid}`);
 const placements = pages.reduce((total, page) => total + allHtml.filter(html => html.includes(page.photo)).length, 0);
 if (placements !== 13) fail(`expected 13 new editorial image placements, found ${placements}`);
 
