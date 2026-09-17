@@ -860,5 +860,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-15",
     "notes": "Representative calm hotel-arrival route check; no named property or emergency is depicted."
+  },
+  "assets/images/photos/buttermilk-falls-state-park.webp": {
+    "title": "Buttermilk Falls, Ithaca, New York",
+    "creator": "Sdetwiler",
+    "source": "https://commons.wikimedia.org/wiki/File:Buttermilk_Falls,_Ithaca,_NY,_April.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "verified": "2026-09-17",
+    "notes": "Exact named place confirmed from Wikimedia Commons description and category; visually checked before publication. Cropped to 16:9."
+  },
+  "assets/images/photos/kids-booster-seat-categories.webp": {
+    "title": "Child passenger restraint categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-17",
+    "notes": "Representative unbranded high-back booster, backless booster and harnessed combination seat outside a vehicle. No model, fit, rating or certification is implied."
+  },
+  "assets/images/photos/family-food-allergy-day-trip-plan.webp": {
+    "title": "Food-allergy-aware day-trip planning kit",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-17",
+    "notes": "Conceptual preparation scene with food hidden inside closed containers; no pictured item is medical advice or guaranteed allergen-safe."
   }
 }

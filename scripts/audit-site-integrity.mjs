@@ -93,6 +93,9 @@ const photoOnlyEditorialGuides={
   ,"guides/womens-rights-national-historical-park-with-kids.html":"womens-rights-history-day.webp"
   ,"guides/family-car-jump-starter-lithium-jump-box-cables-guide.html":"family-jump-starter-options.webp"
   ,"guides/family-hotel-fire-escape-plan.html":"family-hotel-fire-escape-plan.webp"
+  ,"guides/buttermilk-falls-state-park-with-kids.html":"buttermilk-falls-state-park.webp"
+  ,"guides/kids-booster-seat-high-back-backless-harness-guide.html":"kids-booster-seat-categories.webp"
+  ,"guides/family-food-allergy-day-trip-plan.html":"family-food-allergy-day-trip-plan.webp"
 };
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
@@ -137,7 +140,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==88)fail("expected 88 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==91)fail("expected 91 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -194,7 +197,7 @@ for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==88)fail("expected 88 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==91)fail("expected 91 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");

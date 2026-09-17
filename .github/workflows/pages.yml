@@ -38,6 +38,7 @@ jobs:
           node scripts/audit-daily-2026-09-13.mjs
           node scripts/audit-daily-2026-09-14.mjs
           node scripts/audit-daily-2026-09-15.mjs
+          node scripts/audit-daily-2026-09-17.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload audited site

@@ -125,6 +125,11 @@ const catalog = {
     ["portable jump box vehicle battery booster", "Larger portable jump boxes", "Compare battery chemistry, loaded weight, cable reach, charge-state display, service path and vehicle compatibility."],
     ["heavy duty jumper cables pure copper", "Heavy-duty jumper cables", "Confirm conductor material, gauge, length, clamp geometry and that both vehicle manuals permit the donor procedure."],
   ],
+  boosterseats: [
+    ["high back belt positioning booster seat", "High-back belt-positioning booster seats", "Compare child limits, shoulder-belt guide, vehicle head-restraint rules, width and exact instructions in the seating position."],
+    ["backless belt positioning booster seat", "Backless belt-positioning booster seats", "Use only when the child is booster-ready and the vehicle provides the head support and belt geometry required by the seat."],
+    ["combination harness booster car seat", "Harness-to-booster combination seats", "Check harness and booster limits separately, top-tether instructions, vehicle fit and the child's readiness for each mode."],
+  ],
   trackers: [
     ["bluetooth item tracker luggage backpack", "Bluetooth item trackers", "Choose for a backpack or other item, then verify phone ecosystem, attachment, battery and unwanted-tracker protections."],
     ["kids GPS watch cellular location", "Cellular GPS watches", "Compare service, coverage, charging, age and fit guidance, school rules, privacy and the limits of emergency features."],
@@ -163,6 +168,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/booster seat|high.back.*backless|harness.*booster/.test(haystack)) return catalog.boosterseats;
   if (/kids.*bike helmet|bicycle helmet.*fit|helmet.*certification/.test(haystack)) return catalog.bikehelmets;
   if (/kids.*trekking poles|adjustable.*fixed.*folding/.test(haystack)) return catalog.trekkingpoles;
   if (/kids.*hiking footwear|trail runner.*hiking shoe.*boot/.test(haystack)) return catalog.hikingfootwear;

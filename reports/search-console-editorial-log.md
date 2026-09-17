@@ -30,3 +30,11 @@ Individual query variants had only one to four impressions, too little evidence 
 - **Exploration:** Family hotel fire-escape plan — an underserved evergreen family-travel safety problem.
 
 No outreach was sent. No outreach opportunity was logged because the on-site decision matrix and internal topic cluster were the higher-confidence authority actions for this run.
+# 2026-09-17 editorial decision
+
+- Report generated: 2026-09-16; window: 2026-08-17 through 2026-09-13.
+- Property: `mradventuredad.com` — 208 impressions, 2 clicks, 1.0% CTR, average position 13.6.
+- Data-led signal: Taughannock Falls earned 21 impressions, one click and average position 7.95. That was enough to reinforce the Finger Lakes waterfall cluster with a distinct Buttermilk Falls lower-falls-first guide and reciprocal links, not enough to rewrite Taughannock's working title.
+- Authority expansion: a booster-seat decision guide addresses a separate school-age family need with NHTSA and New York sources, a belt-fit protocol and honest commercial categories.
+- Exploration: a food-allergy day-trip protocol adds a clinician-plan-first six-gate checklist and reciprocal links from the cooler, first-aid and day-trip systems.
+- Deliberately ignored: one-to-four-impression query fragments, branded noise and the Adirondacks weekend page at average position 31.6 were too weak or too broad to dictate a three-page batch.
