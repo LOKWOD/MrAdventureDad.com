@@ -130,6 +130,11 @@ const catalog = {
     ["backless belt positioning booster seat", "Backless belt-positioning booster seats", "Use only when the child is booster-ready and the vehicle provides the head support and belt geometry required by the seat."],
     ["combination harness booster car seat", "Harness-to-booster combination seats", "Check harness and booster limits separately, top-tether instructions, vehicle fit and the child's readiness for each mode."],
   ],
+  drybags: [
+    ["roll top dry bag waterproof family kayak", "Roll-top dry bags", "Compare usable volume, closure instructions, seam construction, attachment points and the maker's exact water-exposure claim."],
+    ["water resistant zippered gear pouch", "Zippered water-resistant gear pouches", "Choose for access only after checking the finished pouch claim, zipper care, cleanability and dimensions of the real load."],
+    ["waterproof phone pouch IPX8", "Waterproof phone pouches", "Verify the tested rating, internal dimensions, closure, lanyard instructions and phone controls before trusting the pouch."],
+  ],
   trackers: [
     ["bluetooth item tracker luggage backpack", "Bluetooth item trackers", "Choose for a backpack or other item, then verify phone ecosystem, attachment, battery and unwanted-tracker protections."],
     ["kids GPS watch cellular location", "Cellular GPS watches", "Compare service, coverage, charging, age and fit guidance, school rules, privacy and the limits of emergency features."],
@@ -168,6 +173,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/dry bag|roll.top.*zippered.*phone pouch|waterproof storage/.test(haystack)) return catalog.drybags;
   if (/booster seat|high.back.*backless|harness.*booster/.test(haystack)) return catalog.boosterseats;
   if (/kids.*bike helmet|bicycle helmet.*fit|helmet.*certification/.test(haystack)) return catalog.bikehelmets;
   if (/kids.*trekking poles|adjustable.*fixed.*folding/.test(haystack)) return catalog.trekkingpoles;
@@ -202,7 +208,7 @@ function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
   if (normalized.startsWith("weekend-")) return null;
-  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html", "guides/most-syracuse-with-kids.html", "guides/family-parking-lot-plan.html", "guides/highland-forest-with-kids.html", "guides/pratts-falls-with-kids.html", "guides/multigenerational-family-day-trip-plan.html", "guides/fort-stanwix-with-kids.html", "guides/family-no-cell-service-day-trip-plan.html", "guides/erie-canal-museum-with-kids.html", "guides/family-roadside-breakdown-plan.html", "guides/harriet-tubman-national-historical-park-with-kids.html", "guides/family-tick-check-removal-plan.html", "guides/womens-rights-national-historical-park-with-kids.html", "guides/family-hotel-fire-escape-plan.html"].includes(normalized)) return null;
+  if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html", "guides/most-syracuse-with-kids.html", "guides/family-parking-lot-plan.html", "guides/highland-forest-with-kids.html", "guides/pratts-falls-with-kids.html", "guides/multigenerational-family-day-trip-plan.html", "guides/fort-stanwix-with-kids.html", "guides/family-no-cell-service-day-trip-plan.html", "guides/erie-canal-museum-with-kids.html", "guides/family-roadside-breakdown-plan.html", "guides/harriet-tubman-national-historical-park-with-kids.html", "guides/family-tick-check-removal-plan.html", "guides/womens-rights-national-historical-park-with-kids.html", "guides/family-hotel-fire-escape-plan.html", "guides/cornell-botanic-gardens-with-kids.html", "guides/family-wildlife-encounter-distance-plan.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
   if (normalized === "adventures.html" || normalized === "index.html") return [...catalog.daytrip, catalog.core[2]];

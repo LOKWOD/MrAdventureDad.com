@@ -885,5 +885,30 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-17",
     "notes": "Conceptual preparation scene with food hidden inside closed containers; no pictured item is medical advice or guaranteed allergen-safe."
+  },
+  "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nevin%20Welcome%20Center%20at%20the%20Cornell%20Botanic%20Gardens.jpg?width=1800": {
+    "title": "Nevin Welcome Center at Cornell Botanic Gardens",
+    "creator": "Kenneth C. Zirkel",
+    "source": "https://commons.wikimedia.org/wiki/File:Nevin_Welcome_Center_at_the_Cornell_Botanic_Gardens.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "verified": "2026-09-19",
+    "notes": "Exact named place confirmed from Wikimedia Commons description, coordinates and Cornell location; visually checked before publication. Remote width service may crop for responsive presentation."
+  },
+  "assets/images/photos/family-dry-bag-categories.webp": {
+    "title": "Family dry-bag storage categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-19",
+    "notes": "Representative unbranded roll-top dry bag, zippered gear pouch and transparent phone pouch. No model, rating, flotation or submersion claim is implied."
+  },
+  "assets/images/photos/family-wildlife-distance-plan.webp": {
+    "title": "Family wildlife-distance planning scene",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-19",
+    "notes": "Conceptual family observation scene with a distant deer; does not depict a named place, actual encounter or universal viewing distance."
   }
 }
