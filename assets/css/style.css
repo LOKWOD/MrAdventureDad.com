@@ -84,3 +84,9 @@ body{background:var(--paper)}
 .brand-showcase{background:#fff;padding:30px max(20px,calc((100vw - 1160px)/2));border-bottom:1px solid var(--line)}
 .brand-showcase img{width:min(100%,1000px);height:auto;margin:auto}
 @media(max-width:800px){.brand-mark{width:42px;height:42px}.brand{font-size:16px}.brand-showcase{padding:18px 14px}}
+
+/* Integrate the primary mark into the navigation rather than a standalone banner. */
+.site-header{background:#fff}
+.site-header .brand{display:block;flex:none;width:270px;height:59px;background:url('/assets/brand-primary.svg') left center/contain no-repeat}
+.site-header .brand>span{display:none}
+@media(max-width:800px){.site-header .brand{width:min(220px,calc(100vw - 95px));height:49px}}
