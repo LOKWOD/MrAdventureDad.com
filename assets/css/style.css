@@ -73,3 +73,14 @@ body{background:#f7f4ed}
 /* Source-backed decision matrix */
 .authority-matrix{margin:52px 0;padding:30px;background:#ebe4d5;border:1px solid var(--line)}.authority-matrix>h2{margin-top:0}.authority-matrix-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}.authority-matrix-grid article{background:#fff;border:1px solid var(--line);padding:20px}.authority-matrix-grid h3{margin:0 0 12px}.authority-matrix-grid p{font-size:15px;margin:10px 0}.matrix-rule{border-top:1px solid var(--line);padding-top:18px;margin-bottom:0}
 @media(max-width:800px){.authority-matrix{padding:22px 18px}.authority-matrix-grid{grid-template-columns:1fr}}
+
+/* Mr Adventure Dad identity, September 2026 */
+:root{--ink:#132b38;--paper:#f8f6f0;--cream:#eee9df;--orange:#e87720;--green:#293f2e;--muted:#626a68;--line:#d8d8d0}
+body{background:var(--paper)}
+.site-header{background:rgba(248,246,240,.97)}
+.brand-mark{width:50px;height:50px;flex:none;border-radius:50%;background:#f8f6f0 url('/assets/brand-badge.svg') center/contain no-repeat;box-shadow:none;font-size:0;color:transparent}
+.brand{color:var(--ink);font-weight:700}
+.brand b{color:var(--green)}
+.brand-showcase{background:#fff;padding:30px max(20px,calc((100vw - 1160px)/2));border-bottom:1px solid var(--line)}
+.brand-showcase img{width:min(100%,1000px);height:auto;margin:auto}
+@media(max-width:800px){.brand-mark{width:42px;height:42px}.brand{font-size:16px}.brand-showcase{padding:18px 14px}}
