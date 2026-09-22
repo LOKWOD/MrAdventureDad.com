@@ -91,10 +91,8 @@ body{background:var(--paper)}
 .site-header .brand>span{display:none}
 @media(max-width:800px){.site-header .brand{width:min(220px,calc(100vw - 95px));height:49px}}
 
-/* Readable lockup: badge, wordmark and a real-size tagline. */
-.site-header .brand{display:flex;align-items:center;gap:13px;width:auto;height:auto;background:none;position:relative;padding:4px 0 17px;white-space:nowrap}
-.site-header .brand>span{display:block}
-.site-header .brand .brand-mark{width:57px;height:57px;flex:none;font-size:0;background:#fff url('/assets/brand-badge.svg') center/contain no-repeat;border-radius:50%}
-.site-header .brand>span:last-child{font-size:clamp(20px,1.7vw,26px);line-height:1;font-weight:700;letter-spacing:.015em}
-.site-header .brand::after{content:"MAKE THE WEEKEND COUNT.";position:absolute;left:70px;bottom:5px;font:700 11px/1 Manrope,Arial,sans-serif;letter-spacing:.13em;color:var(--orange)}
-@media(max-width:800px){.site-header .brand{gap:8px;padding-bottom:12px}.site-header .brand .brand-mark{width:41px;height:41px}.site-header .brand>span:last-child{font-size:clamp(16px,4vw,22px)}.site-header .brand::after{left:49px;bottom:2px;font-size:8px;letter-spacing:.08em}}
+
+/* Larger supplied primary logo in the header. */
+.site-header{height:108px}
+.site-header .brand{width:440px;height:95px}
+@media(max-width:800px){.site-header{height:76px}.site-header .brand{width:min(295px,calc(100vw - 85px));height:64px}.nav{top:76px}}
