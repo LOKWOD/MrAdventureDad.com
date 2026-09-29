@@ -16,7 +16,7 @@ for(const p of pages){
  if(!h.includes(`<h1>${p.title}</h1>`))fail(`${p.path}: title mismatch`);
  if(!h.includes(`rel="canonical" href="${p.canonical}"`))fail(`${p.path}: canonical mismatch`);
  if(!h.includes('datePublished":"2026-09-09"'))fail(`${p.path}: original published date missing`);
- const modified=h.match(/"dateModified":"(\\d{4}-\\d{2}-\\d{2})"/);
+ const modified=h.match(/"dateModified":"(\d{4}-\d{2}-\d{2})"/);
  if(!modified || modified[1]<"2026-09-09")fail(`${p.path}: valid updated date missing`);
  if(!/<meta property="og:title"/.test(h)||!/<meta name="twitter:card"/.test(h))fail(`${p.path}: social metadata missing`);
  if(!h.includes('application/ld+json')||!h.includes('"Article"')||!h.includes('"Guide"'))fail(`${p.path}: Article/Guide schema missing`);
