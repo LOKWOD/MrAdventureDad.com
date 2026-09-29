@@ -49,3 +49,14 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Deliberately ignored: one-to-four-impression query fragments, branded noise, Beaver Lake's seven impressions and the Adirondacks weekend page at average position 31.6 were too weak to steer a new exact-match page.
 - Diversity check: the destination, product decision and safety protocol use different search intents, subjects and formats; none competes with the September 19–20 weekly event roundup.
 - Authority action: added the citation-ready wildlife response matrix and nine reciprocal contextual links across the Finger Lakes, water-gear and wildlife clusters. No outreach was sent or logged.
+
+# 2026-09-29 editorial decision
+
+- Report generated: 2026-09-23; window: 2026-08-24 through 2026-09-20.
+- Property: `mradventuredad.com` — 372 impressions, 3 clicks, 0.8% CTR, average position 11.8.
+- Data-led signal: Clark Reservation earned 25 impressions, one click and average position 16.4; Taughannock Falls earned 21 impressions, one click and average position 8.0. This supported one distinct short Central New York nature-center plan—Baltimore Woods—with reciprocal links from Clark Reservation, Beaver Lake and the first-hike guide. It did not justify another waterfall guide or title rewrite.
+- Authority expansion: the kids’ hiking-sock guide adds a one-pair-first buying protocol and a six-part shoe-fit check, strengthening the established footwear, daypack and first-hike cluster.
+- Exploration: the family medicine away-from-home plan addresses an at-home preparation and travel-safety problem with a four-point handoff record and pack–lock–list–return protocol.
+- Deliberately ignored: the 26-impression “binoculars for parents” query at position 1.3 was already served by the existing binocular guide; one-to-four-impression Adirondacks variants and unrelated branded queries were too weak to justify duplicate pages.
+- Diversity check: the local destination plan, commercial foot-fit guide and noncommercial medicine-control system use different search intents, formats and primary subjects. None competes with the September 26–27 roundup.
+- Authority action: added three source-backed decision matrices and nine reciprocal contextual links across the Central New York nature, trail-footwear and family-safety clusters. No outreach was sent or logged.
