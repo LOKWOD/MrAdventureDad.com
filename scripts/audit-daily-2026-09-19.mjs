@@ -89,9 +89,9 @@ const walk = directory => {
 };
 walk(root);
 const sitewidePaid = allHtml.reduce((total, html) => total + count(html, /data-affiliate-active="true"/g), 0);
-if (sitewidePaid !== 154) fail(`expected 154 active affiliate links sitewide, found ${sitewidePaid}`);
+if (sitewidePaid !== 157) fail(`expected 157 active affiliate links sitewide, found ${sitewidePaid}`);
 const placements = pages.reduce((total, page) => total + allHtml.filter(html => html.includes(page.image)).length, 0);
 if (placements !== 13) fail(`expected 13 new editorial image placements, found ${placements}`);
 
 if (failures.length) { console.error(failures.map(message => `FAIL ${message}`).join("\n")); process.exit(1); }
-console.log("PASS daily 2026-09-19: 3 substantial pages, 3 verified editorial heroes across 13 placements, 0 product images, 3 new disclosed Amazon links, 154 active affiliate links sitewide, authority matrix, authoritative sources, discovery and related links verified.");
+console.log("PASS daily 2026-09-19: 3 substantial pages, 3 verified editorial heroes across 13 placements, 0 product images, 3 new disclosed Amazon links, 157 active affiliate links sitewide, authority matrix, authoritative sources, discovery and related links verified.");
