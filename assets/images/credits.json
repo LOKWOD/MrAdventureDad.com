@@ -934,5 +934,29 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-09-29",
     "notes": "Conceptual adult-controlled locked-pouch setup. No child-resistance, storage, temperature or dosing claim is implied."
+  },
+  "assets/images/photos/after-school-nature-mission.webp": {
+    "title": "After-school nature mission",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-30",
+    "notes": "Generic familiar-path planning scene; it does not depict a named park or imply the short walk alone fulfills daily activity guidance."
+  },
+  "assets/images/photos/family-library-night.webp": {
+    "title": "Family library night",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-30",
+    "notes": "Generic library scene with blank-spined books; it does not depict or promise the facilities, hours or collection of a specific branch."
+  },
+  "assets/images/photos/family-charging-station-categories.webp": {
+    "title": "Family charging-station categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-09-30",
+    "notes": "Conceptual unbranded category comparison; not a product image, certification claim, wiring diagram, endorsement or hands-on test."
   }
 }

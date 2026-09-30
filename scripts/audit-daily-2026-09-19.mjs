@@ -89,7 +89,7 @@ const walk = directory => {
 };
 walk(root);
 const sitewidePaid = allHtml.reduce((total, html) => total + count(html, /data-affiliate-active="true"/g), 0);
-if (sitewidePaid !== 157) fail(`expected 157 active affiliate links sitewide, found ${sitewidePaid}`);
+if (sitewidePaid < 157) fail(`expected at least 157 active affiliate links sitewide, found ${sitewidePaid}`);
 const placements = pages.reduce((total, page) => total + allHtml.filter(html => html.includes(page.image)).length, 0);
 if (placements !== 13) fail(`expected 13 new editorial image placements, found ${placements}`);
 

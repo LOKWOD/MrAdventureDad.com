@@ -60,3 +60,8 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Deliberately ignored: the 26-impression “binoculars for parents” query at position 1.3 was already served by the existing binocular guide; one-to-four-impression Adirondacks variants and unrelated branded queries were too weak to justify duplicate pages.
 - Diversity check: the local destination plan, commercial foot-fit guide and noncommercial medicine-control system use different search intents, formats and primary subjects. None competes with the September 26–27 roundup.
 - Authority action: added three source-backed decision matrices and nine reciprocal contextual links across the Central New York nature, trail-footwear and family-safety clusters. No outreach was sent or logged.
+# September 30, 2026
+
+- Used the September 23 report's Clark Reservation (25 impressions, one click, position 16.36) and Taughannock Falls (21 impressions, one click, position 7.95) signal for one distinct after-school nature-mission guide.
+- Strengthened homepage, hub, reciprocal-link and sitemap discovery because the sitemap row showed 0 indexed of 94 submitted despite observable impressions and clicks.
+- Ignored the already-served binocular query at position 1.35 and one-to-four-impression fragments as insufficient reasons to duplicate existing coverage.

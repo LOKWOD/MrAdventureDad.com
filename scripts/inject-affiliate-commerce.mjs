@@ -155,6 +155,11 @@ const catalog = {
     ["kids synthetic hiking socks moisture wicking", "Kids’ synthetic hiking socks", "Compare thickness, seams, drying, cuff pressure and return terms after testing one pair in the actual shoe."],
     ["kids lightweight hiking socks crew", "Lightweight kids’ hiking socks", "Choose a cuff above the shoe collar and enough room for toes without buying a multi-pack before the fit test."],
   ],
+  chargingstations: [
+    ["USB IF certified multiport USB C charger", "Multiport USB-C chargers", "Compare total and per-port output, shared-output behavior, supported protocols, certification record and the maker’s current instructions."],
+    ["UL listed power strip wide spaced outlets", "Listed power strips", "Verify the exact listing, receptacle spacing, cord length, overload protection, surge status and permitted use before choosing a strip."],
+    ["passive device charging station organizer no electronics", "Passive device-charging organizers", "Measure cased-device slots and cable routing, and confirm whether the organizer contains any electrical components before buying."],
+  ],
   trekkingpoles: [
     ["kids adjustable trekking poles hiking", "Adjustable trekking poles for kids", "Verify the minimum usable length, grip size, lock security, section markings and current return terms for the actual child."],
     ["youth aluminum trekking poles adjustable", "Youth aluminum trekking poles", "Compare usable range, pair weight, lock type, replacement tips and the manufacturer’s inspection instructions."],
@@ -183,6 +188,7 @@ function chooseCatalog(path, text) {
   if (/kids.*bike helmet|bicycle helmet.*fit|helmet.*certification/.test(haystack)) return catalog.bikehelmets;
   if (/kids.*trekking poles|adjustable.*fixed.*folding/.test(haystack)) return catalog.trekkingpoles;
   if (/kids.*hiking socks|wool.*synthetic.*cotton.*sock/.test(haystack)) return catalog.hikingsocks;
+  if (/family charging station|multiport charger.*power strip.*dock|charging compatibility card/.test(haystack)) return catalog.chargingstations;
   if (/kids.*hiking footwear|trail runner.*hiking shoe.*boot/.test(haystack)) return catalog.hikingfootwear;
   if (/roof cargo|cargo box|rooftop bag|cargo basket/.test(haystack)) return catalog.roofcargo;
   if (/tire inflator|portable inflator|foot pump|pressure gauge/.test(haystack)) return catalog.tireinflators;
