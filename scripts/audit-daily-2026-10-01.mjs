@@ -8,9 +8,9 @@ const read = path => readFileSync(resolve(root, path), "utf8");
 const count = (text, pattern) => (text.match(pattern) || []).length;
 const strip = html => html.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
 const pages = [
-  {path:"guides/after-school-nature-walk-30-minute-plan.html",title:"The 30-Minute After-School Nature Mission: One Loop, Three Clues, Home Before Dark",image:"after-school-nature-mission.webp",paid:0,sources:["cdc.gov/physical-activity-education/guidelines","nhtsa.gov/road-safety/pedestrian-safety","gml.noaa.gov/grad/solcalc"]},
-  {path:"guides/family-library-night-45-minute-plan.html",title:"The 45-Minute Family Library Night: One Mission, One Bag, Leave on Time",image:"family-library-night.webp",paid:0,sources:["onlib.org/locations","onlib.org/find/using-library/using-your-library-card","onlib.org/learn/youth-resources"]},
-  {path:"guides/family-charging-station-multiport-power-strip-dock-guide.html",title:"Family Charging Stations: Multiport Charger vs Power Strip vs Dock—and the Compatibility Card",image:"family-charging-station-categories.webp",paid:3,sources:["usb.org/usb-charger-pd","cpsc.gov/safety-education/safety-guides/electronics-and-electrical/electrical-safety","ul.com/services/power-strips-testing-and-certification"]}
+  {path:"guides/iroquois-museum-with-kids.html",title:"Iroquois Museum With Kids: Art First, Nature Trail Second",image:"iroquois-museum-family-plan.webp",paid:0,sources:["iroquoismuseum.org/visit","iroquoismuseum.org/current-exhibition","iroquoismuseum.org/nature-park"]},
+  {path:"guides/family-calendar-reset-20-minute-plan.html",title:"The 20-Minute Family Calendar Reset: Tonight, Weekend, Break, Home",image:"family-calendar-reset.webp",paid:0,sources:["healthychildren.org/English/family-life/family-dynamics/Pages/The-Importance-of-Family-Routines.aspx","consumer.gov/your-money/making-budget"]},
+  {path:"guides/kids-camera-simple-digital-instant-rugged-guide.html",title:"Cameras for Kids: Simple Digital vs Instant Print vs Rugged—and the Privacy Check",image:"kids-camera-categories.webp",paid:3,sources:["consumer.ftc.gov/articles/protecting-your-childs-privacy-online","cpsc.gov/Recalls","tsa.gov/travel/security-screening"]}
 ];
 const sitemap = read("sitemap.xml");
 const credits = JSON.parse(read("assets/images/credits.json"));
@@ -22,7 +22,7 @@ for (const page of pages) {
   const html = read(page.path);
   if (!html.includes(`<h1>${page.title}</h1>`)) fail(`${page.path}: title mismatch`);
   if (!html.includes(`rel="canonical" href="${canonical}"`)) fail(`${page.path}: canonical mismatch`);
-  if (!html.includes('datePublished":"2026-09-30"') || !html.includes('dateModified":"2026-09-30"')) fail(`${page.path}: structured dates missing`);
+  if (!html.includes('datePublished":"2026-10-01"') || !html.includes('dateModified":"2026-10-01"')) fail(`${page.path}: structured dates missing`);
   if (!/<meta property="og:title"/.test(html) || !/<meta name="twitter:card"/.test(html)) fail(`${page.path}: social metadata missing`);
   if (!html.includes('application/ld+json') || !html.includes('"Article"') || !html.includes('"Guide"')) fail(`${page.path}: Article/Guide schema missing`);
   if (count(html,/class="article-hero"/g)!==1 || !html.includes(page.image)) fail(`${page.path}: verified hero missing`);
@@ -40,16 +40,16 @@ for (const page of pages) {
     if(count(html,/tag=mradventuredad-20/g)!==paid)fail(`${page.path}: Amazon tag mismatch`);
     if(count(html,/rel="sponsored nofollow noopener noreferrer"/g)!==paid)fail(`${page.path}: paid-link rel mismatch`);
     if(!html.includes('As an Amazon Associate I earn from qualifying purchases'))fail(`${page.path}: disclosure missing`);
-    for(const label of ["Multiport USB-C chargers","Listed power strips","Passive device-charging organizers"])if(!html.includes(label))fail(`${page.path}: missing precise commercial category ${label}`);
+    for(const label of ["Simple digital cameras","Instant-print cameras","Rugged compact cameras"])if(!html.includes(label))fail(`${page.path}: missing precise commercial category ${label}`);
   }
   if(count(sitemap,new RegExp(canonical.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"g"))!==1)fail(`${page.path}: sitemap entry must appear once`);
   if(titles.has(page.title))fail(`${page.path}: duplicate batch title`);else titles.add(page.title);
 }
 
 for(const [key,note] of [
-  ["assets/images/photos/after-school-nature-mission.webp","does not depict a named park"],
-  ["assets/images/photos/family-library-night.webp","does not depict or promise"],
-  ["assets/images/photos/family-charging-station-categories.webp","not a product image, certification claim"]
+  ["assets/images/photos/iroquois-museum-family-plan.webp","does not depict the museum building"],
+  ["assets/images/photos/family-calendar-reset.webp","no private family schedule"],
+  ["assets/images/photos/kids-camera-categories.webp","not a product image, tested item"]
 ]){
   if(!credits[key])fail(`image credit missing: ${key}`);
   else if(!credits[key].notes.includes(note))fail(`image credit scope mismatch: ${key}`);
@@ -58,33 +58,33 @@ for(const [key,note] of [
 for(const [hub,targets] of Object.entries({
   "index.html":pages.map(page=>page.path),
   "adventures.html":pages.map(page=>page.path),
-  "outdoors.html":[pages[0].path],
+  "destinations.html":[pages[0].path],
   "gear.html":[pages[2].path]
 }))for(const target of targets)if(!read(hub).includes(`href="${target}"`))fail(`${hub}: missing ${target}`);
 
 for(const [path,target] of Object.entries({
-  "guides/clark-reservation-state-park-with-kids.html":"after-school-nature-walk-30-minute-plan.html",
-  "guides/taughannock-falls-with-kids.html":"after-school-nature-walk-30-minute-plan.html",
-  "guides/baltimore-woods-with-kids.html":"after-school-nature-walk-30-minute-plan.html",
-  "guides/family-museum-day-system.html":"family-library-night-45-minute-plan.html",
-  "guides/most-syracuse-with-kids.html":"family-library-night-45-minute-plan.html",
-  "guides/family-day-trip-system.html":"family-library-night-45-minute-plan.html",
-  "guides/family-power-banks-car-chargers.html":"family-charging-station-multiport-power-strip-dock-guide.html",
-  "guides/family-location-trackers-bluetooth-gps-watch-phone.html":"family-charging-station-multiport-power-strip-dock-guide.html",
-  "guides/family-hotel-room-system.html":"family-charging-station-multiport-power-strip-dock-guide.html"
+  "guides/howe-caverns-with-kids.html":"iroquois-museum-with-kids.html",
+  "guides/family-museum-day-system.html":"iroquois-museum-with-kids.html",
+  "guides/family-day-trip-system.html":"iroquois-museum-with-kids.html",
+  "guides/after-school-nature-walk-30-minute-plan.html":"family-calendar-reset-20-minute-plan.html",
+  "guides/family-library-night-45-minute-plan.html":"family-calendar-reset-20-minute-plan.html",
+  "guides/family-outdoor-weather-cutoff-plan.html":"family-calendar-reset-20-minute-plan.html",
+  "guides/family-travel-games-guide.html":"kids-camera-simple-digital-instant-rugged-guide.html",
+  "guides/family-charging-station-multiport-power-strip-dock-guide.html":"kids-camera-simple-digital-instant-rugged-guide.html",
+  "guides/family-location-trackers-bluetooth-gps-watch-phone.html":"kids-camera-simple-digital-instant-rugged-guide.html"
 }))if(!read(path).includes(`href="${target}"`))fail(`${path}: missing related ${target}`);
 
-if(!/FRESH IDEAS · (?:SEPTEMBER 30|OCTOBER 1), 2026/.test(read("index.html")))fail("homepage current-date lead missing");
+if(!read("index.html").includes("FRESH IDEAS · OCTOBER 1, 2026"))fail("homepage current-date lead missing");
 if(!read("index.html").includes("weekend-october-3-4-2026.html"))fail("homepage current weekend roundup missing");
-for(const id of ["nature-mission-card","library-mission-card","charging-compatibility-card"])if(!pages.some(page=>read(page.path).includes(`id="${id}"`)))fail(`authority matrix missing: ${id}`);
+for(const id of ["iroquois-visit-card","calendar-four-horizon","camera-category-card"])if(!pages.some(page=>read(page.path).includes(`id="${id}"`)))fail(`authority matrix missing: ${id}`);
 
 const allHtml=[];
 const walk=directory=>{for(const entry of readdirSync(directory,{withFileTypes:true})){if(entry.name===".git")continue;const path=resolve(directory,entry.name);if(entry.isDirectory())walk(path);else if(entry.name.endsWith(".html"))allHtml.push(readFileSync(path,"utf8"));}};
 walk(root);
 const sitewidePaid=allHtml.reduce((total,html)=>total+count(html,/data-affiliate-active="true"/g),0);
-if(sitewidePaid<160)fail(`expected at least 160 active affiliate links sitewide, found ${sitewidePaid}`);
+if(sitewidePaid!==163)fail(`expected 163 active affiliate links sitewide, found ${sitewidePaid}`);
 const placements=pages.reduce((total,page)=>total+allHtml.filter(html=>html.includes(page.image)).length,0);
 if(placements!==11)fail(`expected 11 new editorial image placements, found ${placements}`);
 
 if(failures.length){console.error(failures.map(message=>`FAIL ${message}`).join("\n"));process.exit(1);}
-console.log("PASS daily 2026-09-30: 3 substantial pages, 3 verified editorial heroes across 11 placements, 0 product images, 3 new disclosed Amazon links, 160 active affiliate links sitewide, 3 authority matrices, 9 reciprocal links, protected weekend roundup and current homepage lead verified.");
+console.log("PASS daily 2026-10-01: 3 substantial pages, 3 verified editorial heroes across 11 placements, 0 product images, 3 new disclosed Amazon links, 163 active affiliate links sitewide, 3 authority matrices, 9 reciprocal links, protected weekend roundup and current homepage lead verified.");
