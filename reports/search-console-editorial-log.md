@@ -65,3 +65,9 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Used the September 23 report's Clark Reservation (25 impressions, one click, position 16.36) and Taughannock Falls (21 impressions, one click, position 7.95) signal for one distinct after-school nature-mission guide.
 - Strengthened homepage, hub, reciprocal-link and sitemap discovery because the sitemap row showed 0 indexed of 94 submitted despite observable impressions and clicks.
 - Ignored the already-served binocular query at position 1.35 and one-to-four-impression fragments as insufficient reasons to duplicate existing coverage.
+# 2026-10-02
+
+- Report generated: 2026-09-30; current window 2026-08-31 through 2026-09-27.
+- Used: Clark Reservation page, 32 impressions / 1 click / 3.1% CTR / position 17.1, to justify one distinct four-place Central New York trail decision guide with reciprocal links.
+- Ignored: 42-impression `binoculars for parents` query at position 1.2 because the existing binocular page already serves it; ignored four total Adirondacks vacation impressions at positions 30–41.5 as too weak.
+- Portfolio: one data-led comparison, one adjacent hiking-fit authority guide, one fresh no-spend at-home science activity.

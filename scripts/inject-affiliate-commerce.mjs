@@ -155,6 +155,11 @@ const catalog = {
     ["kids synthetic hiking socks moisture wicking", "Kids’ synthetic hiking socks", "Compare thickness, seams, drying, cuff pressure and return terms after testing one pair in the actual shoe."],
     ["kids lightweight hiking socks crew", "Lightweight kids’ hiking socks", "Choose a cuff above the shoe collar and enough room for toes without buying a multi-pack before the fit test."],
   ],
+  hikinggloves: [
+    ["kids fleece gloves hiking", "Kids’ fleece hiking gloves", "Compare hand measurement, seam comfort, cuff overlap, grip and the maker’s exact material and care instructions."],
+    ["kids waterproof shell mittens", "Kids’ waterproof shell mittens", "Check whether the shell is insulated, how the seams and cuff are constructed, and which liner the maker permits."],
+    ["kids insulated hiking gloves", "Kids’ insulated hiking gloves", "Prioritize present fit, jacket-cuff compatibility, grip and a realistic drying plan over a vague temperature claim."],
+  ],
   chargingstations: [
     ["USB IF certified multiport USB C charger", "Multiport USB-C chargers", "Compare total and per-port output, shared-output behavior, supported protocols, certification record and the maker’s current instructions."],
     ["UL listed power strip wide spaced outlets", "Listed power strips", "Verify the exact listing, receptacle spacing, cord length, overload protection, surge status and permitted use before choosing a strip."],
@@ -188,6 +193,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/kids.*hiking gloves|fleece.*shell mittens.*insulated.*gloves|glove.*grip test/.test(haystack)) return catalog.hikinggloves;
   if (/camera.*kids|simple digital.*instant.*rugged|instant.print camera/.test(haystack)) return catalog.kidscameras;
   if (/dry bag|roll.top.*zippered.*phone pouch|waterproof storage/.test(haystack)) return catalog.drybags;
   if (/booster seat|high.back.*backless|harness.*booster/.test(haystack)) return catalog.boosterseats;
