@@ -78,3 +78,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Used: Howe Caverns, 61 impressions / 1 click / 1.6% CTR / position 8.9, for one narrower packing-and-clothing support guide with a reciprocal link; the established itinerary URL stayed stable.
 - Ignored: 42-impression `binoculars for parents` at position 1.2 because the existing binocular guide already serves it; ignored one-to-eight-impression Adirondacks variants as too weak.
 - Portfolio: one data-led commercial cave-packing decision, one outdoor-art authority expansion and one no-spend after-school exploration.
+
+# 2026-10-04
+
+- Report generated: 2026-09-30; current window 2026-08-31 through 2026-09-27.
+- Used: MOST Syracuse, 16 impressions / 1 click / 6.25% CTR / position 16.06, for one distinct MOST-vs-zoo-vs-Canal-Museum decision guide with reciprocal links; existing venue pages stayed stable.
+- Ignored: 42-impression `binoculars for parents` at position 1.21 because the existing binocular guide already serves it; ignored one-to-eight-impression Adirondacks variants and isolated branded noise as too weak.
+- Discovery: strengthened homepage, hub, sitemap and reciprocal paths because the sitemap report's zero-indexed row conflicts with observable clicks and impressions.
+- Portfolio: one data-led local comparison, one commercial nature-tool authority expansion and one no-spend at-home exploration.

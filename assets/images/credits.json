@@ -1030,5 +1030,29 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-10-03",
     "notes": "Generic sound-map setup with no person, address, app, private worksheet or identifiable neighborhood."
+  },
+  "assets/images/photos/syracuse-family-outing-picker.webp": {
+    "title": "Syracuse family outing decision board",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-04",
+    "notes": "Conceptual unbranded decision board; it does not depict MOST, Rosamond Gifford Zoo, Erie Canal Museum, a real exhibit, ticket or route map."
+  },
+  "assets/images/photos/family-nature-observation-kit.webp": {
+    "title": "Family nature-observation tool categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-04",
+    "notes": "Conceptual unbranded tool categories with an empty viewer; not tested products, endorsements or a captured animal."
+  },
+  "assets/images/photos/family-living-room-picnic.webp": {
+    "title": "No-shopping living-room picnic setup",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-04",
+    "notes": "Conceptual generic indoor picnic; not a real home, family, product placement or prepared event."
   }
 }
