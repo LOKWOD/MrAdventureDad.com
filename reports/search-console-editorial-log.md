@@ -86,3 +86,10 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: 42-impression `binoculars for parents` at position 1.21 because the existing binocular guide already serves it; ignored one-to-eight-impression Adirondacks variants and isolated branded noise as too weak.
 - Discovery: strengthened homepage, hub, sitemap and reciprocal paths because the sitemap report's zero-indexed row conflicts with observable clicks and impressions.
 - Portfolio: one data-led local comparison, one commercial nature-tool authority expansion and one no-spend at-home exploration.
+
+# 2026-10-07
+
+- Report generated: 2026-09-30; current window 2026-08-31 through 2026-09-27.
+- Used as restraint: Howe Caverns (61 impressions, position 8.87), Clark Reservation (32 impressions, position 17.06), MOST (16 impressions, position 16.06) and the 42-impression binocular query already received focused support in the October 2–4 batches, so no second near-duplicate was published.
+- Ignored: one-to-eight-impression Adirondacks variants and isolated irrelevant/branded fragments were too weak to redirect the portfolio.
+- Portfolio: two distinct authority expansions—a local canal-history itinerary and a commercial fall-layer system—plus a no-spend at-home paper-bridge exploration. The current October 10–11 event roundup remains the sole page for this week’s event intent.

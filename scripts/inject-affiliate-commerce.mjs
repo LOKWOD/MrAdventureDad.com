@@ -170,6 +170,11 @@ const catalog = {
     ["kids waterproof shell mittens", "Kids’ waterproof shell mittens", "Check whether the shell is insulated, how the seams and cuff are constructed, and which liner the maker permits."],
     ["kids insulated hiking gloves", "Kids’ insulated hiking gloves", "Prioritize present fit, jacket-cuff compatibility, grip and a realistic drying plan over a vague temperature claim."],
   ],
+  trailclothing: [
+    ["kids moisture wicking base layer long sleeve", "Kids’ moisture-managing base layers", "Compare fiber content, seam comfort, neck opening, sleeve length, care instructions and return terms on the actual child."],
+    ["kids full zip fleece jacket hiking", "Kids’ full-zip fleece midlayers", "Check zipper comfort, shoulder movement, pack fit, fabric weight and whether the layer vents easily during active walking."],
+    ["kids waterproof breathable rain shell jacket", "Kids’ weather shells", "Verify the finished garment’s water-protection claim, seam construction, hood visibility, layer room and care requirements."],
+  ],
   chargingstations: [
     ["USB IF certified multiport USB C charger", "Multiport USB-C chargers", "Compare total and per-port output, shared-output behavior, supported protocols, certification record and the maker’s current instructions."],
     ["UL listed power strip wide spaced outlets", "Listed power strips", "Verify the exact listing, receptacle spacing, cord length, overload protection, surge status and permitted use before choosing a strip."],
@@ -208,6 +213,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/kids.*fall trail layers|base layer.*fleece.*insulation.*shell|system before brand/.test(haystack)) return catalog.trailclothing;
   if (/walking visibility gear|reflective vest.*bands.*clip light|visibility is not right.of.way/.test(haystack)) return catalog.visibilitygear;
   if (/nature observation kit|magnifying glass.*bug viewer.*macro lens|observe.record.release/.test(haystack)) return catalog.natureobservation;
   if (/what to wear at howe caverns|52.f.*139.stair|bag.free.*howe caverns/.test(haystack)) return catalog.howepacking;
@@ -250,6 +256,7 @@ function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
   if (normalized.startsWith("weekend-")) return null;
+  if (["guides/camillus-erie-canal-park-with-kids.html", "guides/paper-bridge-load-test-25-minute-family-stem.html"].includes(normalized)) return null;
   if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html", "guides/most-syracuse-with-kids.html", "guides/family-parking-lot-plan.html", "guides/highland-forest-with-kids.html", "guides/pratts-falls-with-kids.html", "guides/multigenerational-family-day-trip-plan.html", "guides/fort-stanwix-with-kids.html", "guides/family-no-cell-service-day-trip-plan.html", "guides/erie-canal-museum-with-kids.html", "guides/family-roadside-breakdown-plan.html", "guides/harriet-tubman-national-historical-park-with-kids.html", "guides/family-tick-check-removal-plan.html", "guides/womens-rights-national-historical-park-with-kids.html", "guides/family-hotel-fire-escape-plan.html", "guides/cornell-botanic-gardens-with-kids.html", "guides/family-wildlife-encounter-distance-plan.html", "guides/buttermilk-falls-state-park-with-kids.html", "guides/family-food-allergy-day-trip-plan.html", "guides/baltimore-woods-with-kids.html", "guides/family-medicine-away-from-home-plan.html", "guides/after-school-nature-walk-30-minute-plan.html", "guides/family-library-night-45-minute-plan.html", "guides/iroquois-museum-with-kids.html", "guides/family-calendar-reset-20-minute-plan.html", "guides/central-new-york-family-trail-picker.html", "guides/flashlight-shadow-lab-30-minute-family-science.html", "guides/stone-quarry-hill-art-park-with-kids.html", "guides/neighborhood-sound-map-20-minute-family-activity.html", "guides/syracuse-family-outing-picker-most-zoo-erie-canal-museum.html", "guides/living-room-picnic-30-minute-family-plan.html", "guides/saratoga-national-historical-park-with-kids.html", "guides/family-home-fire-escape-drill-20-minute-plan.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
