@@ -93,3 +93,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Used as restraint: Howe Caverns (61 impressions, position 8.87), Clark Reservation (32 impressions, position 17.06), MOST (16 impressions, position 16.06) and the 42-impression binocular query already received focused support in the October 2–4 batches, so no second near-duplicate was published.
 - Ignored: one-to-eight-impression Adirondacks variants and isolated irrelevant/branded fragments were too weak to redirect the portfolio.
 - Portfolio: two distinct authority expansions—a local canal-history itinerary and a commercial fall-layer system—plus a no-spend at-home paper-bridge exploration. The current October 10–11 event roundup remains the sole page for this week’s event intent.
+
+# 2026-10-08
+
+- Report generated: 2026-10-07; current window 2026-09-07 through 2026-10-04.
+- Used: family camping sleep system, 13 impressions / 1 click / 7.69% CTR / position 8.0, for one distinct child-specific sleeping-bag ratings, fit and pad guide with reciprocal links; the established broad sleep-system URL stayed stable.
+- Ignored: Howe Caverns, Clark Reservation and MOST already received focused support on October 2–4; the travel-bag page’s 2 clicks came from only 4 impressions and was too small to justify a packing-cube page.
+- Discovery: strengthened homepage, hubs, sitemap and nine reciprocal paths while treating the reported 0 indexed / 114 submitted sitemap row as inconsistent with observable impressions, not as proof of zero indexing.
+- Portfolio: one data-led camping buying decision, one local destination authority expansion and one no-spend school-night exploration. The October 10–11 roundup remains the sole page for this week’s event intent.

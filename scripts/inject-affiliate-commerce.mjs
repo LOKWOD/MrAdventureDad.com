@@ -175,6 +175,11 @@ const catalog = {
     ["kids full zip fleece jacket hiking", "Kids’ full-zip fleece midlayers", "Check zipper comfort, shoulder movement, pack fit, fabric weight and whether the layer vents easily during active walking."],
     ["kids waterproof breathable rain shell jacket", "Kids’ weather shells", "Verify the finished garment’s water-protection claim, seam construction, hood visibility, layer room and care requirements."],
   ],
+  kidssleepingbags: [
+    ["kids sleeping bag camping rectangular", "Rectangular kids’ sleeping bags", "Compare present body fit, zipper access, fill, shell, care instructions, maker rating method and use with the actual insulated pad."],
+    ["kids mummy sleeping bag camping", "Tapered kids’ sleeping bags", "Check shoulder and hip room, hood clearance, inside zipper operation, ventilation and the manufacturer’s explanation of every temperature claim."],
+    ["youth sleeping bag adjustable length", "Adjustable-length youth sleeping bags", "Verify how the length adjustment works, current user dimensions, hardware, care and whether the child can enter, vent and self-exit."],
+  ],
   chargingstations: [
     ["USB IF certified multiport USB C charger", "Multiport USB-C chargers", "Compare total and per-port output, shared-output behavior, supported protocols, certification record and the maker’s current instructions."],
     ["UL listed power strip wide spaced outlets", "Listed power strips", "Verify the exact listing, receptacle spacing, cord length, overload protection, surge status and permitted use before choosing a strip."],
@@ -213,6 +218,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/kids.*sleeping bags|temperature rating.*pad.first|child.*sleep system.*iso/.test(haystack)) return catalog.kidssleepingbags;
   if (/kids.*fall trail layers|base layer.*fleece.*insulation.*shell|system before brand/.test(haystack)) return catalog.trailclothing;
   if (/walking visibility gear|reflective vest.*bands.*clip light|visibility is not right.of.way/.test(haystack)) return catalog.visibilitygear;
   if (/nature observation kit|magnifying glass.*bug viewer.*macro lens|observe.record.release/.test(haystack)) return catalog.natureobservation;
@@ -256,7 +262,7 @@ function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
   if (normalized.startsWith("weekend-")) return null;
-  if (["guides/camillus-erie-canal-park-with-kids.html", "guides/paper-bridge-load-test-25-minute-family-stem.html"].includes(normalized)) return null;
+  if (["guides/camillus-erie-canal-park-with-kids.html", "guides/paper-bridge-load-test-25-minute-family-stem.html", "guides/onondaga-lake-park-with-kids.html", "guides/family-photo-scavenger-hunt-30-minute-no-posting-plan.html", "guides/syracuse-october-family-plans-2026.html"].includes(normalized)) return null;
   if (["guides/chimney-bluffs-with-kids.html", "guides/green-lakes-state-park-with-kids.html", "guides/taughannock-falls-with-kids.html", "guides/beaver-lake-nature-center-with-kids.html", "guides/watkins-glen-with-kids.html", "guides/letchworth-state-park-with-kids.html", "guides/fort-ontario-with-kids.html", "guides/family-hotel-room-system.html", "guides/howe-caverns-with-kids.html", "guides/family-lost-kid-plan.html", "guides/montezuma-national-wildlife-refuge-with-kids.html", "guides/family-motion-sickness-car-plan.html", "guides/chittenango-falls-with-kids.html", "guides/family-museum-day-system.html", "guides/rosamond-gifford-zoo-with-kids.html", "guides/family-outdoor-weather-cutoff-plan.html", "guides/clark-reservation-state-park-with-kids.html", "guides/family-bathroom-stop-plan.html", "guides/most-syracuse-with-kids.html", "guides/family-parking-lot-plan.html", "guides/highland-forest-with-kids.html", "guides/pratts-falls-with-kids.html", "guides/multigenerational-family-day-trip-plan.html", "guides/fort-stanwix-with-kids.html", "guides/family-no-cell-service-day-trip-plan.html", "guides/erie-canal-museum-with-kids.html", "guides/family-roadside-breakdown-plan.html", "guides/harriet-tubman-national-historical-park-with-kids.html", "guides/family-tick-check-removal-plan.html", "guides/womens-rights-national-historical-park-with-kids.html", "guides/family-hotel-fire-escape-plan.html", "guides/cornell-botanic-gardens-with-kids.html", "guides/family-wildlife-encounter-distance-plan.html", "guides/buttermilk-falls-state-park-with-kids.html", "guides/family-food-allergy-day-trip-plan.html", "guides/baltimore-woods-with-kids.html", "guides/family-medicine-away-from-home-plan.html", "guides/after-school-nature-walk-30-minute-plan.html", "guides/family-library-night-45-minute-plan.html", "guides/iroquois-museum-with-kids.html", "guides/family-calendar-reset-20-minute-plan.html", "guides/central-new-york-family-trail-picker.html", "guides/flashlight-shadow-lab-30-minute-family-science.html", "guides/stone-quarry-hill-art-park-with-kids.html", "guides/neighborhood-sound-map-20-minute-family-activity.html", "guides/syracuse-family-outing-picker-most-zoo-erie-canal-museum.html", "guides/living-room-picnic-30-minute-family-plan.html", "guides/saratoga-national-historical-park-with-kids.html", "guides/family-home-fire-escape-drill-20-minute-plan.html"].includes(normalized)) return null;
   if (normalized === "gear.html") return [...catalog.camping.slice(0, 2), ...catalog.trail.slice(0, 2), ...catalog.road.slice(0, 2)];
   if (normalized === "outdoors.html") return [...catalog.trail, catalog.water[0]];
@@ -300,12 +306,16 @@ for (const file of htmlFiles(root)) {
   const path = relative(root, file).replaceAll("\\", "/");
   if (onlyPath && path !== onlyPath) continue;
   const original = readFileSync(file, "utf8");
+  const hadGeneratedModule = original.includes(markerStart);
   const cleaned = original.replace(new RegExp(`${markerStart}[\\s\\S]*?${markerEnd}\\s*`, "g"), "");
   // Several early guides and the gear hub have hand-curated commerce modules.
   // Preserve those exact modules instead of stacking a generated block below them.
   const products = /class=["']commerce-module["']/.test(cleaned) ? null : productsFor(path, cleaned);
   if (!products) {
-    if (cleaned !== original) writeFileSync(file, cleaned);
+    const preserved = /class=["']commerce-module["']/.test(cleaned) || !hadGeneratedModule
+      ? cleaned
+      : cleaned.replace(/(?:\r?\n[ \t]*)?<link rel="stylesheet" href="(?:\.\.\/)*assets\/css\/affiliate-commerce\.css">(?:[ \t]*(?=\r?\n))?/g, "");
+    if (preserved !== original) writeFileSync(file, preserved);
     continue;
   }
   if (!/<\/main>/i.test(cleaned)) throw new Error(`Missing </main> in ${path}`);
