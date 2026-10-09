@@ -101,3 +101,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: Howe Caverns, Clark Reservation and MOST already received focused support on October 2–4; the travel-bag page’s 2 clicks came from only 4 impressions and was too small to justify a packing-cube page.
 - Discovery: strengthened homepage, hubs, sitemap and nine reciprocal paths while treating the reported 0 indexed / 114 submitted sitemap row as inconsistent with observable impressions, not as proof of zero indexing.
 - Portfolio: one data-led camping buying decision, one local destination authority expansion and one no-spend school-night exploration. The October 10–11 roundup remains the sole page for this week’s event intent.
+
+# 2026-10-09
+
+- Report generated: 2026-10-07; current window 2026-09-07 through 2026-10-04.
+- Used: the coherent Central New York destination cluster—Howe Caverns 88 impressions / position 8.86, Clark Reservation 35 / 16.09 and MOST 23 / 13.74—to choose one distinct local short-visit intent at Carpenter’s Brook with reciprocal links.
+- Ignored: those exact URLs had already received focused support in the October 2–4 batches; camping received a new sleeping-bag guide October 8; travel bags had only four impressions despite two clicks.
+- Discovery: strengthened homepage, four hubs, sitemap and nine reciprocal paths while flagging the reported 0 indexed / 114 submitted sitemap row as inconsistent with observable impressions and clicks.
+- Portfolio: one data-led local destination, one authoritative commercial food-safety guide and one no-spend backyard exploration. The October 10–11 roundup remains the sole page for this week’s event intent.
