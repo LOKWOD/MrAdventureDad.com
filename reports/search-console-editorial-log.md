@@ -109,3 +109,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: those exact URLs had already received focused support in the October 2–4 batches; camping received a new sleeping-bag guide October 8; travel bags had only four impressions despite two clicks.
 - Discovery: strengthened homepage, four hubs, sitemap and nine reciprocal paths while flagging the reported 0 indexed / 114 submitted sitemap row as inconsistent with observable impressions and clicks.
 - Portfolio: one data-led local destination, one authoritative commercial food-safety guide and one no-spend backyard exploration. The October 10–11 roundup remains the sole page for this week’s event intent.
+
+# 2026-10-10
+
+- Report generated: 2026-10-07; window 2026-09-07 through 2026-10-04.
+- Used: Central New York destination cluster—Howe Caverns 88 impressions / position 8.86, Clark Reservation 35 / 16.09, MOST 23 / 13.74—to add one distinct indoor art-museum intent at the Everson.
+- Ignored: exact high-impression pages were already reinforced; travel bags had only four impressions despite two clicks; hydration had one impression; camping received an October 8 support page.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal links were strengthened; 0 indexed / 114 submitted was flagged as inconsistent with observable performance rather than treated as literal zero indexing.
+- Portfolio: one data-led local indoor guide, one commercial recall-first cold-weather guide and one no-spend at-home map lesson. The October 10–11 roundup remains the sole event-week page.
