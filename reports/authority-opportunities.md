@@ -7,3 +7,9 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **Everson Museum of Art** — https://everson.org/contact-us/ — 90-minute family visitor card; factual-correction and resource-list angle.
 - **Family Times of Central New York** — https://familytimescny.com/ — Everson guide or no-spend map game; practical family-planning source angle.
 - **National Capital Poison Center** — https://www.poison.org/contact-us — hand-warmer ingestion and recall checklist; technical-correction and primary-reference angle.
+
+## 2026-10-11
+
+- **City of Little Falls** — https://thisislittlefalls.com/contact/ — Moss Island and Lock 17 family plan; access, construction and facilities correction angle.
+- **Erie Canalway National Heritage Corridor** — https://eriecanalway.org/about/contact — supervised Moss Island route card; practical family-resource and factual-correction angle.
+- **American Chemical Society Education** — https://www.acs.org/education/contact-us.html — adult-led leaf pigment lab; safety and terminology correction angle.
