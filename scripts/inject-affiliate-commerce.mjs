@@ -70,6 +70,11 @@ const catalog = {
     ["water resistant FRS walkie talkies", "Weather-resistant FRS radios", "Verify the exact ingress rating and charging-cover design instead of trusting the word outdoor."],
     ["FRS walkie talkies replaceable batteries", "Replaceable-battery FRS radios", "Useful when a long weekend needs a spare-cell fallback instead of another proprietary charging cradle."],
   ],
+  weatherradio: [
+    ["NOAA weather radio SAME alert battery backup", "SAME desktop alert radios", "Compare county programming, alert controls, display, battery backup, external-device support and the exact manufacturer manual."],
+    ["portable NOAA weather radio battery alert", "Portable weather radios", "Verify automatic alert behavior, common-cell power, antenna, control lock, reception guidance and storage instructions."],
+    ["hand crank NOAA weather radio emergency", "Hand-crank multi-function weather radios", "Treat crank and solar as backup features; compare the real battery system, alert behavior, charge instructions and current recall status."],
+  ],
   sun: [
     ["broad spectrum sunscreen SPF 30 family", "Broad-spectrum family sunscreen", "Read the Drug Facts label, water-resistance time and reapplication directions instead of buying by scent or package size."],
     ["kids UPF 50 long sleeve sun shirt", "Kids' UPF sun shirts", "Compare coverage, wet comfort, care instructions and the maker's stated UPF rating."],
@@ -232,6 +237,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/noaa weather radio|same vs basic|hand.crank.*weather/.test(haystack)) return catalog.weatherradio;
   if (/kids.*snow pants|bibs.*waist.*one.piece|snow.pants.*bathroom/.test(haystack)) return catalog.snowpants;
   if (/family hand warmers|air.activated.*snap.disc.*rechargeable|recall gate/.test(haystack)) return catalog.handwarmers;
   if (/kids.*insulated food jars|10 oz.*14 oz.*16 oz|serving.time temperature/.test(haystack)) return catalog.foodjars;

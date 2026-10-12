@@ -125,3 +125,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: exact visible pages were already reinforced; travel bags had four impressions, hydration one, branded/fragmentary queries were noise, and the 42-impression binocular intent already has a dedicated guide.
 - Discovery: homepage, four hubs, sitemap and nine reciprocal links were strengthened; 0 indexed / 114 submitted was flagged as inconsistent with observable performance rather than treated as literal zero indexing.
 - Portfolio: one data-led local destination, one commercial fit-first winter guide and one adult-led at-home science activity. The October 10–11 roundup remains the sole event-week page.
+
+# 2026-10-12
+
+- Report generated: 2026-10-07; window 2026-09-07 through 2026-10-04.
+- Used: regional destination cluster—Howe Caverns 88 impressions / position 8.86, Clark Reservation 35 / 16.09, MOST 23 / 13.74—to add one distinct Finger Lakes indoor natural-history intent.
+- Ignored: exact visible pages were already reinforced; travel bags had four impressions, hydration one, branded fragments were noise, and the 42-impression binocular intent already has a dedicated guide.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; the reported 0 indexed / 114 submitted contradicts observable performance.
+- Portfolio: one data-led museum destination, one commercial emergency-alert framework and one no-spend at-home engineering build. No dated roundup intent was duplicated.
