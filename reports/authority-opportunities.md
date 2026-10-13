@@ -19,3 +19,9 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **Paleontological Research Institution** — https://www.priweb.org/contact — museum family fossil-mission card; factual-correction and accessibility-detail angle.
 - **NOAA Weather-Ready Nation** — https://www.weather.gov/wrn/ — alert-first receiver checklist; technical-correction and preparedness-resource angle.
 - **Family Times of Central New York** — https://familytimescny.com/ — Finger Lakes museum plan and no-spend maze; practical family-resource angle.
+
+## 2026-10-13
+
+- **Utica Zoo** — https://www.uticazoo.org/contact/ — two-hour family route card; factual-correction, access and current-visitor-detail angle.
+- **Family Times of Central New York** — https://familytimescny.com/ — Utica outing and no-spend oral-history activity; practical local-family-resource angle.
+- **Onondaga Historical Association** — https://www.cnyhistory.org/contact/ — five-question private family-history card; intergenerational local-history learning angle.

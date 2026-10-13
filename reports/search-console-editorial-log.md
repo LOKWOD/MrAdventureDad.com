@@ -133,3 +133,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: exact visible pages were already reinforced; travel bags had four impressions, hydration one, branded fragments were noise, and the 42-impression binocular intent already has a dedicated guide.
 - Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; the reported 0 indexed / 114 submitted contradicts observable performance.
 - Portfolio: one data-led museum destination, one commercial emergency-alert framework and one no-spend at-home engineering build. No dated roundup intent was duplicated.
+
+# 2026-10-13
+
+- Report generated: 2026-10-07; window 2026-09-07 through 2026-10-04.
+- Used: regional family-outing cluster—Howe Caverns 88 impressions / position 8.86, Clark Reservation 35 / 16.09 and MOST 23 / 13.74—to add one distinct Utica Zoo intent.
+- Ignored: exact visible pages were already supported; travel bags had four impressions, hydration one, branded fragments were noise, and the 42-impression binocular intent already has a dedicated guide.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; the reported 0 indexed / 114 submitted contradicts observable performance.
+- Portfolio: one data-led regional attraction, one commercial wet-day footwear framework and one no-spend private oral-history activity. No dated roundup intent was duplicated.
