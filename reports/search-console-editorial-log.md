@@ -141,3 +141,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: exact visible pages were already supported; travel bags had four impressions, hydration one, branded fragments were noise, and the 42-impression binocular intent already has a dedicated guide.
 - Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; the reported 0 indexed / 114 submitted contradicts observable performance.
 - Portfolio: one data-led regional attraction, one commercial wet-day footwear framework and one no-spend private oral-history activity. No dated roundup intent was duplicated.
+
+# 2026-10-14
+
+- Report generated: 2026-10-14; window 2026-09-14 through 2026-10-11.
+- Used: regional destination cluster—Howe Caverns 98 impressions / 2 clicks / position 8.9 and MOST 30 / 1 / 16.7—to add one distinct free nature-center intent at Rogers.
+- Ignored: the 42-impression binocular query is already served; hydration had one impression; fragmentary/branded noise was too weak.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal paths strengthened.
+- Portfolio: one data-led outdoor destination, one commercial field-power authority expansion and one no-spend NASA-based home lab. The October 17–18 roundup remains the sole current event-week page.

@@ -1246,5 +1246,29 @@
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-10-13",
     "notes": "Generic scene only; no real family, recording, private information, branded device, transcript or social post."
+  },
+  "assets/images/photos/rogers-center-family-plan.webp": {
+    "title": "Conceptual nature-center family planning still life",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-14",
+    "notes": "Conceptual only; not Rogers Center, a named trail, official map, current surface or navigation reference."
+  },
+  "assets/images/photos/family-aa-aaa-battery-system.webp": {
+    "title": "Generic AA/AAA battery sorting system",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-14",
+    "notes": "Unbranded category stand-ins; not affiliate or exact product imagery, charger instructions, electrical procedure, capacity proof or performance claim."
+  },
+  "assets/images/photos/family-paper-helicopter-lab.webp": {
+    "title": "At-home paper helicopter engineering lab",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-14",
+    "notes": "Generic tabletop activity; not NASA hardware, a tested result or permission to climb for a drop."
   }
 }

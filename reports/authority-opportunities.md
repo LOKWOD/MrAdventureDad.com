@@ -25,3 +25,9 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **Utica Zoo** — https://www.uticazoo.org/contact/ — two-hour family route card; factual-correction, access and current-visitor-detail angle.
 - **Family Times of Central New York** — https://familytimescny.com/ — Utica outing and no-spend oral-history activity; practical local-family-resource angle.
 - **Onondaga Historical Association** — https://www.cnyhistory.org/contact/ — five-question private family-history card; intergenerational local-history learning angle.
+
+## 2026-10-14
+
+- **Friends of Rogers** — https://www.friendsofrogers.org/contact — ponds-first family route card; hours, access and factual-correction angle.
+- **NASA JPL Education** — https://www.jpl.nasa.gov/edu/contact/ — no-climb family adaptation of the paper-helicopter activity; safety and resource angle.
+- **Family Times of Central New York** — https://familytimescny.com/ — free Sherburne outing and no-spend flight lab; practical local-family-resource angle.
