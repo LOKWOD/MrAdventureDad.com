@@ -28,9 +28,9 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 
 ## 2026-10-14
 
-- **New York State Museum Visitor Services** — https://nysm.nysed.gov/museum-contact — factual-correction/access angle.
-- **Family Times of Central New York** — https://familytimescny.com/ — practical local-family resource angle.
-- **National Fire Protection Association** — https://www.nfpa.org/education-and-research — electrical/fire-safety review angle.
+- **Friends of Rogers** — https://www.friendsofrogers.org/contact — ponds-first family route card; hours, access and factual-correction angle.
+- **NASA JPL Education** — https://www.jpl.nasa.gov/edu/contact/ — no-climb family adaptation of the paper-helicopter activity; safety and resource angle.
+- **Family Times of Central New York** — https://familytimescny.com/ — free Sherburne outing and no-spend flight lab; practical local-family-resource angle.
 
 ## 2026-10-15
 
