@@ -144,8 +144,16 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 
 # 2026-10-14
 
+- Report generated: 2026-10-07; window 2026-09-07 through 2026-10-04.
+- Used: Howe Caverns 88 impressions / position 8.86, Clark Reservation 35 / 16.09 and MOST 23 / 13.74 to add one distinct Albany museum intent.
+- Ignored: travel bags four impressions, hydration one, branded noise, and the already-served 42-impression binocular intent.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; the 0 indexed / 114 submitted row contradicts observable performance.
+- Portfolio: museum, commercial wet-gear system and no-spend school-night system; the October 17–18 roundup was featured and not duplicated.
+
+# 2026-10-15
+
 - Report generated: 2026-10-14; window 2026-09-14 through 2026-10-11.
-- Used: regional destination cluster—Howe Caverns 98 impressions / 2 clicks / position 8.9 and MOST 30 / 1 / 16.7—to add one distinct free nature-center intent at Rogers.
-- Ignored: the 42-impression binocular query is already served; hydration had one impression; fragmentary/branded noise was too weak.
-- Discovery: homepage, four hubs, sitemap and nine reciprocal paths strengthened.
-- Portfolio: one data-led outdoor destination, one commercial field-power authority expansion and one no-spend NASA-based home lab. The October 17–18 roundup remains the sole current event-week page.
+- Used: “binoculars for parents” 42 impressions / position 1.21 / 0 clicks to strengthen the existing binocular URL and support one distinct Lime Hollow destination.
+- Ignored: Howe Caverns 98 impressions, MOST 30, travel bags six and one-impression query fragments because they were already served, weak or would overconcentrate the batch.
+- Discovery: homepage, four hubs, sitemap, nine reciprocal links and the existing binocular guide were strengthened; the 0 indexed / 140 submitted row contradicts observable performance.
+- Portfolio: Cortland destination, commercial field-art system and no-spend flight experiment; the October 17–18 roundup was featured and not duplicated.

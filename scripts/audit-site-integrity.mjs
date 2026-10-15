@@ -128,9 +128,12 @@ const photoOnlyEditorialGuides={
   ,"guides/utica-zoo-with-kids.html":"utica-zoo-family-plan.webp"
   ,"guides/kids-rain-boots-tall-chelsea-insulated-guide.html":"kids-rain-boots-category-guide.webp"
   ,"guides/family-oral-history-interview-30-minute-no-posting-plan.html":"family-oral-history-interview.webp"
-  ,"guides/rogers-environmental-education-center-with-kids.html":"rogers-center-family-plan.webp"
-  ,"guides/family-aa-aaa-battery-system-alkaline-nimh-guide.html":"family-aa-aaa-battery-system.webp"
-  ,"guides/paper-helicopter-30-minute-family-flight-lab.html":"family-paper-helicopter-lab.webp"
+  ,"guides/new-york-state-museum-with-kids-three-gallery-plan.html":"new-york-state-museum-three-gallery-plan.webp"
+  ,"guides/family-wet-gear-drying-station-rack-fan-boot-dryer.html":"family-wet-gear-drying-station.webp"
+  ,"guides/school-night-launch-pad-20-minute-family-reset.html":"school-night-launch-pad.webp"
+  ,"guides/lime-hollow-nature-center-with-kids.html":"lime-hollow-family-plan.webp"
+  ,"guides/family-field-sketch-kit-pouch-case-clipboard-guide.html":"family-field-sketch-kit-categories.webp"
+  ,"guides/paper-airplane-distance-lab-25-minute-family-stem.html":"family-paper-airplane-distance-lab.webp"
 };
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
@@ -175,7 +178,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==144)fail("expected 144 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==147)fail("expected 147 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -232,7 +235,7 @@ for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==144)fail("expected 144 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==147)fail("expected 147 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");

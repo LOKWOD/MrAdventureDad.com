@@ -28,6 +28,12 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 
 ## 2026-10-14
 
-- **Friends of Rogers** — https://www.friendsofrogers.org/contact — ponds-first family route card; hours, access and factual-correction angle.
-- **NASA JPL Education** — https://www.jpl.nasa.gov/edu/contact/ — no-climb family adaptation of the paper-helicopter activity; safety and resource angle.
-- **Family Times of Central New York** — https://familytimescny.com/ — free Sherburne outing and no-spend flight lab; practical local-family-resource angle.
+- **New York State Museum Visitor Services** — https://nysm.nysed.gov/museum-contact — factual-correction/access angle.
+- **Family Times of Central New York** — https://familytimescny.com/ — practical local-family resource angle.
+- **National Fire Protection Association** — https://www.nfpa.org/education-and-research — electrical/fire-safety review angle.
+
+## 2026-10-15
+
+- **Lime Hollow Nature Center** — https://www.limehollow.org/ — factual-correction and accessible-route review for the exact family itinerary.
+- **Cortland County Convention & Visitors Bureau** — https://www.experiencecortland.com/plan-your-visit — visitor-center email/phone route and local-family resource angle for the Lime Hollow plan.
+- **Smithsonian National Air and Space Museum** — https://airandspace.si.edu/contact — visitor-services contact route and evidence-first home-flight experiment angle for the paper-airplane lab.

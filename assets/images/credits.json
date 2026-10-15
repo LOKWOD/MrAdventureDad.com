@@ -1247,28 +1247,52 @@
     "verified": "2026-10-13",
     "notes": "Generic scene only; no real family, recording, private information, branded device, transcript or social post."
   },
-  "assets/images/photos/rogers-center-family-plan.webp": {
-    "title": "Conceptual nature-center family planning still life",
+  "assets/images/photos/new-york-state-museum-three-gallery-plan.webp": {
+    "title": "Conceptual three-gallery museum planning still life",
     "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
     "source": "Original AI-assisted editorial photography",
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-10-14",
-    "notes": "Conceptual only; not Rogers Center, a named trail, official map, current surface or navigation reference."
+    "notes": "Conceptual only; not the New York State Museum, an exhibit, artifact, official map or current layout."
   },
-  "assets/images/photos/family-aa-aaa-battery-system.webp": {
-    "title": "Generic AA/AAA battery sorting system",
+  "assets/images/photos/family-wet-gear-drying-station.webp": {
+    "title": "Generic family wet-gear drying station",
     "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
     "source": "Original AI-assisted editorial photography",
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-10-14",
-    "notes": "Unbranded category stand-ins; not affiliate or exact product imagery, charger instructions, electrical procedure, capacity proof or performance claim."
+    "notes": "Unbranded category scene; not product imagery, installation guidance, tested equipment or endorsement."
   },
-  "assets/images/photos/family-paper-helicopter-lab.webp": {
-    "title": "At-home paper helicopter engineering lab",
+  "assets/images/photos/school-night-launch-pad.webp": {
+    "title": "Generic school-night family launch pad",
     "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
     "source": "Original AI-assisted editorial photography",
     "license": "Copyright Mr Adventure Dad",
     "verified": "2026-10-14",
-    "notes": "Generic tabletop activity; not NASA hardware, a tested result or permission to climb for a drop."
+    "notes": "Generic entryway; no real family, school, logo, private information or product recommendation."
+  },
+  "assets/images/photos/lime-hollow-family-plan.webp": {
+    "title": "Conceptual Lime Hollow family trail-planning still life",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-15",
+    "notes": "Conceptual only; not Lime Hollow Nature Center, its official map or a navigational aid."
+  },
+  "assets/images/photos/family-field-sketch-kit-categories.webp": {
+    "title": "Generic field sketch kit carry formats",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-15",
+    "notes": "Unbranded category scene; not tested products, affiliate product imagery or an instruction to buy all three."
+  },
+  "assets/images/photos/family-paper-airplane-distance-lab.webp": {
+    "title": "Generic paper-airplane distance test lane",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-10-15",
+    "notes": "Conceptual home experiment; no real family, branded product or claimed measured result."
   }
 }
