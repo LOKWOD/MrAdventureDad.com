@@ -37,3 +37,9 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **Lime Hollow Nature Center** — https://www.limehollow.org/ — factual-correction and accessible-route review for the exact family itinerary.
 - **Cortland County Convention & Visitors Bureau** — https://www.experiencecortland.com/plan-your-visit — visitor-center email/phone route and local-family resource angle for the Lime Hollow plan.
 - **Smithsonian National Air and Space Museum** — https://airandspace.si.edu/contact — visitor-services contact route and evidence-first home-flight experiment angle for the paper-airplane lab.
+
+## 2026-10-16
+
+- **Corning Museum of Glass Visitor Services** — https://info.cmog.org/contact — factual-correction and accessibility review for the exact family route.
+- **Finger Lakes Tourism Alliance** — https://www.fingerlakes.org/contact — regional family-resource angle for the demo-first Corning itinerary.
+- **FEMA Ready Kids** — https://www.ready.gov/kids — family-preparedness resource angle for the privacy-limited contact-card drill.

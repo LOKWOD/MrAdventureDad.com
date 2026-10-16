@@ -157,3 +157,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: Howe Caverns 98 impressions, MOST 30, travel bags six and one-impression query fragments because they were already served, weak or would overconcentrate the batch.
 - Discovery: homepage, four hubs, sitemap, nine reciprocal links and the existing binocular guide were strengthened; the 0 indexed / 140 submitted row contradicts observable performance.
 - Portfolio: Cortland destination, commercial field-art system and no-spend flight experiment; the October 17–18 roundup was featured and not duplicated.
+
+# 2026-10-16
+
+- Report generated: 2026-10-14; window 2026-09-14 through 2026-10-11.
+- Used: MOST at 30 impressions / position 16.67 and Howe Caverns at 98 / 8.90 as evidence for one distinct regional indoor family itinerary: Corning Museum of Glass.
+- Ignored: the already-served binocular cluster, six travel-bag impressions and one- or two-impression fragments because they were covered, weak or would overconcentrate the batch.
+- Discovery: homepage, four hubs, sitemap and ten reciprocal links were strengthened; the 0 indexed / 140 submitted row contradicts observable performance and was treated as a crawl-path warning.
+- Portfolio: indoor Finger Lakes destination, seasonal boot-drying decision and no-spend family communication drill; the October 17–18 roundup remains featured and was not duplicated.

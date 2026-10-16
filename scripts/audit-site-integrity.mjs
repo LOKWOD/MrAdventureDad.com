@@ -134,6 +134,9 @@ const photoOnlyEditorialGuides={
   ,"guides/lime-hollow-nature-center-with-kids.html":"lime-hollow-family-plan.webp"
   ,"guides/family-field-sketch-kit-pouch-case-clipboard-guide.html":"family-field-sketch-kit-categories.webp"
   ,"guides/paper-airplane-distance-lab-25-minute-family-stem.html":"family-paper-airplane-distance-lab.webp"
+  ,"guides/corning-museum-of-glass-with-kids.html":"corning-glass-museum-family-plan.webp"
+  ,"guides/family-boot-dryer-fan-heated-passive-guide.html":"family-boot-dryer-categories.webp"
+  ,"guides/family-emergency-contact-card-drill-20-minutes.html":"family-emergency-contact-card-drill.webp"
 };
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
@@ -178,7 +181,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==147)fail("expected 147 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==150)fail("expected 150 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -235,7 +238,7 @@ for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==147)fail("expected 147 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==150)fail("expected 150 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
