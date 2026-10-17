@@ -43,3 +43,9 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **Corning Museum of Glass Visitor Services** — https://info.cmog.org/contact — factual-correction and accessibility review for the exact family route.
 - **Finger Lakes Tourism Alliance** — https://www.fingerlakes.org/contact — regional family-resource angle for the demo-first Corning itinerary.
 - **FEMA Ready Kids** — https://www.ready.gov/kids — family-preparedness resource angle for the privacy-limited contact-card drill.
+
+## 2026-10-17
+
+- **The Strong Visitor Services** — https://www.museumofplay.org/about/contact-us/ — factual-correction and accessibility review for the exact two-zone family route.
+- **Visit Rochester** — https://www.visitrochester.com/contact-us/ — regional family-resource angle for a realistic four-hour Strong itinerary covering parking, food and sensory logistics.
+- **Museum of the Moving Image Education** — https://movingimage.org/education/ — family-learning resource angle for the no-posting six-cue Foley lab, with clear attribution and no claim of partnership.

@@ -165,3 +165,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: the already-served binocular cluster, six travel-bag impressions and one- or two-impression fragments because they were covered, weak or would overconcentrate the batch.
 - Discovery: homepage, four hubs, sitemap and ten reciprocal links were strengthened; the 0 indexed / 140 submitted row contradicts observable performance and was treated as a crawl-path warning.
 - Portfolio: indoor Finger Lakes destination, seasonal boot-drying decision and no-spend family communication drill; the October 17–18 roundup remains featured and was not duplicated.
+
+# 2026-10-17
+
+- Report generated: 2026-10-14; window 2026-09-14 through 2026-10-11.
+- Used: MOST at 30 impressions / position 16.67 and Howe Caverns at 98 / 8.90 as evidence for one distinct regional indoor family itinerary: The Strong Museum of Play.
+- Ignored: the 42-impression binocular query because it already has a page and recent reinforcement; six travel-bag impressions and one- or two-impression fragments were too weak to steer the batch.
+- Discovery: homepage, four hubs, sitemap and ten reciprocal links were strengthened; the 0 indexed / 140 submitted row contradicts observable performance and was treated as a crawl-path warning.
+- Portfolio: Rochester museum itinerary, seasonal sled decision and no-spend private Foley lab; the October 17–18 roundup remains featured and was not duplicated.
