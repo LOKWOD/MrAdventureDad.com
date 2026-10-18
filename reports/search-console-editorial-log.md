@@ -173,3 +173,10 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: the 42-impression binocular query because it already has a page and recent reinforcement; six travel-bag impressions and one- or two-impression fragments were too weak to steer the batch.
 - Discovery: homepage, four hubs, sitemap and ten reciprocal links were strengthened; the 0 indexed / 140 submitted row contradicts observable performance and was treated as a crawl-path warning.
 - Portfolio: Rochester museum itinerary, seasonal sled decision and no-spend private Foley lab; the October 17–18 roundup remains featured and was not duplicated.
+# 2026-10-18
+
+- Reports read: latest.json and latest.md; generated 2026-10-14; current window 2026-09-14–2026-10-11; valid mradventuredad.com entry.
+- Used: Howe Caverns 98 impressions / position 8.90 and MOST 30 / 16.67 support one practical regional outing. Broadened away from museums to a quiet free Sapsucker Woods plan; no claim of exact-location query demand.
+- Ignored: already-served 42-impression binocular query, six travel-bag impressions, one hydration impression and tiny irrelevant fragments.
+- Discovery warning: 0 indexed / 140 submitted conflicts with observed search clicks. Strengthened homepage/four hubs, full sitemap coverage and nine reciprocal links instead of treating it as literal index status.
+- Diverse batch: Data-led birding visit; Authority-expansion home board-game buying/session framework; Exploration no-spend receipt math. Current weekly events remain on their separate October 17–18 URL.

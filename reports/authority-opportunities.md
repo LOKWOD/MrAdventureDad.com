@@ -2,6 +2,10 @@
 
 Qualified editorial matches only. No outreach is authorized or sent by the publishing automation.
 
+## 2026-10-18
+
+- **Cornell Lab Visitor Center accessibility/visitor services** — https://www.birds.cornell.edu/home/visit/accessibility/ — email link or 1-800-843-2473 as published on that page. Exact match: Sapsucker Woods watch–walk–stop family route card. Honest angle: factual/accessibility correction of a concise first-visit resource that could be shared if useful; no partnership or citation promise. No outreach sent.
+
 ## 2026-10-10
 
 - **Everson Museum of Art** — https://everson.org/contact-us/ — 90-minute family visitor card; factual-correction and resource-list angle.

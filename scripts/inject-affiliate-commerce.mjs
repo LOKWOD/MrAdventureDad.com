@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  homeboardgames: [
+    ["cooperative family board games school age", "Cooperative family board games", "Check the exact age label, reading load, player count, shared-decision rules and small-parts warning. Cooperation does not eliminate adult over-coaching."],
+    ["light strategy family board games ages 7", "Light strategy family board games", "Read the matching edition’s manual: count real players, turn waiting, conflict, elimination, teaching and cleanup before buying."],
+    ["tabletop dexterity family games wooden blocks", "Tabletop dexterity family games", "Check piece size, stable table space, reach, motor fit, noise and younger-sibling access. Physical play is not automatically the right fit."],
+  ],
   daytrip: [
     ["family day trip backpack", "Family day-trip pack", "A comfortable pack keeps water, layers, snacks and small emergencies together."],
     ["insulated water bottle kids leakproof", "Leak-resistant water bottles", "Easy-to-carry bottles make regular water breaks less of a production."],
@@ -262,6 +267,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (path === "guides/family-home-board-games-cooperative-strategy-dexterity-guide.html") return catalog.homeboardgames;
   if (/family boot dryers|forced air.*low heat.*passive|material gate/.test(haystack)) return catalog.bootdryers;
   if (/kids.*sleds|saucer.*toboggan.*steering|sled.*hill gate/.test(haystack)) return catalog.kidssleds;
   if (/aa\/aaa battery system|alkaline.*nimh|battery.*junk drawer/.test(haystack)) return catalog.aabatteries;
@@ -313,6 +319,7 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/sapsucker-woods-with-kids.html", "guides/family-grocery-receipt-detective-25-minute-math-activity.html"].includes(normalized)) return null;
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
   if (normalized.startsWith("weekend-")) return null;
   if (["guides/strong-museum-of-play-with-kids.html", "guides/family-foley-sound-effects-lab-30-minutes.html"].includes(normalized)) return null;
