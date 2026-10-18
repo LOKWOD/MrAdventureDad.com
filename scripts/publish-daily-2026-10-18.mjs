@@ -9,11 +9,11 @@ const source=read('scripts/publish-daily-2026-10-17.mjs');
 const template=source.match(/const pageHtml=p=>(`[\s\S]*?`);\n\nfor\(const p of pages\)/)?.[1];
 if(!template)throw new Error('Versioned page source renderer changed; review before publication');
 const render= new Function('date','imageUrl',`return p=>${template}`)(date,n=>`https://mradventuredad.com/assets/images/photos/${n}`);
-for(const p of pages)write(`guides/${p.slug}.html`,render(p).replaceAll('v=20261017','v=20261018').replace(`src="../assets/images/photos/${p.image}"`,`src="../assets/images/photos/${p.image}" width="1600" height="900"`));
+for(const p of pages)write(`guides/${p.slug}.html`,render(p).replaceAll('v=20261017','v=20261018').replace(`src="../assets/images/photos/${p.image}"`,`src="../assets/images/photos/${p.image}" width="1600" height="900" style="height:auto"`));
 const start='<!-- DAILY 2026-10-18 -->',end='<!-- END DAILY 2026-10-18 -->';
 function insert(path,needle,block){let h=read(path).replace(new RegExp(`${start}[\\s\\S]*?${end}`,'g'),'');if(!h.includes(needle))throw new Error(path+': insertion missing');write(path,h.replace(needle,start+block+end+needle));}
 const link=(i,prefix='')=>`${prefix}guides/${pages[i].slug}.html`;
-const img=(p)=>`<img src="assets/images/photos/${p.image}" width="1600" height="900" alt="${p.alt}" loading="lazy" decoding="async">`;
+const img=(p)=>`<img src="assets/images/photos/${p.image}" width="1600" height="900" style="height:auto;aspect-ratio:16/9;object-fit:contain" alt="${p.alt}" loading="lazy" decoding="async">`;
 let home=read('index.html').replace(new RegExp(`${start}[\\s\\S]*?${end}`,'g'),'');
 const old=/<!-- DAILY 2026-10-17 -->[\s\S]*?<!-- END DAILY 2026-10-17 -->/g, prior=home.match(old)?.[0];home=home.replace(old,'');
 if(prior)home=home.replace('<div class="field-archive-content">','<div class="field-archive-content">'+prior);

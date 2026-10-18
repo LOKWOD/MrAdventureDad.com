@@ -10,6 +10,7 @@ for(const [i,p] of pages.entries()){
  for(const s of [`<h1>${p.title}</h1>`,`rel="canonical" href="${url}"`,`property="og:url" content="${url}"`,'datePublished":"2026-10-18"','dateModified":"2026-10-18"','"Article"','"Guide"','data-cf-beacon=','data-site="mr-adventure-dad"',p.caption,p.alt])if(!h.includes(s))fail(p.slug+': missing '+s);
  const words=p.body.replace(/<[^>]+>/g,' ').split(/\s+/).filter(Boolean).length;if(words<850)fail(p.slug+': thin body '+words);
  if(count(h,/class="article-hero"/g)!==1)fail(p.slug+': hero count');
+ if(!h.includes('width="1600" height="900" style="height:auto"'))fail(p.slug+': responsive hero dimensions');
  if(count(h,/data-affiliate-active="true"/g)!==(i===1?3:0))fail(p.slug+': paid count');
  if(i===1&&(!h.includes('As an Amazon Associate I earn from qualifying purchases')||count(h,/rel="sponsored nofollow noopener noreferrer"/g)!==3))fail(p.slug+': disclosure/rel');
  if(!map.includes(`<loc>${url}</loc><lastmod>2026-10-18</lastmod>`))fail(p.slug+': sitemap');
