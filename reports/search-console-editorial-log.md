@@ -1,5 +1,14 @@
 # Search Console editorial decisions
 
+## 2026-10-19 — MrAdventureDad.com
+
+- Report generated October 14, 2026; window September 14–October 11; both JSON and Markdown read from `LOKWOD/site-analytics`; no property error. 747 impressions, nine clicks, CTR 1.2%, average position 11.9.
+- One focused Data-led reinforcement: the paid-attraction cluster (Howe Caverns 98 impressions/two clicks/position 8.90; MOST 30/one/16.67) supports an original editable annual-membership cost calculator, not another museum itinerary or a claim that membership queries are proven. Keep existing titles stable. Before: no membership asset or contextual incoming links; after: calculator, four relevant onward paths and three established contextual entry links.
+- Authority-expansion: a staff-instruction-first Central Rock Gym Syracuse family visit/call card. Exploration: a supervised, scrap-first four-hole-button repair session using owned supplies and a no-needle alternative. The three needs are purchase value, a first active outing and an at-home practical skill.
+- Deliberately ignored: already-covered binoculars (42 impressions, about position 1.21), travel-bag six-impression/two-click sample, single-impression hydration and branded noise. No cosmetic query variants.
+- Zero indexed/140 submitted sitemap reporting conflicts with actual search clicks; treat as discovery/reporting warning. Four hubs, refreshed homepage time windows, nine established reciprocal links and a complete 159-URL sitemap strengthen crawl paths. Preserve the expired October 17–18 weekly roundup as archive, not a current event recommendation.
+- Authority action: editable calculator, first-visit call card, counted-tool repair protocol, primary-source/date/method disclosures and nine contextual entry links. Two exact-match authority opportunities logged; no outreach sent.
+
 ## 2026-09-16 — MrAdventureDad.com
 
 - **Report generated:** 2026-09-16

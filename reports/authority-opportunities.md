@@ -2,6 +2,11 @@
 
 Qualified editorial matches only. No outreach is authorized or sent by the publishing automation.
 
+## 2026-10-19
+
+- **MOST membership team** — https://www.most.org/members/ — published membership-team contact route on the official tier page. Exact asset: https://mradventuredad.com/guides/syracuse-family-membership-break-even-most-zoo.html . Honest angle: invite factual correction of the Household eligibility and exclusions in an independent editable value calculator; a useful family-resource citation only if the team finds it accurate. No affiliation, endorsement or savings promise. No outreach sent.
+- **Central Rock Gym Syracuse visitor team** — https://centralrockgym.com/syracuse/ — published local phone 315-671-4450 and official local contact route. Exact asset: https://mradventuredad.com/guides/central-rock-gym-syracuse-with-kids-first-visit.html . Honest angle: check the eight-question family booking card, access unknowns and instruction-first visit envelope, with a possible beginner-resource share if useful. It does not teach technical climbing, claim a visit or substitute for staff orientation. No outreach sent.
+
 ## 2026-10-18
 
 - **Cornell Lab Visitor Center accessibility/visitor services** — https://www.birds.cornell.edu/home/visit/accessibility/ — email link or 1-800-843-2473 as published on that page. Exact match: Sapsucker Woods watch–walk–stop family route card. Honest angle: factual/accessibility correction of a concise first-visit resource that could be shared if useful; no partnership or citation promise. No outreach sent.

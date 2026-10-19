@@ -319,6 +319,7 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/syracuse-family-membership-break-even-most-zoo.html", "guides/central-rock-gym-syracuse-with-kids-first-visit.html", "guides/sew-four-hole-button-with-kids-family-repair-lesson.html"].includes(normalized)) return null;
   if (["guides/sapsucker-woods-with-kids.html", "guides/family-grocery-receipt-detective-25-minute-math-activity.html"].includes(normalized)) return null;
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;
   if (normalized.startsWith("weekend-")) return null;

@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {calculateMembership as calc} from '../assets/js/membership-break-even.mjs';
+assert.deepEqual(calc({annual:109,day:64,memberVisit:0,visits:2}),{perVisitSaving:64,breakEven:2,without:128,withMembership:109,difference:19});
+assert.equal(calc({annual:77,day:28,memberVisit:0,visits:3}).difference,7);
+assert.equal(calc({annual:77,day:14,memberVisit:0,visits:6}).breakEven,6);
+assert.equal(calc({annual:100,day:30,memberVisit:5,visits:4}).difference,0);
+assert.equal(calc({annual:100,day:30,memberVisit:5,visits:5}).difference,25);
+assert.equal(calc({annual:10,day:0,memberVisit:0,visits:2}).breakEven,null);
+assert.equal(calc({annual:10,day:5,memberVisit:6,visits:2}).breakEven,null);
+assert.equal(calc({annual:109,day:64,memberVisit:0,visits:0}).difference,-109);
+assert.equal(calc({annual:0,day:10,memberVisit:0,visits:1}).breakEven,0);
+assert.equal(calc({annual:10.01,day:3.33,memberVisit:0,visits:4}).difference,3.31);
+for(const bad of [-1,NaN,Infinity])assert.throws(()=>calc({annual:bad,day:2,memberVisit:0,visits:1}));
+assert.throws(()=>calc({annual:1,day:2,memberVisit:0,visits:1.5}));
+assert.throws(()=>calc({annual:100001,day:2,memberVisit:0,visits:1}));
+console.log('PASS membership calculator: two live-price examples, winter case, uncovered costs, exact tie, zero/no saving, zero visits, cents and invalid inputs.');
