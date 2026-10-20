@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  homejigsaws: [
+    ["kids interlocking cardboard jigsaw puzzles age labeled", "Children’s interlocking cardboard jigsaws", "Match the exact age label, warnings, image detail, grip and assembled dimensions to the child and usable workspace—not piece count alone."],
+    ["large piece cardboard jigsaw puzzles age labeled", "Larger-piece cardboard jigsaws", "Check the actual age label and finished dimensions. Larger pieces do not automatically mean approval for younger children or a smaller table."],
+    ["family cardboard jigsaw puzzles age labeled", "Shared family cardboard jigsaws", "Compare the exact edition’s age guidance, image complexity, finished width and height, missing-piece route and secure pause/storage needs."],
+  ],
   homeboardgames: [
     ["cooperative family board games school age", "Cooperative family board games", "Check the exact age label, reading load, player count, shared-decision rules and small-parts warning. Cooperation does not eliminate adult over-coaching."],
     ["light strategy family board games ages 7", "Light strategy family board games", "Read the matching edition’s manual: count real players, turn waiting, conflict, elimination, teaching and cleanup before buying."],
@@ -319,6 +324,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/seward-house-museum-with-kids.html", "guides/family-claim-check-one-headline-20-minute-lesson.html"].includes(normalized)) return null;
+  if (normalized === "guides/family-jigsaw-puzzles-piece-size-table-fit-guide.html") return catalog.homejigsaws;
   if (["guides/syracuse-family-membership-break-even-most-zoo.html", "guides/central-rock-gym-syracuse-with-kids-first-visit.html", "guides/sew-four-hole-button-with-kids-family-repair-lesson.html"].includes(normalized)) return null;
   if (["guides/sapsucker-woods-with-kids.html", "guides/family-grocery-receipt-detective-25-minute-math-activity.html"].includes(normalized)) return null;
   if (["privacy.html", "about.html", "404.html"].includes(normalized)) return null;

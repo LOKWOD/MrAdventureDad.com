@@ -2,6 +2,11 @@
 
 Qualified editorial matches only. No outreach is authorized or sent by the publishing automation.
 
+## 2026-10-20
+
+- **Seward House Museum visitor services** — https://sewardhouse.org/visit/tour-booking — published contact 315-252-1283 / info@sewardhouse.org. Exact asset: https://mradventuredad.com/guides/seward-house-museum-with-kids.html . Honest angle: corrections-first review of six booking/access questions and a family tour envelope; possible independent visitor-resource citation only if accurate/useful. No invented visit, endorsement or guaranteed tour length. No outreach sent.
+- **Digital Inquiry Group / Civic Online Reasoning team** — https://cor.inquirygroup.org/blog/lateral-reading-current-events/ — published contact info@inquirygroup.org. Exact asset: https://mradventuredad.com/guides/family-claim-check-one-headline-20-minute-lesson.html . Honest angle: source-attributed family adaptation with original fictional practice notices, uncertainty labels and an offline option; invite methodological correction, not endorsement or an efficacy claim. No outreach sent.
+
 ## 2026-10-19
 
 - **MOST membership team** — https://www.most.org/members/ — published membership-team contact route on the official tier page. Exact asset: https://mradventuredad.com/guides/syracuse-family-membership-break-even-most-zoo.html . Honest angle: invite factual correction of the Household eligibility and exclusions in an independent editable value calculator; a useful family-resource citation only if the team finds it accurate. No affiliation, endorsement or savings promise. No outreach sent.

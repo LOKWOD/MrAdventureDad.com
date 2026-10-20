@@ -189,3 +189,9 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: already-served 42-impression binocular query, six travel-bag impressions, one hydration impression and tiny irrelevant fragments.
 - Discovery warning: 0 indexed / 140 submitted conflicts with observed search clicks. Strengthened homepage/four hubs, full sitemap coverage and nine reciprocal links instead of treating it as literal index status.
 - Diverse batch: Data-led birding visit; Authority-expansion home board-game buying/session framework; Exploration no-spend receipt math. Current weekly events remain on their separate October 17–18 URL.
+# 2026-10-20
+
+- Read latest JSON and Markdown; generated 2026-10-14, window 2026-09-14–2026-10-11, matching domain without error, six days old.
+- Used Howe Caverns 98 impressions / position 8.90 / 2 clicks and MOST 30 / 16.67 / 1 for one distinct regional guided-history itinerary: Seward House in Auburn. Added a contextual alternative from the existing Howe guide without changing its good title. No measured CTR gain claimed.
+- Ignored already-served binocular query, tiny travel-bag/hydration/fragment samples and branded noise. Sitemap’s contradictory 0-indexed row prompted stronger discovery, not a claim of no indexation.
+- Remaining portfolio deliberately separate: jigsaw purchase/table fit (Authority-expansion), no-spend source-check lesson (Exploration).
