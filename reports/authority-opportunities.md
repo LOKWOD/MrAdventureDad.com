@@ -63,3 +63,11 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **The Strong Visitor Services** — https://www.museumofplay.org/about/contact-us/ — factual-correction and accessibility review for the exact two-zone family route.
 - **Visit Rochester** — https://www.visitrochester.com/contact-us/ — regional family-resource angle for a realistic four-hour Strong itinerary covering parking, food and sensory logistics.
 - **Museum of the Moving Image Education** — https://movingimage.org/education/ — family-learning resource angle for the no-posting six-cue Foley lab, with clear attribution and no claim of partnership.
+
+## 2026-10-21
+
+- **New York State Parks — Stony Brook State Park** — https://parks.ny.gov/visit/state-parks/stony-brook-state-park (public park contact: 585-335-8111) — current lower-gorge out-and-back decision card; factual-correction, trail-status and family-accessibility resource angle.
+- **Library of Congress Preservation Directorate** — https://www.loc.gov/preservation/about/contact/ — no-burial six-item family time-capsule checklist; household-preservation education and factual-correction angle.
+- **Leave No Trace educational resources** — https://lnt.org/contact/ — family turnaround, stay-on-trail and no-gorge-wading decision framework; practical family outdoor-ethics resource angle.
+
+No outreach, submission or account creation was performed.

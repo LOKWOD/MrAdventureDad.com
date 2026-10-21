@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  campingpads: [
+    ["closed cell foam camping sleeping pad ASTM R value", "Closed-cell foam camping pads", "Compare exact length, width, packed bulk and maker-stated ASTM R-value. No valve improves failure tolerance, but foam still must fit the tent and vehicle."],
+    ["self inflating camping sleeping pad ASTM R value", "Self-inflating camping pads", "Check the exact foam-core construction, ASTM R-value, valve, inflation finish, packed size, repair materials and long-term storage instructions."],
+    ["insulated air camping sleeping pad ASTM R value", "Insulated air camping pads", "Require a documented ASTM R-value, body and tent fit, workable inflation method, compatible repair route and a home-tested nighttime exit."],
+  ],
   homejigsaws: [
     ["kids interlocking cardboard jigsaw puzzles age labeled", "Children’s interlocking cardboard jigsaws", "Match the exact age label, warnings, image detail, grip and assembled dimensions to the child and usable workspace—not piece count alone."],
     ["large piece cardboard jigsaw puzzles age labeled", "Larger-piece cardboard jigsaws", "Check the actual age label and finished dimensions. Larger pieces do not automatically mean approval for younger children or a smaller table."],
@@ -324,6 +329,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-camping-sleeping-pads-foam-self-inflating-air-guide.html") return catalog.campingpads;
+  if (["guides/stony-brook-state-park-with-kids.html", "guides/family-time-capsule-30-minute-no-burial-plan.html"].includes(normalized)) return null;
   if (["guides/seward-house-museum-with-kids.html", "guides/family-claim-check-one-headline-20-minute-lesson.html"].includes(normalized)) return null;
   if (normalized === "guides/family-jigsaw-puzzles-piece-size-table-fit-guide.html") return catalog.homejigsaws;
   if (["guides/syracuse-family-membership-break-even-most-zoo.html", "guides/central-rock-gym-syracuse-with-kids-first-visit.html", "guides/sew-four-hole-button-with-kids-family-repair-lesson.html"].includes(normalized)) return null;

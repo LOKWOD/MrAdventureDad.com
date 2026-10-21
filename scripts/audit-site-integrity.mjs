@@ -63,6 +63,9 @@ const photoOnlyGearGuides={
   "guides/family-camping-sleep-system-guide.html":"family-sleep-system.webp"
 };
 const photoOnlyEditorialGuides={
+  "guides/family-camping-sleeping-pads-foam-self-inflating-air-guide.html":"family-camping-sleeping-pad-categories.webp",
+  "guides/stony-brook-state-park-with-kids.html":"stony-brook-family-route-plan.webp",
+  "guides/family-time-capsule-30-minute-no-burial-plan.html":"family-time-capsule-plan.webp",
   "guides/seward-house-museum-with-kids.html":"seward-house-tour-planning.webp",
   "guides/family-jigsaw-puzzles-piece-size-table-fit-guide.html":"family-jigsaw-table-fit.webp",
   "guides/family-claim-check-one-headline-20-minute-lesson.html":"family-claim-check-desk.webp",
@@ -193,7 +196,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==163)fail("expected 163 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==166)fail("expected 166 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -250,7 +253,7 @@ for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==163)fail("expected 163 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==166)fail("expected 166 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
