@@ -195,3 +195,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Used Howe Caverns 98 impressions / position 8.90 / 2 clicks and MOST 30 / 16.67 / 1 for one distinct regional guided-history itinerary: Seward House in Auburn. Added a contextual alternative from the existing Howe guide without changing its good title. No measured CTR gain claimed.
 - Ignored already-served binocular query, tiny travel-bag/hydration/fragment samples and branded noise. Sitemap’s contradictory 0-indexed row prompted stronger discovery, not a claim of no indexation.
 - Remaining portfolio deliberately separate: jigsaw purchase/table fit (Authority-expansion), no-spend source-check lesson (Exploration).
+
+# 2026-10-22
+
+- Report generated: 2026-10-21; window 2026-09-21 through 2026-10-18.
+- Used: folding-wagon page at 28 impressions / 1 click / position 10.29 for one distinct pre-purchase load calculator.
+- Ignored: travel-bag page at 7 impressions and one- or two-impression query fragments as too weak; binocular queries were already served.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; 0 indexed / 153 submitted treated as a warning because it conflicts with observed clicks.
+- Portfolio: one data-led calculator, one authority-expansion destination plan and one fresh no-spend weather log; the October 24–25 roundup remains featured and unduplicated.

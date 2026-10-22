@@ -329,6 +329,7 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/fillmore-glen-state-park-with-kids.html", "guides/seven-day-family-backyard-rain-log.html"].includes(normalized)) return null;
   if (normalized === "guides/family-camping-sleeping-pads-foam-self-inflating-air-guide.html") return catalog.campingpads;
   if (["guides/stony-brook-state-park-with-kids.html", "guides/family-time-capsule-30-minute-no-burial-plan.html"].includes(normalized)) return null;
   if (["guides/seward-house-museum-with-kids.html", "guides/family-claim-check-one-headline-20-minute-lesson.html"].includes(normalized)) return null;

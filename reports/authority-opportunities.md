@@ -71,3 +71,11 @@ Qualified editorial matches only. No outreach is authorized or sent by the publi
 - **Leave No Trace educational resources** — https://lnt.org/contact/ — family turnaround, stay-on-trail and no-gorge-wading decision framework; practical family outdoor-ethics resource angle.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-22
+
+- **New York State Parks — Fillmore Glen State Park** — https://parks.ny.gov/visit/state-parks/fillmore-glen-state-park — factual-correction angle for the conflicting Gorge Trail notices and exact call-first family decision card.
+- **Cayuga County Office of Tourism** — https://www.tourcayuga.com/contact-us/ — practical family-resource angle for the transparent Fillmore Glen status and lower-park fallback guide.
+- **CoCoRaHS New York** — https://www.cocorahs.org/state.aspx?state=ny — weather-literacy resource angle for a household rain log that clearly separates casual learning from trained reportable observations.
+
+No outreach, submission or account creation was performed.
