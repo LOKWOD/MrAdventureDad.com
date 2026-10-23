@@ -210,6 +210,11 @@ const catalog = {
     ["14 oz wide mouth insulated food jar", "About-14-ounce wide-mouth food jars", "Compare mouth width, spoon reach, gasket access, cleaning method and verified temperature at the real serving time."],
     ["16 oz insulated food jar handle", "About-16-ounce insulated food jars", "Choose the larger category only for a genuinely larger portion; verify loaded carry, lid independence, headspace and the maker’s permitted uses."],
   ],
+  snackcontainers: [
+    ["divided snack box kids reusable", "Divided hard snack boxes", "Compare real bag footprint, latch independence, removable seals, compartment cleaning and the exact maker food-use instructions."],
+    ["small screw top snack container wide mouth", "Wide-mouth screw-top snack cups", "Check child opening torque, thread and gasket cleaning, roll-away shape, usable volume and the maker's current leak claim."],
+    ["reusable zipper snack bag food safe", "Reusable zipper snack pouches", "Best for compact dry-food carry only after checking food-contact use, closure alignment, corner cleaning, full drying and crush protection."],
+  ],
   handwarmers: [
     ["air activated hand warmers sealed packets", "Air-activated hand-warmer packets", "Confirm the sealed packet's intended placement, age guidance, skin-contact limits, storage and disposal instructions; keep contents away from children and pets."],
     ["reusable sodium acetate snap disc hand warmers", "Reusable snap-disc hand warmers", "Compare pouch integrity, activation method, stated heat window and exact adult reset instructions; never improvise a microwave or boiling-water method."],
@@ -329,6 +334,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/first-cave-tour-with-kids-readiness-plan.html", "guides/old-erie-canal-state-historic-park-with-kids.html"].includes(normalized)) return null;
+  if (normalized === "guides/family-day-trip-snack-containers-box-cup-pouch-guide.html") return catalog.snackcontainers;
   if (["guides/fillmore-glen-state-park-with-kids.html", "guides/seven-day-family-backyard-rain-log.html"].includes(normalized)) return null;
   if (normalized === "guides/family-camping-sleeping-pads-foam-self-inflating-air-guide.html") return catalog.campingpads;
   if (["guides/stony-brook-state-park-with-kids.html", "guides/family-time-capsule-30-minute-no-burial-plan.html"].includes(normalized)) return null;

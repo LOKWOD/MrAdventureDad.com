@@ -203,3 +203,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: travel-bag page at 7 impressions and one- or two-impression query fragments as too weak; binocular queries were already served.
 - Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; 0 indexed / 153 submitted treated as a warning because it conflicts with observed clicks.
 - Portfolio: one data-led calculator, one authority-expansion destination plan and one fresh no-spend weather log; the October 24–25 roundup remains featured and unduplicated.
+
+# 2026-10-23
+
+- Report generated: 2026-10-21; window 2026-09-21 through 2026-10-18.
+- Used: Howe Caverns page at 103 impressions / 2 clicks / position 8.70 for one distinct pre-booking cave readiness guide.
+- Ignored: MOST at 45 impressions / 1 click because adjacent museum, picker and membership coverage is already strong; one- and two-impression query fragments were too weak.
+- Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; 0 indexed / 153 submitted treated as a warning because it conflicts with observed clicks.
+- Portfolio: one data-led readiness framework, one authority-expansion canal outing and one fresh commercial snack-container guide; the October 24–25 roundup remains featured and unduplicated.

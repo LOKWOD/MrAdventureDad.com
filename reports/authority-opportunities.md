@@ -79,3 +79,11 @@ No outreach, submission or account creation was performed.
 - **CoCoRaHS New York** — https://www.cocorahs.org/state.aspx?state=ny — weather-literacy resource angle for a household rain log that clearly separates casual learning from trained reportable observations.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-23
+
+- **Howe Caverns guest services** — https://howecaverns.com/contact-us/ — family-readiness resource angle for a four-gate pre-booking call card that accurately cites current Traditional Tour requirements and routes readers to official tickets.
+- **New York State Parks — Old Erie Canal State Historic Park** — https://parks.ny.gov/visit/state-parks/old-erie-canal-state-historic-park — local family-resource angle for a map-first one-hour walk that foregrounds current alerts and designated access.
+- **Erie Canalway National Heritage Corridor** — https://eriecanalway.org/contact — educational resource angle for a short infrastructure-observation walk that links canal history to official maps.
+
+No outreach, submission or account creation was performed.
