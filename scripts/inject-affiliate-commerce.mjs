@@ -85,6 +85,11 @@ const catalog = {
     ["kids waterproof chelsea rain boots", "Low Chelsea-style kids’ rain boots", "Useful for quick independent changes when the lower coverage matches the puddle depth; verify elastic-panel construction and current fit."],
     ["kids insulated rain boots waterproof", "Insulated kids’ rain boots", "Choose insulation only when the forecast and activity require it; check lining material, removable components, drying method and the maker’s temperature guidance."],
   ],
+  winterboots: [
+    ["kids removable liner pac winter boots", "Kids’ removable-liner pac boots", "Check both-foot sizing with the real sock, heel security, shell and liner instructions, gaiter closure, loaded walking comfort, drying time and the maker’s exact water-protection claim."],
+    ["kids insulated snow boots waterproof", "Kids’ insulated snow boots", "Compare the exact waterproof boundary, insulation, closure independence, weight, snow-pant interface, current size chart, drying method and recall status."],
+    ["kids winter hiking boots waterproof insulated", "Kids’ winter hiking boots", "Choose for walking only after checking heel hold, toe room, flex, outsole, boot height, maker-stated insulation and water protection, and the child’s clean indoor gait test."],
+  ],
   radio: [
     ["rechargeable FRS walkie talkies family", "Rechargeable FRS radios", "Compare control lock, charging method, certified radio service and a size children can actually manage."],
     ["water resistant FRS walkie talkies", "Weather-resistant FRS radios", "Verify the exact ingress rating and charging-cover design instead of trusting the word outdoor."],
@@ -288,6 +293,7 @@ function chooseCatalog(path, text) {
   if (/aa\/aaa battery system|alkaline.*nimh|battery.*junk drawer/.test(haystack)) return catalog.aabatteries;
   if (/noaa weather radio|same vs basic|hand.crank.*weather/.test(haystack)) return catalog.weatherradio;
   if (/kids.*rain boots|tall pull.on.*chelsea.*insulated|rain.boot.*fit.*dry/.test(haystack)) return catalog.rainboots;
+  if (/kids.*winter boots|pac boot.*snow boot.*winter hiker|sock test/.test(haystack)) return catalog.winterboots;
   if (/kids.*snow pants|bibs.*waist.*one.piece|snow.pants.*bathroom/.test(haystack)) return catalog.snowpants;
   if (/family hand warmers|air.activated.*snap.disc.*rechargeable|recall gate/.test(haystack)) return catalog.handwarmers;
   if (/kids.*insulated food jars|10 oz.*14 oz.*16 oz|serving.time temperature/.test(haystack)) return catalog.foodjars;
@@ -334,6 +340,7 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/rochester-museum-science-center-with-kids.html", "guides/family-laundry-care-label-sort-25-minute-lesson.html"].includes(normalized)) return null;
   if (["guides/first-cave-tour-with-kids-readiness-plan.html", "guides/old-erie-canal-state-historic-park-with-kids.html"].includes(normalized)) return null;
   if (normalized === "guides/family-day-trip-snack-containers-box-cup-pouch-guide.html") return catalog.snackcontainers;
   if (["guides/fillmore-glen-state-park-with-kids.html", "guides/seven-day-family-backyard-rain-log.html"].includes(normalized)) return null;

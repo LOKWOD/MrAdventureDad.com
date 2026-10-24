@@ -87,3 +87,11 @@ No outreach, submission or account creation was performed.
 - **Erie Canalway National Heritage Corridor** — https://eriecanalway.org/contact — educational resource angle for a short infrastructure-observation walk that links canal history to official maps.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-24
+
+- **Rochester Museum & Science Center visitor services** — https://rmsc.org/contact/ — factual-correction and family-resource angle for the independent two-floor route, separate planetarium decision and volatile-price labels.
+- **Visit Rochester** — https://www.visitrochester.com/contact-us/ — regional family-resource angle for a finishable four-hour science-and-history day that routes volatile details to official pages.
+- **Federal Trade Commission consumer education** — https://www.ftc.gov/about-ftc/contact — household-literacy angle for a dry, no-products family lesson derived from the FTC care-label framework; invite factual correction, not endorsement.
+
+No outreach, submission or account creation was performed.
