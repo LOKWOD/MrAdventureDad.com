@@ -95,3 +95,11 @@ No outreach, submission or account creation was performed.
 - **Federal Trade Commission consumer education** — https://www.ftc.gov/about-ftc/contact — household-literacy angle for a dry, no-products family lesson derived from the FTC care-label framework; invite factual correction, not endorsement.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-25
+
+- **Great Swamp Conservancy** — https://www.greatswampconservancy.org/contact — factual-correction and family-resource angle for the independent one-loop plan and explicit facility unknowns.
+- **Visit Madison County** — https://www.visitmadisoncounty.com/contact/ — local family-resource angle for a low-pressure Canastota wetland route that directs volatile details to the Conservancy.
+- **Learn to Skate USA** — https://learntoskateusa.com/contact — parent-resource angle for a rental-first fit framework grounded in its handbook; invite factual correction, not endorsement.
+
+No outreach, submission or account creation was performed.

@@ -219,3 +219,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Ignored: Howe Caverns at 103 impressions / 2 clicks because the October 23 batch already supplied distinct support; the seven-impression travel-bag page and one- or two-impression query fragments were too weak.
 - Discovery: homepage, four hubs, sitemap and nine reciprocal links strengthened; 0 indexed / 153 submitted treated as a warning because it conflicts with observed clicks.
 - Portfolio: one data-led regional indoor destination, one authority-expansion winter-footwear decision and one no-spend home-skill exploration; the October 24–25 roundup remains featured and unduplicated.
+
+# 2026-10-25
+
+- Report generated: 2026-10-21; window 2026-09-21 through 2026-10-18.
+- Used: overall discovery and CTR weakness to strengthen homepage, four hubs, sitemap and nine reciprocal links.
+- Deliberately not chased: Howe Caverns (103 impressions / 2 clicks), MOST (45 / 1) and folding wagons (28 / 1) already received distinct October 22–24 support.
+- Ignored as weak: seven-impression travel-bag activity and one- or two-impression fragments.
+- Portfolio: two authority-expansion items and one exploration; no derivative data-led page and no overlap with the October 24–25 roundup.

@@ -158,6 +158,9 @@ const photoOnlyEditorialGuides={
   ,"guides/first-cave-tour-with-kids-readiness-plan.html":"first-cave-tour-readiness.webp"
   ,"guides/old-erie-canal-state-historic-park-with-kids.html":"old-erie-canal-family-out-and-back.webp"
   ,"guides/family-day-trip-snack-containers-box-cup-pouch-guide.html":"family-snack-container-categories.webp"
+  ,"guides/great-swamp-conservancy-with-kids.html":"great-swamp-conservancy-family-plan.webp"
+  ,"guides/kids-ice-skates-figure-hockey-adjustable-fit-guide.html":"kids-ice-skate-categories.webp"
+  ,"guides/family-recipe-scaling-25-minute-math-lab.html":"family-recipe-scaling-lab.webp"
 };
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");
@@ -202,7 +205,7 @@ for(const file of htmlFiles){
     if(path.endsWith(".html")&&!existsSync(normalize(dirname(file),path)))fail(rel+": broken page link "+href);
   }
 }
-if(htmlFiles.length!==175)fail("expected 175 HTML pages, found "+htmlFiles.length);
+if(htmlFiles.length!==178)fail("expected 178 HTML pages, found "+htmlFiles.length);
 const credits=JSON.parse(readFileSync(resolve(root,"assets/images/credits.json"),"utf8"));
 for(const src of imageSources.keys()){
   if(src.includes("commons.wikimedia.org")&&!credits[src])fail("missing photo credit: "+src);
@@ -259,7 +262,7 @@ for(const [rel,photo] of Object.entries(photoOnlyEditorialGuides)){
 }
 const sitemap=readFileSync(resolve(root,"sitemap.xml"),"utf8");
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
-if(sitemapUrls.length!==175)fail("expected 175 sitemap URLs, found "+sitemapUrls.length);
+if(sitemapUrls.length!==178)fail("expected 178 sitemap URLs, found "+sitemapUrls.length);
 if(new Set(sitemapUrls).size!==sitemapUrls.length)fail("duplicate sitemap URL");
 for(const file of htmlFiles){
   const rel=relative(root,file).replaceAll("\\","/");

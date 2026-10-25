@@ -90,6 +90,11 @@ const catalog = {
     ["kids insulated snow boots waterproof", "Kids’ insulated snow boots", "Compare the exact waterproof boundary, insulation, closure independence, weight, snow-pant interface, current size chart, drying method and recall status."],
     ["kids winter hiking boots waterproof insulated", "Kids’ winter hiking boots", "Choose for walking only after checking heel hold, toe room, flex, outsole, boot height, maker-stated insulation and water protection, and the child’s clean indoor gait test."],
   ],
+  iceskates: [
+    ["kids beginner figure ice skates", "Kids’ figure-skate categories", "Compare the exact maker size method, heel control, toe room, closure, blade attachment, return terms and the lesson provider’s allowed category."],
+    ["youth beginner hockey ice skates", "Youth hockey-skate categories", "Check both-foot measurements, boot shape, current heel and ankle fit, blade service route and the program’s equipment requirements."],
+    ["kids adjustable recreational ice skates", "Adjustable recreational skate categories", "Verify the current setting locks as instructed, holds the heel, matches the measured foot and is accepted by the rink or lesson program."],
+  ],
   radio: [
     ["rechargeable FRS walkie talkies family", "Rechargeable FRS radios", "Compare control lock, charging method, certified radio service and a size children can actually manage."],
     ["water resistant FRS walkie talkies", "Weather-resistant FRS radios", "Verify the exact ingress rating and charging-cover design instead of trusting the word outdoor."],
@@ -340,6 +345,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/kids-ice-skates-figure-hockey-adjustable-fit-guide.html") return catalog.iceskates;
+  if (["guides/great-swamp-conservancy-with-kids.html", "guides/family-recipe-scaling-25-minute-math-lab.html"].includes(normalized)) return null;
   if (["guides/rochester-museum-science-center-with-kids.html", "guides/family-laundry-care-label-sort-25-minute-lesson.html"].includes(normalized)) return null;
   if (["guides/first-cave-tour-with-kids-readiness-plan.html", "guides/old-erie-canal-state-historic-park-with-kids.html"].includes(normalized)) return null;
   if (normalized === "guides/family-day-trip-snack-containers-box-cup-pouch-guide.html") return catalog.snackcontainers;
