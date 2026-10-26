@@ -95,6 +95,11 @@ const catalog = {
     ["youth beginner hockey ice skates", "Youth hockey-skate categories", "Check both-foot measurements, boot shape, current heel and ankle fit, blade service route and the program’s equipment requirements."],
     ["kids adjustable recreational ice skates", "Adjustable recreational skate categories", "Verify the current setting locks as instructed, holds the heel, matches the measured foot and is accepted by the rink or lesson program."],
   ],
+  snowshoes: [
+    ["kids molded snowshoes adjustable binding", "Molded youth snowshoe categories", "Compare the exact total-load range, boot range, binding sequence, deck dimensions, traction, replacement parts and current return terms."],
+    ["youth aluminum frame snowshoes bindings", "Frame-and-deck youth snowshoe categories", "Match the dressed child plus carried load, waterproof boot, stride, trail surface and the manufacturer’s terrain and care instructions."],
+    ["kids adjustable snowshoes winter boots", "Adjustable youth snowshoe categories", "Treat growth range as secondary: the current setting must lock correctly, hold today’s boot and remain inside every maker-defined user limit."],
+  ],
   radio: [
     ["rechargeable FRS walkie talkies family", "Rechargeable FRS radios", "Compare control lock, charging method, certified radio service and a size children can actually manage."],
     ["water resistant FRS walkie talkies", "Weather-resistant FRS radios", "Verify the exact ingress rating and charging-cover design instead of trusting the word outdoor."],
@@ -345,6 +350,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/kids-snowshoes-molded-adjustable-frame-fit-guide.html") return catalog.snowshoes;
+  if (["guides/ganondagan-state-historic-site-with-kids.html", "guides/family-coat-pocket-reset-20-minute-system.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-ice-skates-figure-hockey-adjustable-fit-guide.html") return catalog.iceskates;
   if (["guides/great-swamp-conservancy-with-kids.html", "guides/family-recipe-scaling-25-minute-math-lab.html"].includes(normalized)) return null;
   if (["guides/rochester-museum-science-center-with-kids.html", "guides/family-laundry-care-label-sort-25-minute-lesson.html"].includes(normalized)) return null;

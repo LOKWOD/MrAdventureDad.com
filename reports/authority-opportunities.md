@@ -103,3 +103,11 @@ No outreach, submission or account creation was performed.
 - **Learn to Skate USA** — https://learntoskateusa.com/contact — parent-resource angle for a rental-first fit framework grounded in its handbook; invite factual correction, not endorsement.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-26
+
+- **Friends of Ganondagan** — https://www.ganondagan.org/contact — factual-correction and family-resource angle for the independent gallery/Longhouse/one-trail plan; invite correction, not endorsement.
+- **Visit Finger Lakes** — https://www.visitfingerlakes.com/about/contact-us/ — family-resource angle for a respectful Victor cultural-site plan that sends volatile details to Ganondagan.
+- **National Park Service winter recreation editors** — https://www.nps.gov/aboutus/contactus.htm — resource angle for a family snowshoe fit-and-first-walk checklist that cites NPS hazard guidance without implying endorsement.
+
+No outreach, submission or account creation was performed.
