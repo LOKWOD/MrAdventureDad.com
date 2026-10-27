@@ -111,3 +111,11 @@ No outreach, submission or account creation was performed.
 - **National Park Service winter recreation editors** — https://www.nps.gov/aboutus/contactus.htm — resource angle for a family snowshoe fit-and-first-walk checklist that cites NPS hazard guidance without implying endorsement.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-27
+
+- **NYS DEC Region 7 Lands and Forests** — https://dec.ny.gov/places/salmon-river-falls-unique-area — factual-correction angle for the family upper-overlook route; invite corrections without asking for endorsement.
+- **Oswego County Tourism** — https://visitoswegocounty.com/contact/ — family-resource angle for a conservative Salmon River Falls plan that sends live conditions and rules back to DEC.
+- **USDA Food Safety Education** — https://www.fsis.usda.gov/contact-us — resource angle for the family date-label lesson, with exact attribution and no claim of partnership.
+
+No outreach, submission or account creation was performed.

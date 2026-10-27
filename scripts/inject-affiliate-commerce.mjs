@@ -145,6 +145,11 @@ const catalog = {
     ["weekender duffel bag travel", "Weekend travel duffels", "Look for a comfortable loaded carry, a stable opening and dimensions that fit the actual trunk or luggage rack."],
     ["travel backpack carry on panel opening", "Carry-on travel backpacks", "Prioritize torso fit, strap comfort, panel access and the strictest carrier or venue rule on the trip."],
   ],
+  packingcubes: [
+    ["mesh packing cubes travel set", "Breathable mesh packing cubes", "Compare loaded dimensions, empty weight, mesh and seam construction, zipper path, care instructions, warranty and return terms; visibility does not provide spill protection."],
+    ["wipe clean zip travel organizer pouch", "Wipe-clean travel pouches", "Verify usable dimensions, material, closure, cleanability and the maker's exact water-resistance claim; an ordinary zipper is not a waterproof seal."],
+    ["compression packing cubes travel", "Zip-compression packing cubes", "Check loaded size, empty weight, zipper and gusset design, care, warranty and the real bag-weight result; compression changes volume, not mass."],
+  ],
   hearingprotection: [
     ["kids hearing protection earmuffs NRR", "Youth hearing-protection earmuffs", "Compare the labeled NRR, cup dimensions, headband adjustment and seal on the actual child."],
     ["reusable musician earplugs NRR", "Labeled reusable earplugs", "Check the size range, insertion method, cleaning instructions and real NRR rather than a vague noise-reducing claim."],
@@ -350,6 +355,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-packing-cubes-pouches-compression-guide.html") return catalog.packingcubes;
+  if (["guides/salmon-river-falls-with-kids.html", "guides/family-pantry-date-label-check-25-minute-plan.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-snowshoes-molded-adjustable-frame-fit-guide.html") return catalog.snowshoes;
   if (["guides/ganondagan-state-historic-site-with-kids.html", "guides/family-coat-pocket-reset-20-minute-system.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-ice-skates-figure-hockey-adjustable-fit-guide.html") return catalog.iceskates;
