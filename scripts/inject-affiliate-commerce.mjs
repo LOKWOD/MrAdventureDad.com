@@ -90,6 +90,11 @@ const catalog = {
     ["kids insulated snow boots waterproof", "Kids’ insulated snow boots", "Compare the exact waterproof boundary, insulation, closure independence, weight, snow-pant interface, current size chart, drying method and recall status."],
     ["kids winter hiking boots waterproof insulated", "Kids’ winter hiking boots", "Choose for walking only after checking heel hold, toe room, flex, outsole, boot height, maker-stated insulation and water protection, and the child’s clean indoor gait test."],
   ],
+  winterhats: [
+    ["kids winter beanie no pom", "Kids’ winter beanies", "Compare the current head measurement, ear coverage, stretch recovery, seams, fiber and care label with the child’s real coat and hood."],
+    ["kids earflap winter hat buckle no drawstring", "Kids’ earflap winter hats", "Check ear coverage, short secure closure, side vision, hearing, seams and snag risks; reject dangling neck cords and oversized toggles."],
+    ["kids balaclava winter hood open face", "Kids’ balaclava-style hoods", "Compare the face opening, moisture handling, seams, care and maker sizing. Never assume helmet compatibility; the activity helmet manual controls."],
+  ],
   iceskates: [
     ["kids beginner figure ice skates", "Kids’ figure-skate categories", "Compare the exact maker size method, heel control, toe room, closure, blade attachment, return terms and the lesson provider’s allowed category."],
     ["youth beginner hockey ice skates", "Youth hockey-skate categories", "Check both-foot measurements, boot shape, current heel and ankle fit, blade service route and the program’s equipment requirements."],
@@ -355,6 +360,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/kids-winter-hats-beanie-earflap-balaclava-fit-guide.html") return catalog.winterhats;
+  if (["guides/h-lee-white-maritime-museum-oswego-with-kids.html", "guides/family-room-measure-estimate-draw-25-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-packing-cubes-pouches-compression-guide.html") return catalog.packingcubes;
   if (["guides/salmon-river-falls-with-kids.html", "guides/family-pantry-date-label-check-25-minute-plan.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-snowshoes-molded-adjustable-frame-fit-guide.html") return catalog.snowshoes;

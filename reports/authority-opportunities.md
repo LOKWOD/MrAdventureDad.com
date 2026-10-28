@@ -119,3 +119,11 @@ No outreach, submission or account creation was performed.
 - **USDA Food Safety Education** — https://www.fsis.usda.gov/contact-us — resource angle for the family date-label lesson, with exact attribution and no claim of partnership.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-28
+
+- **H. Lee White Maritime Museum** — https://hlwmm.org/pages/contact — factual-correction angle for the independent main-building-first family route; invite corrections without asking for endorsement.
+- **Oswego County Tourism** — https://visitoswegocounty.com/contact/ — family-resource angle for an indoor maritime plan that sends hours, vessel access and accessibility questions back to the museum.
+- **NIST Office of Weights and Measures** — https://www.nist.gov/pml/owm/contact-us — educational-resource angle for the no-spend estimate/measure/record activity with direct NIST attribution.
+
+No outreach, submission or account creation was performed.
