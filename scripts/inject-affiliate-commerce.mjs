@@ -155,6 +155,11 @@ const catalog = {
     ["wipe clean zip travel organizer pouch", "Wipe-clean travel pouches", "Verify usable dimensions, material, closure, cleanability and the maker's exact water-resistance claim; an ordinary zipper is not a waterproof seal."],
     ["compression packing cubes travel", "Zip-compression packing cubes", "Check loaded size, empty weight, zipper and gusset design, care, warranty and the real bag-weight result; compression changes volume, not mass."],
   ],
+  wetgearentryway: [
+    ["rubber boot tray indoor entryway", "Shallow boot trays", "Measure the inside footprint and lip, then verify material, floor compatibility, emptying grip and cleaning instructions for the actual entryway."],
+    ["washable absorbent entryway mat nonslip", "Washable absorbent entryway mats", "Compare usable area, backing, edge profile, laundering and drying instructions, and the floor maker's restrictions; no backing is non-slip on every wet surface."],
+    ["freestanding coat drying rack entryway", "Freestanding wet-gear racks", "Check footprint, stated load, stability, hook geometry and assembly instructions with the real weight of wet coats and snow pants."],
+  ],
   hearingprotection: [
     ["kids hearing protection earmuffs NRR", "Youth hearing-protection earmuffs", "Compare the labeled NRR, cup dimensions, headband adjustment and seal on the actual child."],
     ["reusable musician earplugs NRR", "Labeled reusable earplugs", "Check the size range, insertion method, cleaning instructions and real NRR rather than a vague noise-reducing claim."],
@@ -360,6 +365,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-wet-gear-entryway-boot-tray-mat-rack-guide.html") return catalog.wetgearentryway;
+  if (["guides/syracuse-university-art-museum-with-kids.html", "guides/family-gear-model-serial-number-log-25-minute-plan.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-winter-hats-beanie-earflap-balaclava-fit-guide.html") return catalog.winterhats;
   if (["guides/h-lee-white-maritime-museum-oswego-with-kids.html", "guides/family-room-measure-estimate-draw-25-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-packing-cubes-pouches-compression-guide.html") return catalog.packingcubes;

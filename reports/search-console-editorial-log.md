@@ -251,3 +251,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Deliberately not chased: Howe Caverns (103 impressions / 2 clicks), MOST (45 / 1) and folding wagons (28 / 1) already received distinct support; binocular intent already has a ranking guide.
 - Ignored as weak: seven-impression travel-bag activity and one- or two-impression fragments.
 - Portfolio: two authority-expansion items and one exploration; no derivative data-led page and no overlap with the October 31–November 1 roundup.
+
+# 2026-10-29
+
+- Report generated: 2026-10-28; window 2026-09-28 through 2026-10-25.
+- Used: 711 impressions, 7 clicks, 0.98% CTR, average position 17.96, plus zero-click hub visibility to strengthen homepage, four hubs, sitemap and nine reciprocal links.
+- Deliberately not chased: Howe Caverns (81 impressions / 1 click / position 9.1), folding wagons (27 / 1 / 10.7), camping sleep (9 / 1 / 8.4) and travel bags (8 / 2 / 14.1) already received distinct support in the previous fourteen days.
+- Ignored as weak or already served: one- or two-impression binocular and branded fragments.
+- Portfolio: two authority-expansion items and one exploration; no derivative data-led page and no overlap with the October 31–November 1 roundup.

@@ -127,3 +127,11 @@ No outreach, submission or account creation was performed.
 - **NIST Office of Weights and Measures** — https://www.nist.gov/pml/owm/contact-us — educational-resource angle for the no-spend estimate/measure/record activity with direct NIST attribution.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-29
+
+- **Syracuse University Art Museum** — https://museum.syr.edu/about/staff/ — factual-correction angle for the independent three-work family route; invite corrections without requesting endorsement.
+- **Visit Syracuse** — https://www.visitsyracuse.com/contact/ — free-family-resource angle for a short campus art visit that sends hours, parking and access questions to official University sources.
+- **U.S. Consumer Product Safety Commission Recall Outreach** — https://www.cpsc.gov/About-CPSC/Contact-Information — consumer-education angle for the five-field gear-label evidence card with direct CPSC recall attribution.
+
+No outreach, submission or account creation was performed.
