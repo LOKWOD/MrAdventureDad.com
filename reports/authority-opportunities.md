@@ -135,3 +135,11 @@ No outreach, submission or account creation was performed.
 - **U.S. Consumer Product Safety Commission Recall Outreach** — https://www.cpsc.gov/About-CPSC/Contact-Information — consumer-education angle for the five-field gear-label evidence card with direct CPSC recall attribution.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-30
+
+- **Skä•noñh – Great Law of Peace Center** — https://www.skanonhcenter.org/contact-us — factual-correction angle for the independent respectful family route; invite corrections without implying endorsement or cultural authority.
+- **Onondaga County Parks** — https://onondagacountyparks.com/contact/ — local-resource angle for the Center-plus-short-lake-walk planner that sends park status and restroom checks to the County.
+- **FTC Consumer Advice** — https://www.ftc.gov/about-ftc/contact — consumer-education angle for the five-field EnergyGuide evidence card with direct FTC attribution and no shopping recommendation.
+
+No outreach, submission or account creation was performed.

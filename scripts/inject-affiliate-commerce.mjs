@@ -54,6 +54,11 @@ const catalog = {
     ["rechargeable hand warmers", "Rechargeable hand warmers", "Useful backup warmth for cold fingers during long outdoor waits."],
     ["compact snow shovel car", "Compact car snow shovel", "Keep it accessible after the vehicle is loaded, not under every suitcase."],
   ],
+  carsnowremoval: [
+    ["handheld car ice scraper windshield", "Handheld windshield ice scrapers", "Compare the exact blade material, grip with winter gloves, total length, storage, replaceable parts and the tool maker's permitted surfaces. A scraper is not automatically safe for paint, sensors, cameras, mirrors or coated glass."],
+    ["long snow brush ice scraper car telescoping", "Long snow brushes with scraper ends", "Measure usable reach with both feet on the ground, then check head material, lock security, handle control, vehicle-manual limits and secured storage. Reject a joint that twists or collapses in the glove test."],
+    ["foam head car snow remover long handle", "Broad foam-head snow removers", "Compare the exact head material, edge, attachment, temperature limits, reach and permitted contact. Foam does not prove paint compatibility, and a damaged or gritty head can expose hard surfaces."],
+  ],
   bike: [
     ["bike repair kit portable pump tire levers", "Portable bike repair kit", "Carry only tools that fit the family bikes and that an adult knows how to use."],
     ["kids bicycle helmet adjustable", "Adjustable youth bike helmets", "Fit and current safety standards matter more than color or accessories."],
@@ -365,6 +370,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-car-snow-removal-tools-scraper-brush-foam-guide.html") return catalog.carsnowremoval;
+  if (["guides/skanonh-great-law-of-peace-center-with-kids.html", "guides/family-energyguide-label-check-25-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-wet-gear-entryway-boot-tray-mat-rack-guide.html") return catalog.wetgearentryway;
   if (["guides/syracuse-university-art-museum-with-kids.html", "guides/family-gear-model-serial-number-log-25-minute-plan.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-winter-hats-beanie-earflap-balaclava-fit-guide.html") return catalog.winterhats;
