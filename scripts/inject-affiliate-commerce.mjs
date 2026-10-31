@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  sidelineblankets: [
+    ["washable fleece stadium sideline blanket", "Washable fleece sideline blankets", "Compare open size, packed bulk, fiber, edge finish and exact care label. Fleece is simple to wash, but it is not automatically windproof or waterproof."],
+    ["wool blend stadium picnic blanket", "Wool-blend sideline blankets", "Check the exact fiber percentages, weight, itch sensitivity, fringe, packed size and care method. The word wool does not define the blend or maintenance."],
+    ["packable insulated outdoor stadium blanket", "Packable insulated outdoor blankets", "Compare shell, insulation, open and packed dimensions, care limits and the maker’s precise water-resistance boundary. A quilted look proves no performance claim."],
+  ],
   campingpads: [
     ["closed cell foam camping sleeping pad ASTM R value", "Closed-cell foam camping pads", "Compare exact length, width, packed bulk and maker-stated ASTM R-value. No valve improves failure tolerance, but foam still must fit the tent and vehicle."],
     ["self inflating camping sleeping pad ASTM R value", "Self-inflating camping pads", "Check the exact foam-core construction, ASTM R-value, valve, inflation finish, packed size, repair materials and long-term storage instructions."],
@@ -370,6 +375,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-sideline-blankets-fleece-wool-insulated-guide.html") return catalog.sidelineblankets;
+  if (["guides/salmon-river-fish-hatchery-with-kids.html", "guides/family-foil-boat-load-lab-25-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-car-snow-removal-tools-scraper-brush-foam-guide.html") return catalog.carsnowremoval;
   if (["guides/skanonh-great-law-of-peace-center-with-kids.html", "guides/family-energyguide-label-check-25-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-wet-gear-entryway-boot-tray-mat-rack-guide.html") return catalog.wetgearentryway;

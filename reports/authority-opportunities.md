@@ -143,3 +143,11 @@ No outreach, submission or account creation was performed.
 - **FTC Consumer Advice** — https://www.ftc.gov/about-ftc/contact — consumer-education angle for the five-field EnergyGuide evidence card with direct FTC attribution and no shopping recommendation.
 
 No outreach, submission or account creation was performed.
+
+## 2026-10-31
+
+- **NYS DEC Salmon River Fish Hatchery** — https://dec.ny.gov/things-to-do/freshwater-fishing/hatcheries/salmon-river — factual-correction angle for the independent 75-minute family route; invite corrections without implying endorsement or a live operating promise.
+- **Oswego County Tourism** — https://www.visitoswegocounty.com/contact-us/ — local-resource angle for a call-first working-hatchery family plan that sends operating facts to DEC.
+- **NASA STEM engagement** — https://www.nasa.gov/learning-resources/ — educator-resource angle for the equal-sheet six-test foil-boat evidence card with direct NASA attribution and no product promotion.
+
+No outreach, submission or account creation was performed.
