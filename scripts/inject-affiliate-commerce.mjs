@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  skigoggles: [
+    ["youth ski goggles helmet compatible", "Youth-fit ski goggles", "Compare the exact frame dimensions, face seal, nose clearance, strap range, helmet interface, lens documentation and clean-return terms. Youth labeling does not prove fit."],
+    ["kids OTG ski goggles over glasses", "Kids’ OTG ski goggles", "Require explicit over-the-glasses design, then test the child’s actual frames for bridge, temple and lens clearance with the real helmet."],
+    ["kids low light ski goggles high VLT", "Youth low-light ski goggles", "Compare the maker’s documented VLT range, UV claim, intended light conditions, lens compatibility and care instructions. Tint alone proves none of these."],
+  ],
   sidelineblankets: [
     ["washable fleece stadium sideline blanket", "Washable fleece sideline blankets", "Compare open size, packed bulk, fiber, edge finish and exact care label. Fleece is simple to wash, but it is not automatically windproof or waterproof."],
     ["wool blend stadium picnic blanket", "Wool-blend sideline blankets", "Check the exact fiber percentages, weight, itch sensitivity, fringe, packed size and care method. The word wool does not define the blend or maintenance."],
@@ -322,6 +327,7 @@ function amazonUrl(query) {
 function chooseCatalog(path, text) {
   const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1] || "";
   const haystack = `${path} ${title}`.toLowerCase();
+  if (/kids.*ski goggles|youth.*otg.*low.light|goggle.*helmet test/.test(haystack)) return catalog.skigoggles;
   if (path === "guides/family-home-board-games-cooperative-strategy-dexterity-guide.html") return catalog.homeboardgames;
   if (/family boot dryers|forced air.*low heat.*passive|material gate/.test(haystack)) return catalog.bootdryers;
   if (/kids.*sleds|saucer.*toboggan.*steering|sled.*hill gate/.test(haystack)) return catalog.kidssleds;
@@ -469,3 +475,4 @@ for (const file of htmlFiles(root)) {
 }
 
 console.log(`Mr Adventure Dad affiliate commerce: ${changed} revenue page(s), ${links} tagged link(s), tag=${tag}`);
+

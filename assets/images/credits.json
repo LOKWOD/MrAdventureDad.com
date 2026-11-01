@@ -1678,5 +1678,29 @@
     "license": "Original AI-assisted image; published by Mr Adventure Dad",
     "verified": "2026-10-31",
     "notes": "Original AI-assisted conceptual editorial image showing a controlled foil-boat load setup. Generic materials only; not NASA imagery, a product test or proof of results."
+  },
+  "assets/images/photos/delphi-falls-family-plan.webp": {
+    "title": "Conceptual family waterfall-day planning still life",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-11-01",
+    "notes": "Conceptual generic waterfall planning scene; explicitly not Delphi Falls, a park trail, present water level, access or conditions. Not affiliate/product imagery."
+  },
+  "assets/images/photos/kids-ski-goggles-fit-categories.webp": {
+    "title": "Generic youth ski-goggle fit categories",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-11-01",
+    "notes": "Unbranded youth, OTG and low-light category stand-ins with helmet and glasses; not exact products, testing, certification, optical performance or compatibility. Not affiliate/product imagery."
+  },
+  "assets/images/photos/family-power-outage-drill.webp": {
+    "title": "Conceptual family power-outage drill kit",
+    "creator": "Mr Adventure Dad Editorial Desk with OpenAI image generation",
+    "source": "Original AI-assisted editorial photography",
+    "license": "Copyright Mr Adventure Dad",
+    "verified": "2026-11-01",
+    "notes": "Conceptual planning still life; no active outage, flame, generator, fuel, live wiring or product claim. Not affiliate/product imagery."
   }
 }

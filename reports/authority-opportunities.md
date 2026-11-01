@@ -151,3 +151,12 @@ No outreach, submission or account creation was performed.
 - **NASA STEM engagement** — https://www.nasa.gov/learning-resources/ — educator-resource angle for the equal-sheet six-test foil-boat evidence card with direct NASA attribution and no product promotion.
 
 No outreach, submission or account creation was performed.
+
+
+## 2026-11-01
+
+- **Madison County Planning / Delphi Falls County Park** — https://www.madisoncounty.ny.gov/2873/Delphi-Falls-County-Park — factual-correction and accessible-route review for the independent lower-falls-first family plan; no endorsement implied.
+- **Ski Areas of New York** — https://www.iskiny.com/contact — family-education angle for the helmet-and-glasses ski-goggle fit test, with manufacturer documentation and no paid placement request.
+- **Onondaga County Emergency Management** — https://www.ongov.net/em/ — local-preparedness resource angle for the five-box family outage drill grounded in Ready.gov and CDC guidance.
+
+No outreach, submission, account creation or paid placement was performed.
