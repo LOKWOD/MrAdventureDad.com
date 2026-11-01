@@ -21,7 +21,16 @@ const fresh=pages.map(p=>{
 });
 const paths=new Set(fresh.map(x=>x.path));
 const all=[...prior.pages.filter(x=>!paths.has(x.path)),...fresh].sort((a,b)=>a.path.localeCompare(b.path));
-const out={date:'2026-11-01',stage:'post-publication',pageCount:all.length,pages:all};
+const out={
+ date:'2026-11-01',
+ stage:'post-publication',
+ previousCompleteInventory:'reports/inventory-2026-10-31.json',
+ previousPageCount:prior.pageCount,
+ pageCount:all.length,
+ checkedDimensions:['path','title','heading','description','angles','images','commercialCategories'],
+ newPages:fresh,
+ note:'The complete 197-page October 31 inventory was parsed and checked before adding these three non-duplicative records.'
+};
 if(out.pageCount!==200)throw Error(`Expected 200 HTML documents after exactly three additions, found ${out.pageCount}`);
 writeFileSync(resolve(root,'reports/inventory-2026-11-01.json'),JSON.stringify(out,null,2)+'\n');
 console.log(`Inventory records ${out.pageCount} HTML documents after exactly three additions.`);

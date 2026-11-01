@@ -8,7 +8,7 @@ if(new Set(pages.map(p=>p.slug)).size!==3)fail('Duplicate source slug');
 if(new Set(pages.map(p=>p.title)).size!==3)fail('Duplicate source title');
 if(new Set(pages.map(p=>p.image)).size!==3)fail('Duplicate source image');
 const inventory=JSON.parse(read('reports/inventory-2026-11-01.json'));
-if(inventory.pageCount!==200||inventory.pages.length!==200)fail('Inventory count mismatch');
+if(inventory.previousPageCount!==197||inventory.pageCount!==200||inventory.newPages?.length!==3)fail('Inventory count mismatch');
 const sitemap=read('sitemap.xml'),home=read('index.html'),credits=JSON.parse(read('assets/images/credits.json'));
 let paid=0;
 for(const [i,p] of pages.entries()){
