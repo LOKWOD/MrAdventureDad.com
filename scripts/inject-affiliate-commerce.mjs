@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  carcargoorganizers: [
+    ["soft trunk organizer tote car cargo", "Soft car-cargo totes", "Compare the measured footprint, loaded carry, base, handles, closure and cleaning instructions. A tote organizes gear; it is not a crash restraint."],
+    ["folding trunk organizer dividers car cargo", "Divided folding cargo boxes", "Check open and folded dimensions, divider structure, base, handles, maker load guidance and how the loaded box will be secured through vehicle-approved points."],
+    ["lidded storage bin car trunk cargo", "Lidded rigid cargo bins", "Verify outside dimensions, loaded weight, lid security, hatch clearance, emergency access and manufacturer instructions. A flat lid is not permission to stack above the sightline."],
+  ],
   skigoggles: [
     ["youth ski goggles helmet compatible", "Youth-fit ski goggles", "Compare the exact frame dimensions, face seal, nose clearance, strap range, helmet interface, lens documentation and clean-return terms. Youth labeling does not prove fit."],
     ["kids OTG ski goggles over glasses", "Kids’ OTG ski goggles", "Require explicit over-the-glasses design, then test the child’s actual frames for bridge, temple and lens clearance with the real helmet."],
@@ -381,6 +386,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-car-cargo-organizers-tote-folding-box-lidded-bin-guide.html") return catalog.carcargoorganizers;
+  if (["guides/labrador-hollow-boardwalk-with-kids.html", "guides/family-home-utility-map-20-minute-adults-operate.html"].includes(normalized)) return null;
   if (normalized === "guides/family-sideline-blankets-fleece-wool-insulated-guide.html") return catalog.sidelineblankets;
   if (["guides/salmon-river-fish-hatchery-with-kids.html", "guides/family-foil-boat-load-lab-25-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-car-snow-removal-tools-scraper-brush-foam-guide.html") return catalog.carsnowremoval;

@@ -160,3 +160,11 @@ No outreach, submission or account creation was performed.
 - **Onondaga County Emergency Management** — https://www.ongov.net/em/ — local-preparedness resource angle for the five-box family outage drill grounded in Ready.gov and CDC guidance.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-02
+
+- **NYS DEC Region 7 / Labrador Hollow Unique Area** — https://dec.ny.gov/places/labrador-hollow-unique-area — factual-correction and accessible-route review for the independent boardwalk-first family plan; no endorsement implied.
+- **National Highway Traffic Safety Administration** — https://www.nhtsa.gov/contact — consumer-education angle for the six-measurement cargo framework and parked hard-brake test grounded in Secure Your Load guidance.
+- **American Red Cross, Central & Northern New York** — https://www.redcross.org/local/new-york/central-and-northern-new-york.html — preparedness-resource angle for the four-color, adults-operate family utility map grounded in Red Cross utility guidance.
+
+No outreach, submission, account creation or paid placement was performed.
