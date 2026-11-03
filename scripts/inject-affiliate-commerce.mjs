@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  wintertraction: [
+    ["low profile carbide stud ice cleats walking pavement", "Low-profile stud traction", "Compare the exact intended surface, current footwear size chart, user limits, inspection points and transition rules. Low-profile studs do not make every paved surface slip-proof."],
+    ["coil traction cleats packed snow ice walking", "Coil-style winter traction", "Check the exact wearer and footwear limits, packed-snow and ice use, excluded surfaces, fit method and storage instructions. Some manufacturers do not make child sizes."],
+    ["microspike chain trail traction ice snow hiking", "Chain-and-spike trail traction", "Require the maker’s current pedestrian-use manual, exact boot fit, inspection, route match and a clear boundary before technical terrain. These are not climbing crampons."],
+  ],
   carcargoorganizers: [
     ["soft trunk organizer tote car cargo", "Soft car-cargo totes", "Compare the measured footprint, loaded carry, base, handles, closure and cleaning instructions. A tote organizes gear; it is not a crash restraint."],
     ["folding trunk organizer dividers car cargo", "Divided folding cargo boxes", "Check open and folded dimensions, divider structure, base, handles, maker load guidance and how the loaded box will be secured through vehicle-approved points."],
@@ -386,6 +391,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-winter-footwear-traction-studs-coils-trail-spikes-guide.html") return catalog.wintertraction;
+  if (["guides/utica-childrens-museum-with-kids.html", "guides/family-stargazing-20-minute-backyard-reset.html"].includes(normalized)) return null;
   if (normalized === "guides/family-car-cargo-organizers-tote-folding-box-lidded-bin-guide.html") return catalog.carcargoorganizers;
   if (["guides/labrador-hollow-boardwalk-with-kids.html", "guides/family-home-utility-map-20-minute-adults-operate.html"].includes(normalized)) return null;
   if (normalized === "guides/family-sideline-blankets-fleece-wool-insulated-guide.html") return catalog.sidelineblankets;

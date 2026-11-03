@@ -292,3 +292,11 @@ No outreach was sent. No outreach opportunity was logged because the on-site dec
 - Deliberately not chased: Howe Caverns (81 impressions), folding wagons (27), camping sleep (9) and travel bags (8) already have established pages and recent support; another derivative page risked cannibalization.
 - Ignored as weak: one- and two-impression query fragments.
 - Portfolio: two authority-expansion items and one exploration; no derivative data-led page and no overlap with the October 31–November 1 roundup.
+
+# 2026-11-03
+
+- Report generated: 2026-10-28; window 2026-09-28 through 2026-10-25; age six days.
+- Used: 711 impressions, 7 clicks, 0.98% CTR and position 17.96, plus zero-click Adventures (15 / 7.7), Destinations (9 / 13.9) and Gear (10 / 13.9), to strengthen all three hubs, homepage, sitemap and nine reciprocal links.
+- Deliberately not chased: Howe Caverns (81 impressions), folding wagons (27), camping sleep (9) and travel bags (8) already have dedicated pages and recent support; another derivative risked cannibalization.
+- Ignored as weak: one- and two-impression query fragments and unrelated/branded noise.
+- Portfolio: two authority-expansion items and one exploration; no page labeled Data-led because the usable signal was hub-level rather than an uncovered query.

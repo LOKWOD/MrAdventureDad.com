@@ -168,3 +168,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **American Red Cross, Central & Northern New York** — https://www.redcross.org/local/new-york/central-and-northern-new-york.html — preparedness-resource angle for the four-color, adults-operate family utility map grounded in Red Cross utility guidance.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-03
+
+- **Utica Children’s Museum** — https://www.uticachildrensmuseum.org/contact/ — factual-correction and family-planning review for the independent three-gallery route and disclosed Wednesday-hours conflict; no endorsement implied.
+- **NYS DEC Hike Smart NY** — https://dec.ny.gov/things-to-do/hiking/hike-smart-ny — consumer-education angle for the child-fit winter-traction decision gate grounded in DEC winter guidance and current manufacturer manuals.
+- **NASA Night Sky Network** — https://nightsky.jpl.nasa.gov/ — family-outreach angle for the no-spend one-direction stargazing card grounded in NASA site-scouting and Polaris guidance.
+
+No outreach, submission, account creation or paid placement was performed.
