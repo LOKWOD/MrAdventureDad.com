@@ -61,4 +61,5 @@ for(const source of ['https://science.nasa.gov/solar-system/how-to-find-good-pla
 if(!home.includes('FRESH IDEAS · NOVEMBER 3, 2026'))fail('Homepage lead date not refreshed');
 if(!home.includes('Dated weekend events stay in the separate weekly guide'))fail('Weekly roundup separation missing');
 if(!existsSync(resolve(root,'weekend-october-31-november-1-2026.html')))fail('Current separate weekend roundup missing');
+if(!existsSync(resolve(root,'weekend-november-7-8-2026.html')))fail('Current Nov 7-8 weekend roundup missing');
 console.log('November 3 daily audit passed: 3 pages, full 206-page inventory, 3 unique titles/slugs/images, 3 new and 255 sitewide affiliate links, sources/discovery/schema/credits/internal links present.');
