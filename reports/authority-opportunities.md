@@ -176,3 +176,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **NASA Night Sky Network** — https://nightsky.jpl.nasa.gov/ — family-outreach angle for the no-spend one-direction stargazing card grounded in NASA site-scouting and Polaris guidance.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-04
+
+- **City of Syracuse Parks & Recreation** — https://www.syr.gov/Departments/Parks-Recreation — factual-correction and family-access review for the one-hour Creekwalk card grounded in the city map, access list and closure route.
+- **Smithsonian Learning Lab** — https://learninglab.si.edu/about/contact — family-resource angle for the no-spend three-object mini museum using Observe, Think, Connect and Reflect with explicit attribution.
+- **NHTSA Vehicle Safety Hotline / consumer resources** — https://www.nhtsa.gov/contact-us — consumer-education angle for the owner-manual-first floor-mat pedal gate and VIN recall check; no product endorsement requested.
+
+No outreach, submission, account creation or paid placement was performed.

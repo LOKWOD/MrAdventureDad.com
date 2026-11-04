@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  winterfloormats: [
+    ["vehicle specific all weather floor liners retention", "Vehicle-specific all-weather floor liners", "Require the exact year, make, model, body style, seating layout and retention system. The vehicle owner manual controls the driver footwell; never stack coverings."],
+    ["trim to fit rubber car floor mats rear passenger cargo", "Trim-to-fit rubber passenger and cargo mats", "Measure the permitted non-driver zone, keep seat tracks and vents clear, and follow both vehicle and mat instructions. Do not improvise a driver mat."],
+    ["waterproof boot tray car cargo wet shoes", "Removable boot and cargo trays", "Use only in a stable, vehicle-permitted passenger or cargo zone for removed wet gear. A tray is not a floor mat, passenger restraint or cargo tie-down."],
+  ],
   wintertraction: [
     ["low profile carbide stud ice cleats walking pavement", "Low-profile stud traction", "Compare the exact intended surface, current footwear size chart, user limits, inspection points and transition rules. Low-profile studs do not make every paved surface slip-proof."],
     ["coil traction cleats packed snow ice walking", "Coil-style winter traction", "Check the exact wearer and footwear limits, packed-snow and ice use, excluded surfaces, fit method and storage instructions. Some manufacturers do not make child sizes."],
@@ -391,6 +396,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-winter-car-floor-mats-liners-trays-fit-guide.html") return catalog.winterfloormats;
+  if (["guides/onondaga-creekwalk-inner-harbor-with-kids.html", "guides/family-three-object-mini-museum-30-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-winter-footwear-traction-studs-coils-trail-spikes-guide.html") return catalog.wintertraction;
   if (["guides/utica-childrens-museum-with-kids.html", "guides/family-stargazing-20-minute-backyard-reset.html"].includes(normalized)) return null;
   if (normalized === "guides/family-car-cargo-organizers-tote-folding-box-lidded-bin-guide.html") return catalog.carcargoorganizers;
