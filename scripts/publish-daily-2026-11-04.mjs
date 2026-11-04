@@ -22,6 +22,7 @@ function insert(path,needle,block){let h=read(path).replace(new RegExp(`${start}
 const link=i=>`guides/${pages[i].slug}.html`,img=p=>`<img src="assets/images/photos/${p.image}" width="1600" height="900" style="height:auto;aspect-ratio:16/9;object-fit:contain" alt="${p.alt}" loading="lazy" decoding="async">`;
 
 let home=read('index.html').replace(new RegExp(`${start}[\\s\\S]*?${end}`,'g'),'');
+home=home.replace(/<section class="stories" id="october-family-plans">[\s\S]*?(?=<section class="now-plans wrap")/,'');
 const priorPattern=/<!-- DAILY 2026-11-03 -->[\s\S]*?<!-- END DAILY 2026-11-03 -->/g,prior=home.match(priorPattern)?.[0];
 home=home.replace(priorPattern,'');
 if(prior)home=home.replace('<div class="field-archive-content">','<div class="field-archive-content">'+prior);
