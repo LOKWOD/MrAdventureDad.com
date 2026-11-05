@@ -184,3 +184,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **NHTSA Vehicle Safety Hotline / consumer resources** — https://www.nhtsa.gov/contact-us — consumer-education angle for the owner-manual-first floor-mat pedal gate and VIN recall check; no product endorsement requested.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-05
+
+- **New York State Museum Visitor Services** — https://nysm.nysed.gov/museum-contact — factual-correction and family-access review for the three-gallery route grounded in the museum’s current visit, exhibition, renovation and carousel pages.
+- **CDC HEADS UP** — https://www.cdc.gov/heads-up/about/contact-us.html — family-resource angle for the snow-sport helmet four-gate matrix using CDC certification, fit and replacement guidance without product endorsement.
+- **Science Buddies** — https://www.sciencebuddies.org/about/contact-us — family-resource angle for the one-variable rubber-band sound table with clear attribution and added no-launch/allergy gates.
+
+No outreach, submission, account creation or paid placement was performed.

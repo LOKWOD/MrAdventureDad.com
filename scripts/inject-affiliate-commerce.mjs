@@ -29,6 +29,11 @@ const catalog = {
     ["kids OTG ski goggles over glasses", "Kids’ OTG ski goggles", "Require explicit over-the-glasses design, then test the child’s actual frames for bridge, temple and lens clearance with the real helmet."],
     ["kids low light ski goggles high VLT", "Youth low-light ski goggles", "Compare the maker’s documented VLT range, UV claim, intended light conditions, lens compatibility and care instructions. Tint alone proves none of these."],
   ],
+  skihelmets: [
+    ["youth ski helmet ASTM F2040 hard shell", "Youth hard-shell ski helmet categories", "Require the exact snow-sport certification label, manufacture date, current head measurement, complete manual, known history and clean return terms. Construction does not prove fit or performance."],
+    ["youth ski helmet ASTM F2040 in mold", "Youth in-mold ski helmet categories", "Compare the exact certification, shell shape, size chart, retention system, goggle interface, permitted layers, replacement rule and current recall status."],
+    ["kids adjustable fit ski snowboard helmet ASTM F2040", "Adjustable-fit youth snow-sport helmets", "A dial can fine-tune only a correctly sized shell. Verify the snow-sport label, stable pain-free fit, real goggles, unmodified parts and known crash history."],
+  ],
   sidelineblankets: [
     ["washable fleece stadium sideline blanket", "Washable fleece sideline blankets", "Compare open size, packed bulk, fiber, edge finish and exact care label. Fleece is simple to wash, but it is not automatically windproof or waterproof."],
     ["wool blend stadium picnic blanket", "Wool-blend sideline blankets", "Check the exact fiber percentages, weight, itch sensitivity, fringe, packed size and care method. The word wool does not define the blend or maintenance."],
@@ -396,6 +401,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/kids-ski-helmets-hard-shell-in-mold-fit-replacement-guide.html") return catalog.skihelmets;
+  if (["guides/new-york-state-museum-albany-with-kids.html", "guides/family-rubber-band-sound-lab-20-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-winter-car-floor-mats-liners-trays-fit-guide.html") return catalog.winterfloormats;
   if (["guides/onondaga-creekwalk-inner-harbor-with-kids.html", "guides/family-three-object-mini-museum-30-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-winter-footwear-traction-studs-coils-trail-spikes-guide.html") return catalog.wintertraction;
