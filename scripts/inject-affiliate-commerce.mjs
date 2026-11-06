@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  visualtimers: [
+    ["analog visual countdown timer kids", "Analog visual countdown timers", "Compare total size, viewing angle, duration range, control simplicity, alarm options, batteries and mounting. A colored disk is useful only when the child can see and understand it."],
+    ["large display digital countdown timer adjustable volume", "Large-display digital countdown timers", "Check display size, button lock, alarm and silent modes, memory, battery compartment, manual and accidental-reset behavior in the actual room."],
+    ["portable vibration timer visual countdown", "Portable visual or vibration timers", "Verify the exact display, vibration and sound controls, clip or stand security, charging or battery access, privacy, manual and return terms. Portability does not prove accessibility."],
+  ],
   winterfloormats: [
     ["vehicle specific all weather floor liners retention", "Vehicle-specific all-weather floor liners", "Require the exact year, make, model, body style, seating layout and retention system. The vehicle owner manual controls the driver footwell; never stack coverings."],
     ["trim to fit rubber car floor mats rear passenger cargo", "Trim-to-fit rubber passenger and cargo mats", "Measure the permitted non-driver zone, keep seat tracks and vents clear, and follow both vehicle and mat instructions. Do not improvise a driver mat."],
@@ -401,6 +406,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-visual-timers-analog-digital-app-transition-guide.html") return catalog.visualtimers;
+  if (["guides/cny-regional-market-with-kids-three-item-mission.html", "guides/family-home-draft-hunt-20-minute-no-flame-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-ski-helmets-hard-shell-in-mold-fit-replacement-guide.html") return catalog.skihelmets;
   if (["guides/new-york-state-museum-albany-with-kids.html", "guides/family-rubber-band-sound-lab-20-minute-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/family-winter-car-floor-mats-liners-trays-fit-guide.html") return catalog.winterfloormats;

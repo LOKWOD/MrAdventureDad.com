@@ -192,3 +192,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **Science Buddies** — https://www.sciencebuddies.org/about/contact-us — family-resource angle for the one-variable rubber-band sound table with clear attribution and added no-launch/allergy gates.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-06
+
+- **CNY Regional Market Authority** — https://www.cnyregionalmarket.org/contact — factual-correction and family-access review for the three-item mission grounded in current official hours, payment, access and pet rules.
+- **Home Performance with ENERGY STAR** — https://www.energystar.gov/saveathome/improvements/find-home-energy-assessor — family handout angle for the observation-versus-diagnosis draft map, with an explicit certified-assessor gate.
+- **Onondaga County Public Library family services** — https://www.onlib.org/contact-us — practical family-routine resource angle for the seven-day timer test and no-buy option; no product endorsement requested.
+
+No outreach, submission, account creation or paid placement was performed.
