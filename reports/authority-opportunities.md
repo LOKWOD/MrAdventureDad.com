@@ -200,3 +200,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **Onondaga County Public Library family services** — https://www.onlib.org/contact-us — practical family-routine resource angle for the seven-day timer test and no-buy option; no product endorsement requested.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-07
+
+- **Northeast Classic Car Museum** — https://classiccarmuseum.org/contact-us/ — factual-correction and family-access review for the three-room route, especially the conflicting official closing times and current sit-in-car status.
+- **New York State Amateur Radio Association council** — https://nysara.org/contact/ — resource-page fit for the FCC-grounded family FRS/GMRS decision card; pitch only the legal-service and range-reality asset, not an endorsement request.
+- **Onondaga County Public Library family services** — https://www.onlib.org/contact-us — no-cost media-literacy activity fit for the 12-move, no-posting stop-motion card.
+
+No outreach, submission, account creation or paid placement was performed.

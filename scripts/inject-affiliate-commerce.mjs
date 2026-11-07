@@ -406,6 +406,7 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (["guides/northeast-classic-car-museum-with-kids-three-room-plan.html", "guides/family-stop-motion-story-30-minute-twelve-moves-no-posting.html", "guides/delphi-falls-county-park-with-kids.html", "guides/family-power-outage-drill-20-minutes.html"].includes(normalized)) return null;
   if (normalized === "guides/family-visual-timers-analog-digital-app-transition-guide.html") return catalog.visualtimers;
   if (["guides/cny-regional-market-with-kids-three-item-mission.html", "guides/family-home-draft-hunt-20-minute-no-flame-activity.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-ski-helmets-hard-shell-in-mold-fit-replacement-guide.html") return catalog.skihelmets;
