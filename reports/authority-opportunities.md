@@ -208,3 +208,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **Onondaga County Public Library family services** — https://www.onlib.org/contact-us — no-cost media-literacy activity fit for the 12-move, no-posting stop-motion card.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-08
+
+- **Onondaga Historical Association** — https://www.cnyhistory.org/contact/ — factual-correction and family-access review for the three-exhibit route, especially current exhibit access, renovation status and accessible-entry details.
+- **National Weather Service Binghamton education/outreach** — https://www.weather.gov/bgm/ — local weather-literacy resource fit for the four-box, zero-forecasting map-read framework; pitch the decision boundary, not a forecast endorsement.
+- **Onondaga County Public Library family services** — https://www.onlib.org/contact-us — no-cost family-learning resource fit for the NOAA map activity and local-history route.
+
+No outreach, submission, account creation or paid placement was performed.

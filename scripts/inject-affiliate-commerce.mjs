@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  wintergaiters: [
+    ["kids low ankle gaiters trail debris", "Low ankle gaiters for kids", "Compare the exact footwear attachment, child-size chart, closure, lace hook or heel patch, care and return terms. Low coverage fits debris and light splash, not deep snow."],
+    ["kids mid calf winter gaiters snow boots", "Mid-calf winter gaiters for kids", "Check the current boot size, dressed calf, closure overlap, lace hook, instep strap and clean indoor walk. A kids label does not prove a secure boot seal."],
+    ["kids tall snow gaiters winter boots", "Taller snow gaiters for kids", "Use only when deeper snow justifies the extra coverage and a true child size fits. Verify the maker chart, strap route, hardware, care and return policy before outdoor use."],
+  ],
   visualtimers: [
     ["analog visual countdown timer kids", "Analog visual countdown timers", "Compare total size, viewing angle, duration range, control simplicity, alarm options, batteries and mounting. A colored disk is useful only when the child can see and understand it."],
     ["large display digital countdown timer adjustable volume", "Large-display digital countdown timers", "Check display size, button lock, alarm and silent modes, memory, battery compartment, manual and accidental-reset behavior in the actual room."],
@@ -406,6 +411,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/kids-winter-gaiters-low-mid-knee-high-boot-seal-guide.html") return catalog.wintergaiters;
+  if (["guides/onondaga-historical-museum-with-kids-three-exhibit-plan.html", "guides/family-weather-map-read-20-minute-fronts-high-low-activity.html"].includes(normalized)) return null;
   if (["guides/northeast-classic-car-museum-with-kids-three-room-plan.html", "guides/family-stop-motion-story-30-minute-twelve-moves-no-posting.html", "guides/delphi-falls-county-park-with-kids.html", "guides/family-power-outage-drill-20-minutes.html"].includes(normalized)) return null;
   if (normalized === "guides/family-visual-timers-analog-digital-app-transition-guide.html") return catalog.visualtimers;
   if (["guides/cny-regional-market-with-kids-three-item-mission.html", "guides/family-home-draft-hunt-20-minute-no-flame-activity.html"].includes(normalized)) return null;
