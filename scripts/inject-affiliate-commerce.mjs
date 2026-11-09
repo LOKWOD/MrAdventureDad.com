@@ -9,6 +9,11 @@ const markerEnd = "<!-- END MAD AFFILIATE COMMERCE -->";
 const skipDirectories = new Set([".git", "node_modules", ".wrangler"]);
 
 const catalog = {
+  roadsidevisibility: [
+    ["reflective roadside warning triangles FMVSS 125 case", "Reflective roadside warning triangles", "Compare a documented manufacturer, stable base, protected reflective faces, complete instructions and a verifiable FMVSS No. 125 compliance claim. Never place devices when leaving the vehicle is unsafe."],
+    ["amber LED roadside emergency beacon magnetic battery", "Amber LED roadside beacons", "Check lawful amber output, controls, mounting, batteries, charging, temperature and weather claims. An electronic beacon does not make a highway shoulder safe."],
+    ["adult high visibility reflective safety vest over coat", "Adult high-visibility roadside vests", "Fit the adult who may need to exit over the bulkiest coat. Compare closure, visible coverage, care and documented reflectivity; a vest is conspicuity gear, not traffic control."],
+  ],
   wintergaiters: [
     ["kids low ankle gaiters trail debris", "Low ankle gaiters for kids", "Compare the exact footwear attachment, child-size chart, closure, lace hook or heel patch, care and return terms. Low coverage fits debris and light splash, not deep snow."],
     ["kids mid calf winter gaiters snow boots", "Mid-calf winter gaiters for kids", "Check the current boot size, dressed calf, closure overlap, lace hook, instep strap and clean indoor walk. A kids label does not prove a secure boot seal."],
@@ -411,6 +416,8 @@ function chooseCatalog(path, text) {
 
 function productsFor(path, text) {
   const normalized = path.replaceAll("\\", "/").toLowerCase();
+  if (normalized === "guides/family-roadside-visibility-kit-triangles-led-beacons-flares-guide.html") return catalog.roadsidevisibility;
+  if (["guides/great-bear-recreation-area-with-kids-apple-trail-plan.html", "guides/family-neighborhood-cleanup-30-minute-one-bag-plan.html"].includes(normalized)) return null;
   if (normalized === "guides/kids-winter-gaiters-low-mid-knee-high-boot-seal-guide.html") return catalog.wintergaiters;
   if (["guides/onondaga-historical-museum-with-kids-three-exhibit-plan.html", "guides/family-weather-map-read-20-minute-fronts-high-low-activity.html"].includes(normalized)) return null;
   if (["guides/northeast-classic-car-museum-with-kids-three-room-plan.html", "guides/family-stop-motion-story-30-minute-twelve-moves-no-posting.html", "guides/delphi-falls-county-park-with-kids.html", "guides/family-power-outage-drill-20-minutes.html"].includes(normalized)) return null;

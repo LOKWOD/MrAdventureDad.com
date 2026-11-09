@@ -216,3 +216,11 @@ No outreach, submission, account creation or paid placement was performed.
 - **Onondaga County Public Library family services** — https://www.onlib.org/contact-us — no-cost family-learning resource fit for the NOAA map activity and local-history route.
 
 No outreach, submission, account creation or paid placement was performed.
+
+## 2026-11-09
+
+- **Friends of Great Bear** — https://friendsofgreatbear.org/contact — factual-correction and family-route review for the Apple Trail first-visit framework, especially current map, bridge and access details.
+- **City of Syracuse Adopt-A-Block / Cityline** — https://www.syr.gov/cityline — local family-service resource fit for the pick/leave/report hazard card; pitch clear separation from the formal Adopt-A-Block program.
+- **New York State DEC recycling education** — https://dec.ny.gov/environmental-protection/recycling-composting/waste-reduction/recycling-events-you-can-organize — educational-resource fit for the one-bag, traffic-free family cleanup framework.
+
+No outreach, submission, account creation or paid placement was performed.
