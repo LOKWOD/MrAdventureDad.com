@@ -65,6 +65,7 @@ for(const source of ['https://dec.ny.gov/environmental-protection/recycling-comp
 if(!home.includes('FRESH IDEAS · NOVEMBER 9, 2026'))fail('Homepage lead date not refreshed');
 if(!home.includes('The November 7–8 roundup is archived'))fail('Wednesday roundup separation missing');
 if(!existsSync(resolve(root,'weekend-november-7-8-2026.html')))fail('Current Nov 7-8 weekend roundup missing');
+if(!existsSync(resolve(root,'weekend-november-14-15-2026.html')))fail('Current Nov 14-15 weekend roundup missing');
 const placements=pages.reduce((n,p)=>n+allHtml.reduce((m,h)=>m+[...h.matchAll(new RegExp(`<img\\b[^>]*src="[^"]*${p.image.replaceAll('.','\\.')}`, 'g'))].length,0),0);
 if(placements!==11)fail(`Expected 11 image placements across articles, homepage, hubs and credits, found ${placements}`);
 console.log('November 9 daily audit passed: 3 pages, full 225-page inventory, 3 unique titles/slugs/images, 3 new and 273 sitewide affiliate links, primary sources, weekly-roundup separation, schema, credits and internal links present.');
